@@ -7,8 +7,8 @@
 					<div class="row">	
 						<div class="col-md-12">
 							<ol class="breadcrumb menu-breadcrumb">
-								<li><a href="<?php echo base_url(); ?>">Home</a> <i class="fa fa fa-chevron-right"></i></li>
-								<li class="active">My Profile</li>        
+								<li><a href="<?php echo base_url(); ?>">Início</a> <i class="fa fa fa-chevron-right"></i></li>
+								<li class="active">Perfil</li>        
 							</ol>
 						</div>
 					</div>
@@ -120,20 +120,20 @@
 									<li class="active">
 										<a href="#">
 											<span class="visible-xxs"><i class="fa fa-key" aria-hidden="true"></i></span> 
-											<span class="hidden-xxs">Password</span> 
+											<span class="hidden-xxs">Senha</span> 
 										</a>
 									</li>
 									<li>
 										<a href="<?php echo base_url().'profile'; ?>">
 											<span class="visible-xxs"><i class="fa fa-user" aria-hidden="true"></i></span>
-											<span class="hidden-xxs">Profile</span>
+											<span class="hidden-xxs">Perfil</span>
 										</a>
 									</li>
-									<li>
+									<!--<li>
 										<a href="<?php echo base_url().'payment-settings'; ?>">
 											<span class="visible-xxs"><i class="fa fa-money" aria-hidden="true"></i></span>
 											<span class="hidden-xxs">Payment Settings</span>
-										</a>
+										</a>-->
 									</li>
 								</ul>    
 							</div>		
@@ -159,13 +159,13 @@
 										<div class="row">
 											<div class="col-sm-6">
 												<div class="form-group">
-													<label>Username</label>
+													<label>Nome</label>
 													<input type="text" class="form-control" disabled="disabled" value="<?php echo $profile['username']; ?>">
 												</div>
 											</div>
 											<div class="col-sm-6">
 												<div class="form-group">
-													<label>Current password</label>
+													<label>Senha atual</label>
 													<input type="password" name="current_password" id="current_password" class="form-control" value="">
 												</div>
 											</div>
@@ -173,19 +173,19 @@
 										<div class="row">
 											<div class="col-sm-6">
 												<div class="form-group">
-													<label>New password</label>
+													<label>Nova senha</label>
 													<input type="password" name="new_password" id="new_password" class="form-control">
 												</div>
 											</div>
 											<div class="col-sm-6">
 												<div class="form-group">
-													<label>Repeat password</label>
+													<label>Repita nova senha</label>
 													<input type="password" name="repeat_password" id="repeat_password" class="form-control">
 												</div>
 											</div>
 										</div>
 										<div class="text-center">
-											<button name="form_submit" class="btn btn-primary save-btn" value="true" type="submit">Save</button>
+											<button name="form_submit" class="btn btn-primary save-btn" value="true" type="submit">Salvar</button>
 										</div>
 									</div>
 								</div>

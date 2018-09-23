@@ -1746,6 +1746,10 @@ $('#update_gig').bootstrapValidator({
 
         $('#users_register input[type="text"]').val('');
 
+        $('#provider_register input[type="text"]').val('');
+
+        $('#ong_register input[type="text"]').val('');
+
         $('#users_forget input[type="email"]').val('');
 
     });
@@ -1844,6 +1848,8 @@ $('#update_gig').bootstrapValidator({
 
     });
 
+    // REGISTRO USER
+
     $('#users_register').bootstrapValidator({           
 
         fields: {
@@ -1854,7 +1860,7 @@ $('#update_gig').bootstrapValidator({
 
                     notEmpty: {
 
-                        message: 'Please enter your  name'
+                        message: 'Por favor, digite o seu nome'
 
                     }
 
@@ -1880,7 +1886,7 @@ $('#update_gig').bootstrapValidator({
 
                         },
 
-                        message: 'The username is already exists',
+                        message: 'O nome de usuário já existe.',
 
                         type: 'POST'
 
@@ -1888,7 +1894,7 @@ $('#update_gig').bootstrapValidator({
 
                     notEmpty: {
 
-                        message: 'Please enter your  username'
+                        message: 'Porfavor, digite o seu nome de usuário.'
 
                     }
 
@@ -1914,7 +1920,7 @@ $('#update_gig').bootstrapValidator({
 
                         },
 
-                        message: 'The Email is already exists',
+                        message: 'Este e-mail já está cadastrado.',
 
                         type: 'POST'
 
@@ -1922,7 +1928,7 @@ $('#update_gig').bootstrapValidator({
 
 					 notEmpty: {
 
-                        message: 'Please enter your  email'
+                        message: 'Por favor, digite seu e-mail.'
 
                     },
 
@@ -1930,7 +1936,7 @@ $('#update_gig').bootstrapValidator({
 
                             regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
 
-                            message: 'Please enter the valid email address'
+                            message: 'Por favor, entre com um e-mail válido.'
 
                         }
 
@@ -1944,7 +1950,7 @@ $('#update_gig').bootstrapValidator({
 
                     notEmpty: {
 
-                        message: 'Please enter your new password'
+                        message: 'Por favor, digite sua nova senha.'
 
                     },
 
@@ -1960,9 +1966,9 @@ $('#update_gig').bootstrapValidator({
 
                     identical: {
 
-                        field: 'RepeatPassword',
+                        field: 'Password',
 
-                        message: 'The password and its confirm are not the same'
+                        message: 'Sua senha e sua confimação, não são as mesmas.'
 
 					} 
 
@@ -1976,7 +1982,7 @@ $('#update_gig').bootstrapValidator({
 
                     notEmpty: {
 
-                        message: 'Please re-enter your  password'
+                        message: 'Por favor, Digite novamente sua senha.'
 
                     },
 
@@ -1984,7 +1990,7 @@ $('#update_gig').bootstrapValidator({
 
                         field: 'Password',
 
-                        message: 'The password and its confirm are not the same'
+                        message: 'Sua senha e sua confimação, não são as mesmas.'
 
                     }
 
@@ -1998,7 +2004,7 @@ $('#update_gig').bootstrapValidator({
 
                     notEmpty: {
 
-                        message: 'Please select a country '
+                        message: 'Por favor, selecione um País. '
 
                     }
 
@@ -2012,7 +2018,7 @@ $('#update_gig').bootstrapValidator({
 
                     notEmpty: {
 
-                        message: 'Please select a state '
+                        message: 'Por favor, selecione um Estado. '
 
                     }
 
@@ -2093,6 +2099,250 @@ $('#update_gig').bootstrapValidator({
         });
 
     });
+
+//REGISTRO ONG
+
+$('#ong_register').bootstrapValidator({           
+
+}).on('success.form.bv', function(e) {
+    $('#success_message').slideDown({
+
+            opacity: "show"
+
+        }, "slow") // Do something ...
+
+    $('#ong_register').data('bootstrapValidator').resetForm();
+
+    $('#register_errtext').html('');
+
+    var nomeOng = $('#nomeOng').val();
+
+    var descricao = $('#descricao').val();
+
+    var cnpj = $('#cnpj').val();
+
+    var telefone = $('#telefone').val();
+
+    var site = $('#site').val();
+
+    var rua = $('#rua').val();
+
+    var numero = $('#numero').val();
+
+    var complemento = $('#complemento').val();
+
+    var bairro = $('#bairro').val();
+
+    var cep = $('#cep').val();
+
+    var estado = $('#estado').val();
+
+    var cidade = $('#cidade').val();
+
+    var banco = $('#banco').val();
+
+    var titular = $('#titular').val();
+
+    var agencia = $('#agencia').val();
+
+    var conta = $('#conta').val();
+
+    var causas = $('input[name="campo-checkbox"]:checked').serialize();
+
+    causas = causas.replace(new RegExp('campo-checkbox=', 'g'),'');
+
+    $.ajax({
+
+        type: 'POST',
+
+        url: base_url + 'user/dashboard/ong_registeration',
+
+        data: {
+
+            nomeOng :nomeOng,
+
+            descricao : descricao,
+        
+            cnpj : cnpj,
+        
+            telefone : telefone,
+        
+            site : site,
+        
+            rua : rua,
+        
+            numero : numero,
+        
+            complemento : complemento,
+        
+            bairro : bairro,
+        
+            cep : cep,
+        
+            estado : estado,
+        
+            cidade : cidade,
+        
+            banco : banco,
+        
+            titular : titular,
+        
+            agencia : agencia,
+        
+            conta :conta, 
+            
+            causas : causas 
+        },
+
+        success: function(response) {
+
+            if (response == 1) {                    
+
+                $('#register_success').html('<div class="account-error success">Obrigado ! Um email de ativação foi enviado para o e-mail cadastrado.</div>');
+
+                window.setTimeout(function() {
+
+                    window.location.href = base_url;
+
+                }, 5000);
+
+            } else if (response == 2) {
+
+                $('#register_success').html('<div class="account-error">Erro ao cadastrar. Tente novamente mais tarde.</div>');
+            }
+            else if (response == 3) {
+
+                $('#register_success').html('<div class="account-error">Esta Ong já está cadastrada com este usuário, ou CNPJ.</div>');
+            }
+
+        }
+
+    });
+
+});
+
+
+
+//REGISTRO PROVIDER
+
+$('#provider_register').bootstrapValidator({           
+
+        fields: {
+
+            instituicoes: {
+
+                validators: {
+
+                    notEmpty: {
+
+                        message: 'Por favor, selecione uma instituição que deseja apoiar. '
+
+                    }
+
+                }
+
+            },
+
+            porcentagem: {
+
+                validators: {
+
+                    notEmpty: {
+
+                        message: 'Por favor, selecione a porcentagem que deseja contribuir. '
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }).on('success.form.bv', function(e) {
+
+        $('#success_message').slideDown({
+
+                opacity: "show"
+
+            }, "slow") // Do something ...
+
+        $('#provider_register').data('bootstrapValidator').resetForm();
+
+        $('#register_errtext').html('');
+
+
+
+        var instituição = $('#instituicoes').val();
+
+        var doacao = $('#porcentagem').val();
+
+        var pagamento =  $('.check_pay:radio:checked').val();   
+
+        var desconto = $('#cupom_desconto').val();
+
+        var plano = $("#txtP")[0].innerHTML;
+
+        if(plano == "MENSAL")
+        {
+            plano = 1;
+        }
+        else if(plano == "TRIMESTRAL")
+        {
+            plano = 2;
+        }
+        else if(plano == "SEMESTRAL")
+        {
+            plano = 3;         
+        }
+
+        $.ajax({
+
+            type: 'POST',
+
+            url: base_url + 'user/dashboard/provider_registration',
+
+            data: {
+
+                plano: plano,                              
+
+                instituição: instituição,
+
+                doacao: doacao,
+
+                pagamento: pagamento,
+
+                desconto: desconto
+
+            },
+
+            success: function(response) {
+
+                if (response == 1) {                    
+
+                    $('#register_success').html('<div class="account-error success">Thanks ! Activation Mail Has been sent to Registered Mail Id</div>');
+
+                    window.setTimeout(function() {
+
+                        window.location.href = base_url;
+
+                    }, 5000);
+
+                } else if (response == 2) {
+
+                    $('#register_success').html('<div class="account-error">Something Went Wrong</div>');
+
+
+
+                }
+
+            }
+
+        });
+
+    });
+
+
 
     $('#users_login').bootstrapValidator({    
 

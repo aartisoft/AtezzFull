@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h4 class="page-title m-b-20 m-t-0">Paid Withdrawal</h4>
+					<h4 class="page-title m-b-20 m-t-0">Retirada de Pagamento</h4>
 				</div>
 			</div>
 			<div class="row">
@@ -13,14 +13,14 @@
 							<table class="table table-striped table-actions-bar m-b-0 datatable">
 								<thead>
 									<tr>                                                    
-										<th>Order Id</th>
-										<th>Order Date</th>
-										<th>Transaction Id</th>
-										<th>Seller</th>
-										<th>Buyer</th>
-										<th>Amount</th>
-										<th>commission Amount</th>
-										<th>Amount to Seller</th>
+										<th>Id</th>
+										<th>Data de Criação</th>
+										<th>Id Transação </th>
+										<th>Vendedor</th>
+										<th>Comprador</th>
+										<th>Valor</th>
+										<th>Valor para Comissão</th>
+										<th>Valor do Vendedor</th>
 										<th>Status</th>
 									</tr>
 								</thead>

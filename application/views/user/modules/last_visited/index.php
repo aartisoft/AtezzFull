@@ -10,9 +10,9 @@
 
 							<ol class="breadcrumb menu-breadcrumb">
 
-								<li><a href="<?php echo base_url(); ?>">Home</a> <i class="fa fa fa-chevron-right"></i></li>
+								<li><a href="<?php echo base_url(); ?>">Início</a> <i class="fa fa fa-chevron-right"></i></li>
 
-								<li class="active">Last visited gigs</li>        
+								<li class="active">Ultimos serviços selecionados</li>        
 
 							</ol>
 
@@ -24,7 +24,7 @@
 
 						<div class="col-md-12">
 
-							<h3 class="page-title">Reminders</h3>
+							<h3 class="page-title">Favoritos</h3>
 
 						</div>
 
@@ -52,7 +52,7 @@
 
 											<span class="visible-xxs"><i class="fa fa-heart" aria-hidden="true"></i></span> 
 
-											<span class="hidden-xxs">Favorites</span> 
+											<span class="hidden-xxs">Favoritos</span> 
 
 										</a>
 
@@ -64,7 +64,7 @@
 
 											<span class="visible-xxs"><i class="fa fa-eye" aria-hidden="true"></i></span>
 
-											<span class="hidden-xxs">Last visited gigs</span>
+											<span class="hidden-xxs">Ultimos serviços selecionados</span>
 
 										</a>
 
@@ -110,11 +110,11 @@
 
                             <div class="col-md-12">
 
-                            <h3 class="inner-title">Last Visited gigs</h3>
+                            <h3 class="inner-title">Ultimos serviços selecionados</h3>
 
                              <?php  if(empty($list)) {   ?>
 
-                             <p> Sorry ! No Gigs Found  </p>
+                             <p> Desculpe ! Nenhum serviço selecionado.  </p>
 
                              <?php					 }   ?>
 

@@ -21,7 +21,7 @@
     }else{
 
     $this->load->view($theme . '/includes/header');    
-    if($module=="gig_preview" ||$module=="search" || $module=="user_profile" ||   $module=="buy_service"  ||   $module=="terms" ||   $module=="forget_password" ||   $module=="pages" ){
+    if($module=="gig_preview" || $module=="search" || $module=="user_profile" ||   $module=="buy_service"  ||   $module=="terms" ||   $module=="forget_password" ||   $module=="pages" ||   $module=="plano_premium" ||   $module=="sobre" ||  $module=="projeto_solidario" ||   $module== "Post_ong")
 
          $this->load->view($theme . '/modules/' . $module .'/'.$page);   
     }else {

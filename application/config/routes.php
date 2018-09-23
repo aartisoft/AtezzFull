@@ -102,7 +102,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-$route['default_controller'] = 'installer';
+$route['default_controller'] = 'gigs';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
@@ -160,6 +160,14 @@ $route['admin/create'] = 'admin/dashboard/create';
 $route['load_more_userfeedbacks'] = 'gigs/load_more_userfeedbacks';
 
 $route['sell-service'] = 'user/sell_service';
+
+$route['projeto_solidario'] = 'user/projeto_solidario';
+
+$route['sobre'] = 'user/sobre';
+
+$route['plano_premium'] = 'user/plano_premium';
+
+$route['post_ong'] = 'user/post_ong';
 
 $route['buy-service/(:any)'] = 'user/buy_service/index/$1';
 

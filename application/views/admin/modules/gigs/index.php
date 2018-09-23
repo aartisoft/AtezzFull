@@ -10,7 +10,7 @@
 							<?php  if($this->session->flashdata('message')){ ?>
 						<p class="bg-success"><?php echo $this->session->flashdata('message'); ?></p>
 						<?php } ?>
-					<h4 class="page-title m-b-20 m-t-0">Manage Gigs</h4>
+					<h4 class="page-title m-b-20 m-t-0">Gerenciar Serviços</h4>
 
 				</div>
 
@@ -32,19 +32,19 @@
 
 										<th>#</th>                                                  
 
-										<th>Gigs</th>
+										<th>Serviço</th>
 
-										<th>Category</th> 			                                        
+										<th>Categoria</th> 			                                        
 
-										<th>Posted User</th>
+										<th>Prestador</th>
 
-										<th>Price</th>                                                 
+										<th>Preço</th>                                                 
 
 										<th>Status</th>
 
-										<th>Created Date</th>
+										<th>Data de Criação</th>
 
-										<th class="text-right">Action</th>
+										<th class="text-right">Ação</th>
 
 									</tr>
 

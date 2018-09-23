@@ -208,10 +208,10 @@
 										</div>-->
                                         <div class="row">											 
 											<div class="col-md-6 col-sm-9">
-												 
+												<div class="form-group">
 													<label>PayPal Email ID:</label>
 													<input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="paypal_email_id" id="paypal_email_id" value="<?php echo $list['paypal_email_id'];   ?>" class="form-control" required="required" >
-												 
+												</div>
 											</div>
 										</div>
 										<div class="text-left">

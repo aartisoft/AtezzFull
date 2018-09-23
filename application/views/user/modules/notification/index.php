@@ -433,7 +433,7 @@
            
                  $html = '<li class="list-group-item">
                     <a href="javascript:;" class="notify-content">                                                                  
-                    <p class="text-center m-b-0"> <strong>Sorry !</strong> No Notifications</span></p>
+                    <p class="text-center m-b-0"> <strong>Desculpe !</strong> Sem notificações.</span></p>
                     </a>                    
                     </li>';   
                 

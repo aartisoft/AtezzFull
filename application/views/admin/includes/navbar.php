@@ -32,9 +32,9 @@
 					?>
 					<a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="<?php echo $image; ?>" alt="user-img" class="img-circle"> </a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo base_url().'admin/profile' ?>">Profile</a></li>
-						<li><a href="<?php echo base_url().'admin/settings' ?>">Settings</a></li>
-						<li><a href="<?php echo base_url().'admin/new_updates' ?>">Updates <?php if($this->session->userdata('updates')!=''){ echo '<span class="badge badge-xs badge-danger" id="update_count">1</span>'; } ?></a></li>
+						<li><a href="<?php echo base_url().'admin/profile' ?>">Perfil</a></li>
+						<li><a href="<?php echo base_url().'admin/settings' ?>">Configurações</a></li>
+						<li><a href="<?php echo base_url().'admin/new_updates' ?>">Atualizações <?php if($this->session->userdata('updates')!=''){ echo '<span class="badge badge-xs badge-danger" id="update_count">1</span>'; } ?></a></li>
 						<li><a href="<?php echo base_url()."admin/dashboard/logout"; ?>">Logout</a></li>
 					</ul>
 				</li>

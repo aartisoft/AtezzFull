@@ -390,6 +390,19 @@ LEFT join `categories` as c2 ON c2.CATID = c.parent where c.delete_sts =0 ");
         $result = $query->result_array();
         return $result;                  
     }
+
+
+    public function get_Prestador()
+    {        
+        $query = $this->db->query("SELECT a.USERID, a.email , a.username, a.fullname, a.verified , a.status, b.status as 'prestador', c.title, b.start, b.end, b.status_payment, b.form_payment, b.fk_ong_provider, b.percent_doacao 
+            FROM members a  
+            inner JOIN service_provider b ON b.fk_members_service = a.USERID 
+            inner JOIN contract_plans c ON c.id = b.fk_plan_service   ;");
+
+        $result = $query->result_array();
+        return $result;                  
+    }
+
     public function edit_user($id)
     {
         $query = $this->db->query("SELECT `USERID`,`email`,`username`,`fullname`,`verified`,`status` FROM `members`  WHERE `USERID` = $id ;");

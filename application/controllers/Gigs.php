@@ -25,6 +25,15 @@ class Gigs extends CI_Controller{
     $this->data['country_list'] = $this->user_panel_model->country_list();
     $common_settings = gigs_settings();
 
+    $userid = $this->session->userdata; 
+    if(isset($userid['SESSION_USER_ID']))
+    {
+        $uid = $userid['SESSION_USER_ID']; 
+        $verify_user = $this->user_panel_model->verify_Premium($uid); 
+        $this->data['verify_user_premium'] = $verify_user;
+    }
+
+
     $default_currency = 'USD';
         if(!empty($common_settings)){
           foreach($common_settings as $datas){

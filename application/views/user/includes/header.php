@@ -65,6 +65,7 @@
 	<link href="<?php echo base_url(); ?>assets/css/bootstrap-tagsinput.css" media="screen" rel="stylesheet" type="text/css" />
 	<?php } ?>
 	<link href="<?php echo base_url(); ?>assets/css/app.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/formStep.css" media="screen" rel="stylesheet" type="text/css" />
 <!-- <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'>
 </script>
 <script>
@@ -188,98 +189,144 @@
 		<input type="hidden" name="session_user_id" id="session_user_id" value="<?php echo $user_id; ?>" >
 		<?php }
 		?>
+		<!-- MENU DESKTOP USER LOGADO -->
 	    <header class="header" id="header">
-            <div class="menu-bar">
-                <div class="container">
+            <div class="menu-bar ">
+                <div class="container container-menu ">
                     <nav id="menu-navigation" class="main-menu">
 						<input type="hidden" id="selected_menu" name="selected_menu" value="">
                         <ul class="nav navbar navbar-static-top">
                             <?php if(($this->session->userdata('SESSION_USER_ID')))
                             {  ?>
-							<li id="menu-1" class="menu-1 <?php if($module == 'gigs') echo 'active'; ?>"><a href="<?php echo base_url(); ?>">Welcome</a></li>
-							<li id="menu-2" class="menu-2 <?php if($module == 'sell_service') echo 'active'; ?>"><a href="<?php echo base_url().'sell-service'; ?>">Sell Service</a></li>            
-							<li id="menu-3" class="menu-3 <?php if($module == 'buy_service') echo 'active'; ?>"><a href="<?php echo base_url().'buy-service'; ?>">Buy Service</a></li>
-							<li id="menu-4" class="dropdown menu-4 <?php if($module == 'reminder' || $module == 'last_visited') echo 'active'; ?>">
-								<a href="<?php echo base_url().'reminder'; ?>">Reminder</a>
+                            <li id="menu-1" class="menu-1 logotipo <?php if($module == 'gigs') echo 'active'; ?>"><a href="<?php echo base_url(); ?>">Atezz</a></li>
+                            	
+							 <li id="menu-1" class="menu-1 <?php if($module == 'gigs') echo 'active'; ?>"><a href="<?php echo base_url().'sobre'; ?>">Sobre</a></li> 
+
+							 <li id="menu-1" class="menu-1 <?php if($module == 'gigs') echo 'active'; ?>"><a href="<?php echo base_url().'projeto_solidario'; ?>">Projeto solidário</a></li> 
+
+
+							<li id="menu-2" class="menu-2 <?php if($module == 'sell_service') echo 'active'; ?>">
+								<button class="btn btn-outline-success"  href="javascript:;" >
+										<a href="<?php echo base_url().'plano_premium'; ?>" > SEJA UM PROFISSIONAL </a>
+								</button>
+							
+							</li>  
+
+
+							
+							<li id="menu-3" class="menu-3 <?php if($module == 'buy_service') echo 'active'; ?>"><a href="<?php echo base_url().'buy-service'; ?>">Contratar Serviço</a></li>
+							<li id="menu-4" class="dropdown menu-4 menu-icon-4 <?php if($module == 'reminder' || $module == 'last_visited') echo 'active'; ?>">
+								<a href="<?php echo base_url().'reminder'; ?>"><span class="fa fa-heart-o fa-2x
+								" alt="Favoritos" style="color:red"></span> &nbsp;</a>
 								<ul class="dropdown-menu">
-									<li><a href="<?php echo base_url().'reminder'; ?>">Favorites Gigs</a></li>
-									<li><a href="<?php echo base_url().'last-visited'; ?>">Last Visited Gigs</a></li>
+									<li><a href="<?php echo base_url().'reminder'; ?>">Meus Favoritos</a></li>
+									<li><a href="<?php echo base_url().'last-visited'; ?>">Ultimas solicitações</a></li>
 								</ul>
 							</li>
-							<li id="menu-5" class="dropdown menu-5 <?php if($module == 'message') echo 'active'; ?>">
-								<a href="<?php echo base_url().'message'; ?>">Messages
+							<li id="menu-5" class="menu-icon-5 dropdown menu-5  <?php if($module == 'message') echo 'active'; ?>">
+								<a href="<?php echo base_url().'message'; ?>"><span class="fa fa-telegram fa-2x" alt="mensagem" style="color: #3ba2ce"></span>
 									<span class="badge badge-success pull-right" id="new_message_count" style="display: none;"></span>   
 								</a>
 								<div id="message_notification"></div>
 							</li>
-							<li id="menu-6"  class="dropdown menu-6 <?php if($module == 'notification') echo 'active'; ?>">
-								<a href="<?php echo base_url().'notification'; ?>">Alerts 
+							<li id="menu-6"  class="dropdown menu-6 menu-icon-6 <?php if($module == 'notification') echo 'active'; ?>">
+								<a href="<?php echo base_url().'notification'; ?>"><span class="fa fa-bell-o fa-2x" style="margin-top:10px !important;" alt="alerta"></span> 
 									<span id="notification_count" class="badge badge-success pull-right" style="display: none"> </span>
 								</a>
 								<div class="dropdown-menu notifications arrow" id="notification_notification"></div>
 							</li>    
-							<li id="menu-7" class="dropdown menu-7 <?php if($module == 'password' || $module == 'profile' || $module == 'payment_settings' ) echo 'active'; ?> ">
-								<a href="<?php echo base_url().'password'; ?>">Settings</a>
+							<li id="menu-7" class="dropdown menu-7 menu-icon-7 <?php if($module == 'password' || $module == 'profile' || $module == 'payment_settings' ) echo 'active'; ?> ">
+								<a href="<?php echo base_url().'password'; ?>"><span class="fa fa-cog fa-2x"> </span></a>
 								<ul class="dropdown-menu">
-									<li><a href="<?php echo base_url().'password'; ?>">Account Settings</a></li>
-									<li><a href="<?php echo base_url().'profile'; ?>">Profile Settings</a></li>
-									<li><a href="<?php echo base_url().'payment-settings'; ?>">Payment Settings</a></li>
+									<li><a href="<?php echo base_url().'password'; ?>">Ajustes da conta</a></li>
+									<li><a href="<?php echo base_url().'profile'; ?>">Ajustes de Perfil</a></li>
+									
 								</ul>
 							</li>                             
-							<li id="menu-8" class="dropdown menu-8 <?php if($module == 'purchases' || $module == 'my_gigs' || $module == 'sales' || $module == 'payments' || $module == 'user_profile' ) echo 'active'; ?> ">
-								<img class="menu-pro-img" src="<?php echo $header_user_image ; ?>" alt="<?php echo $header_user_fullname ; ?>" 
-								title="<?php echo $header_user_fullname ; ?>" width="50" height="50">
+							<li id="menu-8" align="center" class="logado dropdown menu-8 menu-icon-8 <?php if($module == 'purchases' || $module == 'my_gigs' || $module == 'sales' || $module == 'payments' || $module == 'user_profile' ) echo 'active'; ?> ">
+								<img style="margin-top: 8px !important; padding-right:5px" class="menu-pro-img" src="<?php echo $header_user_image ; ?>" alt="<?php echo $header_user_fullname ; ?>" 
+								title="<?php echo $header_user_fullname ; ?>" width="10" height="50">
 								<a href="<?php echo base_url().'user-profile/'.$header_username; ?>">
-									Profile
+									
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="<?php echo base_url().'purchases'; ?>">My Purchases</a></li>
-									<li><a href="<?php echo base_url().'my-gigs'; ?>">My Gigs</a></li>
-									<li><a href="<?php echo base_url().'sales'; ?>">My Sales</a></li>
-									<li><a href="<?php echo base_url().'payments'; ?>">My Payments</a></li>
-									<li><a href="<?php echo base_url().'user-profile/'.$header_username; ?>">My Profile</a></li>
-									<li><a href="<?php echo base_url().'logout'; ?>">Log Out</a></li>
+									<li><a href="<?php echo base_url().'purchases'; ?>">Minhas solicitações</a></li>
+									
+								<?php if($this->session->userdata('SESSION_PROVIDER')){ ?> 
+									<li><a href="<?php echo base_url().'my-gigs'; ?>">Meus serviços</a></li>
+									<li><a href="<?php echo base_url().'sales'; ?>">Serviços Prestados</a></li>
+									
+								<?php } ?>		
+									<li><a href="">Avaliações</a></li>
+									<li><a href="<?php echo base_url().'user-profile/'.$header_username; ?>">Perfil</a></li>
+									<li><a href="<?php echo base_url().'logout'; ?>">Sair</a></li>
 								</ul>
 							</li>    
+
+							<!-- USUARIO DESLOGADO-->
 							<?php } else {  ?>
-							<li id="menu-1" class="menu-1 <?php if($module == 'gigs') echo 'active'; ?> ">
+
+							<li id="menu-1" class="menu-1 logotipo <?php if($module == 'gigs') echo 'active'; ?> ">
 								<a href="<?php echo base_url(); ?>">
-									Welcome
+									ATEZZ
 								</a>
 							</li>
-                            <li id="menu-2" class="menu-2">
-                                <a href="javascript:;" onclick="selected_menu('sell-service')" >
-                                    Sell Service
-                                </a>
-                            </li>
-                            <li id="menu-3" class="menu-3 <?php if($module == 'buy_service') echo 'active'; ?>">
-                                <a href="<?php echo base_url().'buy-service'; ?>" >
-                                    Buy Service
-                                </a>
-                            </li>
+
+							<li id="menu-2" class="menu-2 <?php if($module == 'sobre') echo 'active'; ?> ">
+								<a href="<?php echo base_url().'sobre'; ?>">
+									Sobre
+								</a>
+							</li>
+
+							<li id="menu-3" class="menu-3 <?php if($module == 'sobre') echo 'active'; ?> ">
+								<a href="<?php echo base_url().'projeto_solidario'; ?>">
+									Projeto Solidário
+								</a>
+							</li>
+
                             <li id="menu-4" class="menu-4">
-                                <a href="javascript:;" onclick="selected_menu('reminder')">
-                                    Reminder
+
+                                <button class="btn btn-outline-success"  href="javascript:;" >
+                                    <a href="<?php echo base_url().'plano_premium'; ?>" > SEJA UM PROFISSIONAL </a>
+                                </button>
+                            </li>
+
+                       <!-- <li id="menu-4" class="menu-4">
+	                                <button class="btn btn-outline-success"  href="javascript:;" onclick="selected_menu('sell-service')" >
+	                                    SEJA UM PROFISSIONAL
+	                                </button>
+                            </li> -->
+
+
+
+                            <li id="menu-5" class="menu-5 <?php if($module == 'buy_service') echo 'active'; ?>">
+                                <a href="<?php echo base_url().'buy-service'; ?>" >
+                                    CONTRATAR SERVIÇO
                                 </a>
                             </li>
-                            <li id="menu-5" class="menu-5">
+                            <!-- <li id="menu-4" class="menu-4">
+                                <a href="javascript:;" onclick="selected_menu('reminder')">
+                                    LEMBRETE
+                                </a>
+                            </li> 
+                            <li id="menu-5" class="menu-5" >
                                 <a href="javascript:;" onclick="selected_menu('message')">
-                                    Messages
+                                    MENSAGEM
                                 </a>
                             </li>
 							<li id="menu-6" class="dropdown menu-6">
                                 <a href="javascript:;" onclick="selected_menu('notification')">
-                                    Alerts
+                                    ALERTAS
                                 </a>                                 
                             </li>
 							<li id="menu-7" class="menu-7">
                                 <a href="javascript:;" onclick="selected_menu('password')">
-                                    Settings
+                                    AJUSTES
                                 </a>
-                            </li>
-							<li id="menu-8" class="dropdown menu-8 login-img" >
+                            </li>-->
+							<li id="menu-6" class="dropdown menu-6 login-img" >
                                 <a href="javascript:;"  data-toggle="modal" data-target="#login-popup">
-                                    Log In
+                                   <span class="fa fa-user-circle fa-3x"> </span> &nbsp; LOG IN
                                 </a>                                 
                             </li>
                           <?php } ?> 
@@ -292,31 +339,31 @@
 					<div class="sidebar-inner slimscroll">
 					<a href="#" id="close_menu"><i class="fa fa-close"></i></a>
 					<ul class="mobile-menu-wrapper">
-						<li class="<?php if($module == 'gigs') echo 'active'; ?>">
+					<!--	<li class="<?php if($module == 'gigs') echo 'active'; ?>">
 							<div class="mobile-menu-item clearfix">
 								<a href="<?php echo base_url(); ?>">
-									Welcome
+									HOME
 								</a>
 							</div>
-						</li>
+						</li> -->
 						<li class="<?php if($module == 'sell_service') echo 'active'; ?> " >
 							<div class="mobile-menu-item clearfix">
 								<a href="<?php echo base_url().'sell-service'; ?>">
-									Sell Service
+									SEJA UM PROFISSIONAL
 								</a>
 							</div>
 						</li>
 						<li class="<?php if($module == 'buy_service') echo 'active'; ?> ">
 							<div class="mobile-menu-item clearfix">
 								<a href="<?php echo base_url().'buy-service'; ?>">
-									Buy Service
+									CONTRATE UM SERVIÇO
 								</a>
 							</div>
 						</li>
 						<li class="<?php if($module == 'reminder' || $module == 'last_visited') echo 'active'; ?>">
 							<div class="mobile-menu-item clearfix">
 								<a href="<?php echo base_url().'reminder'; ?>">
-									Reminder
+									LEMBRETE
 									<i class="fa fa-chevron-down menu-toggle"></i>
 								</a>
 							</div>
@@ -328,21 +375,21 @@
 						<li class="<?php if($module == 'message') echo 'active'; ?>">
 							<div class="mobile-menu-item clearfix">
 								<a href="<?php echo base_url().'message'; ?>">
-									Messages
+									MENSAGEM
 								</a>
 							</div>
 						</li>
 						<li class="<?php if($module == 'notification') echo 'active'; ?>">
 							<div class="mobile-menu-item clearfix">
 								<a href="<?php echo base_url().'notification'; ?>">
-									Alerts
+									ALERTAS
 								</a>
 							</div>                                
 						</li>
 						<li class="<?php if($module == 'password' || $module == 'profile' ) echo 'active'; ?>" >
 							<div class="mobile-menu-item clearfix">
 								<a href="<?php echo base_url().'password'; ?>">
-									Settings
+									AJUSTES
 									<i class="fa fa-chevron-down menu-toggle"></i>
 								</a>
 							</div>
@@ -375,59 +422,62 @@
 					<div class="sidebar-inner slimscroll">
 					<a href="#" id="close_menu"><i class="fa fa-close"></i></a>
 					<ul class="mobile-menu-wrapper">
-						<li class="<?php if($module == 'gigs') echo 'active'; ?>">
+					<!--	<li class="<?php if($module == 'gigs') echo 'active'; ?>">
 							<div class="mobile-menu-item clearfix">
 								<a href="<?php echo base_url(); ?>">
-									Welcome
+									HOME
 								</a>
 							</div>
-						</li>
+						</li> -->
+
+						<!-- USUARIO DESLOGADO MOBILE-->	
+
 						<li>
 							<div class="mobile-menu-item clearfix">
 								 <a href="javascript:;" onclick="selected_menu('sell-service')">
-									Sell Service
+									SEJA UM PROFISSIONAL
 								</a>
 							</div>
 						</li>
 						<li class="<?php if($module == 'buy_service') echo 'active'; ?>">
 							<div class="mobile-menu-item clearfix">
 								 <a href="<?php echo base_url().'buy-service'; ?>">
-									Buy Service
+									CONTRATAR SERVIÇO
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="mobile-menu-item clearfix">
 						 <a href="javascript:;" onclick="selected_menu('reminder')" >
-									Reminder
+									LEMBRETE
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="mobile-menu-item clearfix">
 						 <a href="javascript:;" onclick="selected_menu('message')" >
-									Messages
+									MENSAGEM
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="mobile-menu-item clearfix">
 						   <a href="javascript:;" onclick="selected_menu('notification')" >
-									Alerts                                         
+									ALERTA                                         
 								</a>
 							</div>                                
 						</li>
 						<li>
 							<div class="mobile-menu-item clearfix">
 							  <a href="javascript:;" onclick="selected_menu('password')" >
-									Settings
+									AJUSTES
 									</a>
 							</div>
 						</li>
 						<li>
 							<div class="mobile-menu-item clearfix">
 								<a href="#" data-toggle="modal" data-target="#login-popup">
-									Log In
+									LOG IN
 								</a>
 							</div>
 					   
@@ -448,6 +498,9 @@
 				</nav>
             </div>
         </header>
+        <!-- END MENU DESKTOP -->
+
+        <!-- POP-UP LOGIN -->
 		<div id="login-popup" class="modal fade custom-popup" role="dialog" data-backdrop="static" data-keyboard="false">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -470,9 +523,25 @@
 									<input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
 								</div>
 							</div>
+
+							<div class="form-group">								
+								<div class="col-lg-4">
+									<button type="submit" class="btn btn-primary logon-btn pull-right">Login</button>
+								</div>
+
+								<div class="col-lg-4">
+									<button type="submit" class="btn btn-primary logon-btn pull-right">
+										<a href="" data-toggle="modal" data-target="#register-popup">
+											Criar uma conta
+										</a> 
+									</button>
+								</div>								
+							</div>
+
 							<div class="form-group">
-								<div class="col-lg-6"><a href="#" class="pull-left forgot" data-toggle="modal" data-target="#forgot-popup">Forgot password?</a></div>
-								<div class="col-lg-6"><button type="submit" class="btn btn-primary logon-btn pull-right">Login</button></div>
+								<div class="col-lg-6">
+									<a href="#" class="pull-left forgot" data-toggle="modal" data-target="#forgot-popup">Esqueci minha senha?</a>
+								</div>
 							</div>
 						</form>
 					</div>
@@ -482,6 +551,10 @@
 				</div>
 			</div>
 		</div>
+		<!-- END POP-UP LOGIN -->
+
+
+		<!-- POP-UP REGISTER USER -->
         <?php if($this->session->userdata('SESSION_USER_ID')) {} else { ?>
 		<div id="register-popup" class="modal fade custom-popup" role="dialog" data-backdrop="static" data-keyboard="false">
 			<div class="modal-dialog">
@@ -566,6 +639,98 @@
 				</div>
 			</div>
 		</div>
+		<!-- END POP-UP REGISTER USER -->
+		<?php } ?>
+		
+		<!-- POP-UP REGISTER ONGS -->
+        <?php if($this->session->userdata('SESSION_USER_ID')) {} else { ?>
+		<div id="register-popup_ongs" class="modal fade custom-popup" role="dialog" data-backdrop="static" data-keyboard="false">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<button type="button" id="remove_popuptop" class="close" data-dismiss="modal">&times;</button>
+					<div class="modal-header text-center">
+					</div>
+					<div class="modal-body">
+						<form id="ongs_register" class="form-horizontal">
+							<p class="member-text">Already a member? <a href="" data-toggle="modal" data-target="#login-popup">Login</a></p>
+							<span id="register_success_1"> </span>
+							<div class="login-or">
+								<hr class="hr-or">
+								<span class="span-or">or</span>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">Name</label>
+								<div class="col-lg-8">
+									<input type="text" value=""   placeholder="Name" id="name_ong" name='name' class="form-control alphaonly" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">Email</label>
+								<div class="col-lg-8">
+									<input type="email" value=""  placeholder="Email" id="email_ong" name='email' class="form-control" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">Username</label>
+								<div class="col-lg-8">
+									 <input type="text" name="username"  minlength=5  id="username_ong" class="form-control alphaonly" placeholder="Username" autocomplete="off" required>                                                                              
+								</div>
+								<div id="username_suggestion_ong"  style="display: none;">
+									<input type="hidden" name="hidden_field" >                                                                                           
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">Password</label>
+								<div class="col-lg-8">
+									<input type="password" placeholder="Password" class="form-control" id="reg_password_ong" name="Password" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">Repeat Password</label>
+								<div class="col-lg-8">
+									<input type="password" placeholder="Repeat Password" class="form-control" id="repeatpassword_ong" name="RepeatPassword" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">Country</label>
+								<div class="col-lg-8">
+									<select name="country_id" id="country_id_ong" class="form-control" required > 
+										<option value="">Select Country</option>
+										<?php if(!empty($country_list)) { ?>
+										<?php foreach($country_list as $countries) { ?>
+										<option value="<?php echo $countries['id']; ?>" ><?php echo $countries['country']; ?></option>
+										<?php } ?>
+										<?php } ?>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">State</label>
+								<div class="col-lg-8">
+									<select name="state_id" id="state_id_ong" class="form-control" required>
+										<option value="">Select State</option> 
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-lg-12">
+									<div class="terms-text text-center">
+										By signing up, I agree to <?php echo  $this->site_name; ?>  <a href="<?php echo base_url().'terms';?>" target="_blank"> Terms of conditions</a>.               
+									</div>		
+								</div>										
+							</div>
+							<div class="form-group">								
+								<div class="col-lg-12 text-center"><button type="submit" class="btn btn-primary logon-btn" id="registers_ong">Register</button></div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END POP-UP REGISTER ONGS -->
+
+
+
            <?php } ?>
 		<div id="forgot-popup" class="modal fade custom-popup" role="dialog" data-backdrop="static" data-keyboard="false">
 			<div class="modal-dialog">

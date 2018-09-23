@@ -48,13 +48,13 @@ if($this->session->flashdata('message')) { ?>
 
 			<div class="col-md-12 banner-content">
 
-				<img src="<?php 
+				<!-- <img src="<?php 
 
 				if(!empty($logo['value'])) { echo base_url().$logo['value']; }else { echo base_url()."assets/images/logo.png";   }?>" class="logo" alt="logo" width="133" height="133" />
 
 				<h1 class="banner-title"><?php echo $slogan['value']; ?></h1> 
 
-				
+				--><h2 class="logo" alt="logo" width="403" height="133"><p>ATEZZ</h2></p> <h3>O <b>profissional</b> certo, na hora certa.<br/> <span style="font-size: 28px;">Tudo isso na palma da sua mão!</span></h3><br/><br/>
 
 				<?php if(($this->session->userdata('SESSION_USER_ID'))) {  } else { ?> 
 
@@ -132,7 +132,8 @@ if($this->session->flashdata('message')) { ?>
 
 				<h3 class="latest-title"><img src="<?php echo base_url().'assets/images/map.png';?>" alt="Location" width="42" height="42">
 
-					<span> Popular Gigs<?php // echo $full_country_name; ?> &nbsp;&nbsp;
+					<span> 
+					Em destaque<?php // echo $full_country_name; ?> &nbsp;&nbsp;
 
 						<span id="uniquename" style="display:none;">
 
@@ -365,7 +366,7 @@ if($this->session->flashdata('message')) { ?>
 
 				</div>
 
-				<h4 class="latest-title"><img src="<?php echo base_url().'assets/images/clock.png';?>" alt="Latest Gigs" width="35" height="34">Latest Gigs&nbsp;&nbsp; 
+				<h4 class="latest-title"><img src="<?php echo base_url().'assets/images/clock.png';?>" alt="Latest Gigs" width="35" height="34">Mais Recentes &nbsp;&nbsp; 
 
                  </h4>
 

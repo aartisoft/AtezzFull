@@ -154,7 +154,15 @@ class Dashboard extends CI_Controller{
         $this->session->set_userdata('SESSION_USER_ID',$result['USERID']);   
         $this->session->set_userdata('user_role',2);   
         $this->session->set_userdata('old_timezone',$result['user_timezone']);
-        $this->session->set_userdata('unique_code',$result['unique_code']);
+
+        $verify_user = $this->user_panel_model->verify_Premium($result['USERID']); 
+
+        if(!empty($verify_user))
+        {
+            $this->session->set_userdata('SESSION_PROVIDER',$verify_user);   
+            $teste = $this->session->userdata('SESSION_PROVIDER');   
+        }
+        
 
         echo 1;
 
@@ -725,8 +733,114 @@ class Dashboard extends CI_Controller{
 }       
 
    
+    public function provider_registration()
+    {
 
-    
+      $user_id                          = $this->session->userdata('SESSION_USER_ID');   
+
+      $data['fk_members_service']       = $user_id;
+
+       $data['status']                  = 0;
+
+       $data['fk_plan_service']         = $this->input->post('plano');
+
+       $data['start']                   =  "";
+
+       $data['end']                     =  "";
+
+       $data['status_pay']              = 0;
+
+       $data['form_payment']            = $this->input->post('pagamento');
+
+       $data['fk_ong_provider']         = $this->input->post('instituição');
+
+       $data['percent_doacao']          = $this->input->post('doacao');
+
+
+       if($this->db->insert('service_provider',$data))
+       {
+          $this->session->set_userdata("user_registeration","Success");
+
+           echo 1;        
+       }
+
+    }
+
+
+    public function ong_registeration()
+    {
+       $user_id                          = $this->session->userdata('SESSION_USER_ID');
+       $cnpj                             =  $this->input->post('cnpj');   
+      
+       $result = $this->user_panel_model->check_ong($user_id, $cnpj);  
+
+       if($result == 0)
+       {
+                $data['ID_USUARIO']               = $user_id;
+
+                $data['NOME']                    = $this->input->post('nomeOng');
+        
+                $data['DESCRICAO']               = $this->input->post('descricao');
+        
+                $data['CNPJ']                    = $cnpj;
+        
+                $data['CONTATO']                 =  $this->input->post('telefone');
+        
+                $data['SITE']                    = $this->input->post('site');
+        
+                $data['RUA']                     = $this->input->post('rua');
+        
+                $data['NUMERO']                  = $this->input->post('numero');
+        
+                $data['COMPLEMENTO']             = $this->input->post('complemento');
+        
+                $data['BAIRRO']                  = $this->input->post('bairro');
+        
+                $data['CEP']                     = $this->input->post('cep');
+        
+                $data['ESTADO']                  = $this->input->post('estado');
+        
+                $data['CIDADE']                  = $this->input->post('cidade');
+        
+                $data['BANCO']                   = $this->input->post('banco');
+        
+                $data['TITULAR']                 = $this->input->post('titular');
+        
+                $data['AGENCIA']                 = $this->input->post('agencia');
+                
+                $data['CONTA']                   = $this->input->post('conta');
+                
+                $causas                          = $this->input->post('causas');
+
+                $getAreas                        = (explode("&",$causas));                
+        
+                if($this->db->insert('cadastro_ong',$data))
+                {
+
+                    $idCadastro = $this->db->insert_id();
+
+                    foreach($getAreas as $item)
+                    {   
+                        $data2['ID_CADASTRO_ONG'] = $idCadastro;
+                        $data2['ID_TIPO_SERVICO'] = $item;
+
+                        $this->db->insert('tiposervico_cadastroOng',$data2);
+                    }
+
+                    $this->session->set_userdata("user_registeration","Success");
+                    echo 1;        
+                }
+                else
+                {
+                    echo 2;
+                }
+        }
+        else
+        {
+             echo 3;
+        }
+
+    }
 
     public function users_registeration()
 

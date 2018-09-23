@@ -52,7 +52,7 @@
 
 					<div class="footer-widget">
 
-						<h4 class="widget-title text-right">FOLLOW US</h4>
+						<h4 class="widget-title text-right">Siga nossas Redes Sociais</h4>
 
 						<div class="footer-line">
 
@@ -148,7 +148,7 @@ if(!empty($google_analytics_code))
 
 ?>
 
-						<p>&copy; <?php echo date('Y'); ?> <span><a href="<?php echo base_url(); ?>"><?php echo $website_name; ?></a>.</span> All Rights Reserved.</p>
+						<p>&copy; <?php echo date('Y'); ?> <span><a href="<?php echo base_url(); ?>"><?php echo $website_name; ?></a>.</span> Todos direitos reservados.</p>
 
 					</div>
 
@@ -230,7 +230,7 @@ if(!empty($google_analytics_code))
 
 	<?php }?>
 
-	<?php if($module=="sell_service" || $module=="edit_gig") { ?>
+	<?php if($module=="sell_service" || $module=="edit_gig" || $module=="post_ong" ) { ?>
 
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap-tagsinput.js"></script>
 
@@ -363,6 +363,8 @@ if(!empty($google_analytics_code))
 
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/app.js"></script>
 
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/formStep.js"></script>
+
 		
 
 	<?php 
@@ -372,6 +374,11 @@ if(!empty($google_analytics_code))
 		if($uri=='sell-service'){ ?>
 
 			<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/sell_services.js"></script>
+		<?php }
+		
+		if($uri=='post_ong'){ ?>
+			<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/post_ong.js"></script>
+	
 
 	<?php }	
 

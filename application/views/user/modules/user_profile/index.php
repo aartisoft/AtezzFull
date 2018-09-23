@@ -22,11 +22,11 @@
 
 						if($profile['USERID'] == $login_user_id){ ?>
 
-							<li class="active">My Profile</li>        
+							<li class="active">Meu Perfil</li>        
 
 						<?php }else{ ?>
 
-							<li class="active"> Profile</li>        
+							<li class="active"> Perfil</li>        
 
 						<?php } ?>      
 
@@ -78,7 +78,7 @@
 
 						<div class="edit-profile">
 
-							<a href="<?php echo base_url().'profile' ?>" title="Edit Profile" class="btn btn-primary btn-block"><i class="fa fa-pencil"></i> Edit Profile</a> 
+							<a href="<?php echo base_url().'profile' ?>" title="Edit Profile" class="btn btn-primary btn-block"><i class="fa fa-pencil"></i> Editar Perfil</a> 
 
 						</div>
 
@@ -168,7 +168,7 @@
 
 			 ?>
 
-				<h3 class="latest-title"><span><?php echo ucfirst($name); ?>'s gigs&nbsp;&nbsp;</span></h3>
+				<h3 class="latest-title"><span><?php echo ucfirst($name); ?> Seus Serviços&nbsp;&nbsp;</span></h3>
 
 				<span class="loca-dd">
 
@@ -341,7 +341,7 @@
 
 			<?php } } else { ?>      
 
-				<div class="col-sm-12"><p> Sorry! No gigs </p></div>
+				<div class="col-sm-12"><p> Nenhum Serviço registrado. </p></div>
 
 			<?php } ?>
 
@@ -393,7 +393,7 @@
 
 					<div class="text-center">
 
-						<h4>Since joining</h4>
+						<h4>Criação da conta</h4>
 
 						
 
@@ -579,9 +579,9 @@
 
 					<div class="text-center">
 
-						<h4>Completed</h4>
+						<h4>Cadastrados</h4>
 
-						<h2><?php echo $completed_gigs; ?> <span>Gigs</span></h2>
+						<h2><?php echo $completed_gigs; ?> <span>Serviços</span></h2>
 
 					</div>
 
@@ -595,9 +595,9 @@
 
 					<div class="text-center">                                                                           
 
-						<h4>Recent Deliveries</h4>
+						<h4>Serviços Recentes</h4>
 
-						<h2><?php echo $completed_gigs; ?> <span>Gigs</span></h2>
+						<h2><?php echo $completed_gigs; ?> <span>Serviços</span></h2>
 
 					</div>
 

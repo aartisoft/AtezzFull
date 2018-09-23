@@ -3,12 +3,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
-					<h4 class="page-title m-t-0">New Updates</h4>			
+					<h4 class="page-title m-t-0">Atualizações</h4>			
 				</div>			
 				<div class="pull-right">
 					<button class="btn btn-primary" id="upload"><i class="fa fa-upload m-r-5"></i> Upload</button>	
-					<button class="btn btn-danger" id="check"><i class="fa fa-refresh m-r-5"></i> Check Updates</button>	
-					<button class="btn btn-success hidden" id="download" ><i class="fa fa-download m-r-5"></i> New updates available</button>	
+					<button class="btn btn-danger" id="check"><i class="fa fa-refresh m-r-5"></i> Verificar atualizações</button>	
+					<button class="btn btn-success hidden" id="download" ><i class="fa fa-download m-r-5"></i> Novas atualizações disponíveis</button>	
 					<input type="hidden" name="filename" id="filename">
 				</div>
 			</div>
@@ -41,10 +41,10 @@
 					<thead>
 						<tr>
 							<th>#</th>
-							<th>Build</th>                                    
-							<th>Version</th>                                    
-							<th>Title</th>                                   
-							<th>Last Updated On</th>                                    								
+							<th>Contruir</th>                                    
+							<th>Versão</th>                                    
+							<th>Título</th>                                   
+							<th>Ultima atualização em</th>                                    								
 						</tr>
 					</thead>
 					<tbody >	
@@ -69,11 +69,11 @@
 <div class="backups">
 	<div class="row">
 		<div class="col-sm-8">
-			<h4 class="page-title m-b-20 m-t-0">Backup Details</h4>
+			<h4 class="page-title m-b-20 m-t-0">Detalhes de Back-up</h4>
 		</div>
 		<div class="col-sm-4 text-right m-b-20">
-			<a class="btn btn-success pull-right backup_btn" href="<?php echo  base_url();?>admin/new_updates/backup_db"><i class="fa fa-database m-r-5"></i> Backup Files & DB</a>	
-			<button class="btn btn-info pull-right loading" style="display: none"><i class="fa fa-spinner fa-spin fa-fw m-r-5"></i> Please wait backup on process</button>
+			<a class="btn btn-success pull-right backup_btn" href="<?php echo  base_url();?>admin/new_updates/backup_db"><i class="fa fa-database m-r-5"></i> Arquivos de Back-up & DB</a>	
+			<button class="btn btn-info pull-right loading" style="display: none"><i class="fa fa-spinner fa-spin fa-fw m-r-5"></i> Por favor, aguarde o backup no processo..</button>
 		</div>
 	</div>
 </div>
@@ -85,9 +85,9 @@
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Backup File name</th>          
-						<th>Created On</th>                                    
-						<th>Action</th>                                    
+						<th>Backup Nome do projeto</th>          
+						<th>Criado em</th>                                    
+						<th>Ação</th>                                    
 					</tr>
 				</thead>
 				<tbody >	

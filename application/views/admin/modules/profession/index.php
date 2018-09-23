@@ -3,10 +3,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
-					<h4 class="page-title m-b-20 m-t-0">Profession</h4>
+					<h4 class="page-title m-b-20 m-t-0">Profissões</h4>
 				</div>
 				<div class="col-sm-4 text-right m-b-20">
-					<a href="<?php echo base_url().'admin/profession/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Profession</a>
+					<a href="<?php echo base_url().'admin/profession/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Adicionar Profissão</a>
 				</div>
 			</div>
 			<?php if($this->session->userdata('message')) {  ?>
@@ -20,9 +20,9 @@
 								<thead>
 									<tr>
 										<th>#</th>
-										<th>Profession</th>                                                     
+										<th>Profissão</th>                                                     
 										<th>Status</th>                   
-										<th class="text-right">Action</th>
+										<th class="text-right">Ação</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -44,7 +44,7 @@
 									</tr>
 									<?php $i = $i+1; } } else { ?>
 									<tr>
-										<td colspan="4"><p class="text-danger text-center m-b-0">No Records Found</p></td>
+										<td colspan="4"><p class="text-danger text-center m-b-0">Nenhum registro encontrado</p></td>
 									</tr>
 									<?php } ?>
 								</tbody>

@@ -7,7 +7,7 @@
 			<div class="col-md-12">
 
 				<div class="search-box">
-
+					<h2>Pesquisar Serviço</h2>
 					<form class="search_form" action="<?php echo base_url()."search"; ?>" method="post">
 
 						 	<span class="search-input">
@@ -35,8 +35,7 @@
 						if(!isset($selected_category_value)){ $selected_category_value = ''; } 					
 						$common_search = (!empty($_POST['common_search']))?$_POST['common_search']:''; 
 						 ?>
-
-						 	<input class="text" name="common_search" id="common_search" type="text" value="<?php echo (!empty($searched_value))?$searched_value:$common_search; ?>" placeholder="Search"/>
+						 	<input class="text" name="common_search" id="common_search" type="text" value="<?php echo $searched_value; ?>" placeholder="Buscar por Serviço"/>
 
 
 
@@ -45,9 +44,7 @@
 						 	<span class="search-category">
 
 						 		<select class="select" id="changecatetext" name="search_category">
-
-								<option value="">All Categories</option>
-
+								<option value="">Categoria</option>
 								<?php 
 
 																                                                                                   
@@ -106,7 +103,7 @@
 
 								<select class="country select form-control" id="country" onchange="country_id_chnage(this)" name="change_country">
 
-									<option value="">--Country--</option>
+									<option value="">--País--</option>
 
 					<?php 
 
@@ -128,9 +125,7 @@
 						 	<div class="search-state">
 
 								<select class="state select form-control" id="search_state" name="state">
-
-									<option value="">--State--</option>
-
+									<option value="">--Estado--</option>
 									<?php 
 
 									if(!empty($gigs_state)){
@@ -152,9 +147,7 @@
 						 	</div>
 
 						 	<span class="search-btn">
-
-						 		<button type="submit" name="search_submit" value="search" class="btn btn-primary btn-block search_btn" >Search</button>	
-
+						 		<button type="submit" name="search_submit" value="search" class="btn btn-primary btn-block search_btn" >Pesquisar</button>	
 						 	</span>
 
 						

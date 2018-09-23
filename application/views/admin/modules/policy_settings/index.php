@@ -3,14 +3,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
-					<h4 class="page-title m-t-0">Policy Settings</h4>
-					<p class="m-t-5">Maximum 4 Policy only!</p>
+					<h4 class="page-title m-t-0">Configurações de Políticas</h4>
+					<p class="m-t-5">Maximo de 4 Políticas apenas!</p>
 				</div>
 				<div class="col-sm-4 text-right m-b-20">
 				<?php 
 					if(count($list)<4) { 
 				?>
-				<a href="<?php echo base_url().'admin/policy_settings/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Policy settings</a>
+				<a href="<?php echo base_url().'admin/policy_settings/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Adicionar configurações de Políticas</a>
 				<?php } ?>
 				</div>
 			</div>
@@ -25,9 +25,9 @@
 								<thead>
 									<tr>
 										<th>#</th>
-										<th>Policy Name</th>
-										<th>Policy Description</th>
-										<th class="text-right">Action</th>
+										<th>Nome</th>
+										<th>Descrição</th>
+										<th class="text-right">Ação</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -49,7 +49,7 @@
 									</tr>
 									<?php $i = $i+1; } } else { ?>
 									<tr>
-										<td colspan="5"><p class="text-danger text-center m-b-0">No Records Found</p></td>
+										<td colspan="5"><p class="text-danger text-center m-b-0">Nenhum registro encontrado</p></td>
 									</tr>
 									<?php } ?>
 								</tbody>

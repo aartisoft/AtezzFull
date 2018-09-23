@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h4 class="page-title m-b-20 m-t-0">Pending Orders</h4>
+					<h4 class="page-title m-b-20 m-t-0">Pedidos Realizados</h4>
 				</div>
 			</div>
             <div class="row">
@@ -13,14 +13,14 @@
 							<table class="table table-actions-bar datatable m-b-0">
 								<thead>
 									<tr>                                                    
-										<th>Order Id</th>
-										<th>Order Date</th>
-										<th>Transaction Id</th>
-										<th>Seller</th>
-										<th>Seller paypal id</th>
-										<th>Buyer</th>
-										<th>Amount</th>
-										<th>Order Status</th>
+										<th>Id</th>
+										<th>Data de Criação</th>
+										<th>Id Transação</th>
+										<th>Prestador</th>
+										<th>Id paypal Prestador</th>
+										<th>Cliente</th>
+										<th>Valor</th>
+										<th>Status do Pedido</th>
 									</tr>
 								</thead>
 								<tbody>

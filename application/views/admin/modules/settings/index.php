@@ -8,7 +8,7 @@
 
                 <div class="col-sm-12">
 
-                    <h4 class="page-title m-b-20 m-t-0">Settings </h4>
+                    <h4 class="page-title m-b-20 m-t-0">Configurações </h4>
 
                 </div>
 
@@ -32,15 +32,15 @@
 
 								<ul class="nav nav-tabs navtab-bg nav-justified">
 
-									<li class="active tab"><a href="#general" data-toggle="tab">General</a></li>
+									<li class="active tab"><a href="#general" data-toggle="tab">Geral</a></li>
 
 									<li class="tab"><a href="#seo" data-toggle="tab">SEO</a></li>
 
 									<li class="tab"><a href="#social_links" data-toggle="tab">Social Links</a></li>
 
-									<li class="tab"><a href="#push_notification" data-toggle="tab">Push Notification</a></li>
+									<li class="tab"><a href="#push_notification" data-toggle="tab">Notificações</a></li>
 
-									<li class="tab"><a href="#payment_setting" data-toggle="tab">Payments</a></li>
+									<li class="tab"><a href="#payment_setting" data-toggle="tab">Pagamento</a></li>
 
 								</ul>
 
@@ -50,7 +50,7 @@
 
 										<div class="form-group">
 
-											<label class="col-sm-3 control-label">Website Name</label>
+											<label class="col-sm-3 control-label"> Nome do Site</label>
 
 											<div class="col-sm-9">
 
@@ -62,7 +62,7 @@
 
 										<div class="form-group">
 
-											<label class="col-sm-3 control-label">Base domain</label>
+											<label class="col-sm-3 control-label">Domínio</label>
 
 											<div class="col-sm-9">
 
@@ -74,7 +74,7 @@
 
 										<div class="form-group">
 
-											<label class="col-sm-3 control-label">Website Slogan</label>
+											<label class="col-sm-3 control-label">Slogan</label>
 
 											<div class="col-sm-9">
 
@@ -90,7 +90,7 @@
 
 									<div class="form-group">
 
-											<label class="col-sm-3 control-label">Currency</label>
+											<label class="col-sm-3 control-label">Moeda</label>
 
 											<div class="col-sm-9">
 
@@ -158,7 +158,7 @@
 
 									<div class="form-group">
 
-											<label class="col-sm-3 control-label">Price Option</label>
+											<label class="col-sm-3 control-label">Opção de Preços</label>
 
 											<div class="col-sm-9">
 
@@ -174,7 +174,7 @@
 
 												</div>
 
-												<span class="help-block small">Seller can add dynamic price, choose dynamic price option</span>
+												<span class="help-block small">O vendedor pode adicionar preço dinâmico, escolha a opção de preço dinâmico.</span>
 
 											</div>
 
@@ -184,7 +184,7 @@
 
 										<div class="form-group fixed_price" <?php echo ($price_option=='dynamic')?'style="display:none"':''; ?> >
 
-											<label class="col-sm-3 control-label">Base Gig Price</label>
+											<label class="col-sm-3 control-label">Base de Preço</label>
 
 											<div class="col-sm-9">
 
@@ -202,7 +202,7 @@
 
 										<div class="form-group fixed_price" <?php echo ($price_option=='dynamic')?'style="display:none"':''; ?> >
 
-											<label class="col-sm-3 control-label">Base Extra Gig Price</label>
+											<label class="col-sm-3 control-label">Base de Preço extra</label>
 
 											<div class="col-sm-9">
 
@@ -220,7 +220,7 @@
 
 										<div class="form-group">
 
-											<label class="col-sm-3 control-label">Admin's Commision %</label>
+											<label class="col-sm-3 control-label">Comissões %</label>
 
 											<div class="col-sm-9">
 
@@ -238,7 +238,7 @@
 
 										<div class="form-group">
 
-											<label class="col-sm-3 control-label">Website Logo</label>
+											<label class="col-sm-3 control-label">Logotipo</label>
 
 											<div class="col-sm-9">
 
@@ -254,13 +254,13 @@
 
 														<div class="uploader"><input type="file" id="site_logo" multiple="true"  class="form-control" name="site_logo" placeholder="Select file"></div>
 
-														<span class="help-block small">Recommended image size is <b>150px x 150px</b></span>
+														<span class="help-block small">O tamanho de imagem recomendado é <b>150px x 150px</b></span>
 
 													</div>
 
 												</div>
 
-												<div id="img_upload_error" class="text-danger"  style="display:none">Please upload valid image file.</b></div>
+												<div id="img_upload_error" class="text-danger"  style="display:none">Por favor carregue um arquivo de imagem válido.</b></div>
 
 											</div>
 
@@ -284,15 +284,15 @@
 
 														<div class="uploader"><input type="file"  multiple="true"  class="form-control" id="favicon" name="favicon" placeholder="Select file"></div>
 
-														<span class="help-block small">Recommended image size is <b>16px x 16px</b> or <b>32px x 32px</b></span>
+														<span class="help-block small">O tamanho de imagem recomendado é  <b>16px x 16px</b> or <b>32px x 32px</b></span>
 
-														<span class="help-block small">Accepted formats: only png and ico</span>
+														<span class="help-block small">Formatos aceitos: somente png e icon</span>
 
 													</div>
 
 												</div>
 
-												<div id="img_upload_errors" class="text-danger" style="display:none">Please upload valid image file.</div>
+												<div id="img_upload_errors" class="text-danger" style="display:none">Por favor carregue uma imagem válida.</div>
 
 											</div>
 
@@ -414,7 +414,7 @@
 
 										<div class="form-group">
 
-											<label class="col-sm-3 control-label">One Signal Subdomain</label>
+											<label class="col-sm-3 control-label">Um subdomínio</label>
 
 											<div class="col-sm-9">
 
@@ -426,7 +426,7 @@
 
 										<div class="form-group">
 
-											<label class="col-sm-3 control-label">One Signal AppId</label>
+											<label class="col-sm-3 control-label">Um Sinal AppId</label>
 
 											<div class="col-sm-9">
 
@@ -438,7 +438,7 @@
 
 										<div class="form-group">
 
-											<label class="col-sm-3 control-label">One Signal Reset Key</label>
+											<label class="col-sm-3 control-label">Uma chave de Reset Key</label>
 
 											<div class="col-sm-9">
 
@@ -556,11 +556,11 @@
 
 
 
-											<h3 class="text-primary">Stripe</h3>
+											<h3 class="text-primary">Lista</h3>
 
 										<div class="form-group">
 
-											<label class="col-sm-3 control-label">Stripe Option</label>
+											<label class="col-sm-3 control-label">Opção de lista</label>
 
 											<div class="col-sm-9">
 
@@ -638,13 +638,13 @@
 
 												<label class="radio-inline">
 
-														<input type="radio" <?php echo $ckd1; ?> name="stripe_allow" value="1"> Active
+														<input type="radio" <?php echo $ckd1; ?> name="stripe_allow" value="1"> Ativo
 
 												</label>
 
 												<label class="radio-inline">
 
-														<input type="radio" <?php echo $ckd2; ?> name="stripe_allow" value="2"> Inactive
+														<input type="radio" <?php echo $ckd2; ?> name="stripe_allow" value="2"> Inativo
 
 												</label>
 
@@ -860,7 +860,7 @@
 
 							</div>
 
-                           <button name="form_submit" type="submit" class="btn btn-primary center-block" value="true">Save Changes</button>
+                           <button name="form_submit" type="submit" class="btn btn-primary center-block" value="true">Salvar alterações</button>
 
 						</form>
 
@@ -884,7 +884,7 @@
 
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
 
-						<h4 class="modal-title">Add More Social Media Link</h4> 
+						<h4 class="modal-title">Adicionar Link de Mídia Social</h4> 
 
 					</div> 
 
@@ -896,7 +896,7 @@
 
 								<div class="form-group"> 
 
-									<label for="field-1" class="control-label">Label Name</label> 
+									<label for="field-1" class="control-label">Campo Nome</label> 
 
 									<input type="text" class="form-control" id="field-1" placeholder="Type here"> 
 
@@ -912,7 +912,7 @@
 
 								<div class="form-group"> 
 
-									<label for="field-2" class="control-label">Field Name</label> 
+									<label for="field-2" class="control-label">Campo Nome</label> 
 
 									<input type="text" class="form-control" id="field-2" placeholder="Type here"> 
 
@@ -926,9 +926,9 @@
 
 					<div class="modal-footer"> 
 
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button> 
 
-						<button type="button"  onclick="subitmorefield()" class="btn btn-info">Save</button> 
+						<button type="button"  onclick="subitmorefield()" class="btn btn-info">Salvar</button> 
 
 					</div> 
 

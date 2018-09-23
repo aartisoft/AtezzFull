@@ -7,8 +7,8 @@
 		<div class="row">	
 			<div class="col-md-12">
 				<ol class="breadcrumb menu-breadcrumb">
-					<li><a href="<?php echo base_url(); ?>">Home</a> <i class="fa fa fa-chevron-right"></i></li>
-					<li class="active">Profile</li>        
+					<li><a href="<?php echo base_url(); ?>">Início</a> <i class="fa fa fa-chevron-right"></i></li>
+					<li class="active">Perfil</li>        
 				</ol>
 			</div>
 		</div>
@@ -108,7 +108,7 @@
 
 						<div class="user-language">
 							<span><img src="<?php echo base_url(); ?>assets/images/li-world.png"></span>
-																	Speaks: <span id="language_list"><?php echo ucfirst($profile['lang_speaks']);  ?></span> 
+																	Idiomas: <span id="language_list"><?php echo ucfirst($profile['lang_speaks']);  ?></span> 
 							<input type="hidden" value="" id="lang_speaks">
 							</span>
 						</div>
@@ -128,21 +128,21 @@
 						<li>
 							<a href="<?php echo base_url().'password'; ?>">
 								<span class="visible-xxs"><i class="fa fa-key" aria-hidden="true"></i></span> 
-								<span class="hidden-xxs">Password</span> 
+								<span class="hidden-xxs">Senha</span> 
 							</a>
 						</li>
 						<li class="active">
 							<a href="javascript:;">
 								<span class="visible-xxs"><i class="fa fa-user" aria-hidden="true"></i></span>
-								<span class="hidden-xxs">Profile</span>
+								<span class="hidden-xxs">Perfil</span>
 							</a>
 						</li>
-						<li>
+						<!--<li>
 							<a href="<?php echo base_url().'payment-settings'; ?>">
 								<span class="visible-xxs"><i class="fa fa-money" aria-hidden="true"></i></span>
 								<span class="hidden-xxs">Payment Settings</span>
 							</a>
-						</li>
+						</li>-->
 					</ul>   
 				</div>		
 			</div>
@@ -165,7 +165,7 @@
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>Phone :</label>
+										<label>Telefone :</label>
 										<input type="text" name="user_contact" id="user_contact" class="form-control" value="<?php echo $profile['contact']; ?>">
 									</div>
 								</div>
@@ -173,7 +173,7 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>Name :</label>
+										<label>Nome :</label>
 										<input type="text"  name="user_name" id="user_name" class="form-control" value="<?php echo $profile['fullname']; ?>" required >
 									</div>
 								</div>
@@ -187,9 +187,9 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>Country :</label>
+										<label>País :</label>
 										<select name="country_id" id="country_id" class="form-control"> 
-											<option value="">--Select Country--</option>
+											<option value="">--Selecione um País--</option>
 											<?php foreach($country_list as $countries) { ?>
 											<option value="<?php echo $countries['id']; ?>" <?php if($profile['country']==$countries['id']) echo 'selected'; ?>  ><?php echo $countries['country']; ?></option>
 											<?php } ?>
@@ -198,7 +198,7 @@
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>State/Province:</label>
+										<label>Estado:</label>
 										<?php if(!empty($profile['state'])) {
 										$query = $this->db->query("SELECT * FROM `states` WHERE `country_id` =". $profile['country']." AND `state_status` = 1");
 										$result = $query->result_array();
@@ -222,7 +222,7 @@
 								</div>
 								<div class="col-sm-3">
 									<div class="form-group">
-										<label>City:</label>
+										<label>Cidade:</label>
 										<input type="text" name="user_city" id="user_city" value="<?php echo $profile['city']; ?>" class="form-control">
 									</div>
 								</div>
@@ -236,9 +236,9 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>Profession:</label>
+										<label>Profissão:</label>
 										 <select name="profession" class="form-control">
-										 <option value="">--Select Profession--</option>
+										 <option value="">--Selecione Profissão--</option>
 											<?php foreach($profession as $prof) { ?>
 											<option value="<?php echo $prof['id'] ; ?>" <?php if($profile['profession']==$prof['id']) { echo "selected";} ?> ><?php echo $prof['profession_name'] ?></option>
 											<?php } ?>
@@ -249,13 +249,13 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label>Something about you:</label>
+										<label>Fale mais sobre seu perfil:</label>
 										<textarea maxlength="225" name="user_desc" id="user_desc" class="form-control" cols="5" rows="5"><?php echo $profile['description']; ?></textarea>
 									</div>
 								</div>
 							</div>
 							<div class="text-center">
-								<button type="submit" name="form_submit" value="true" class="btn btn-primary save-btn">Save</button>
+								<button type="submit" name="form_submit" value="true" class="btn btn-primary save-btn">Salvar</button>
 							</div>
 						</div>
 					</div>

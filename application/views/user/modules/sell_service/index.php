@@ -15,9 +15,9 @@
 
 						<div class="col-md-12 sell-banner-cont">
 
-								<h2>Creating gigs is easy.</h2>	
+								<h2>Mostre a todos o que você sabe </br> fazer de melhor. </h2>	
 
-								<h2 class="center-cont">Start selling now!</h2>	
+								<h2 class="center-cont">Comece agora!</h2>	
 
 								<div class="create-gig">										 
 

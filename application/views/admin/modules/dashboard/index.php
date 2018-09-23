@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h4 class="page-title m-t-0 m-b-20">Dashboard</h4>
+					<h4 class="page-title m-t-0 m-b-20">Painel de controle</h4>
 				</div>
 			</div>
 			<div class="row">
@@ -12,7 +12,7 @@
 						<div class="dash-widget">
 							<i class="mdi mdi-account-box text-custom"></i>
 							<h2 class="m-0 text-dark counter font-600"><?php echo $dashboard_details['total_gigs']; ?></h2>
-							<div class="text-muted m-t-5">Total Gigs</div>
+							<div class="text-muted m-t-5">Total Serviços</div>
 						</div>
 					</a>    
 				</div>
@@ -21,7 +21,7 @@
 						<div class="dash-widget">
 							<i class="mdi mdi-account-box text-custom"></i>
 							<h2 class="m-0 text-dark counter font-600"><?php echo $dashboard_details['total_user']; ?></h2>
-							<div class="text-muted m-t-5">Total Users</div>
+							<div class="text-muted m-t-5">Total Usuários</div>
 						</div>
 					</a>     
 				</div>
@@ -30,7 +30,7 @@
 						<div class="dash-widget">
 							<i class="mdi mdi-store text-custom"></i>
 							<h2 class="m-0 text-dark counter font-600"><?php echo $dashboard_details['total_orders']; ?></h2>
-							<div class="text-muted m-t-5">Total Orders</div>
+							<div class="text-muted m-t-5">Total Pedidos</div>
 						</div>
 					</a>    
 				</div>
@@ -39,7 +39,7 @@
 						<div class="dash-widget">
 							<i class="mdi mdi-cart text-custom"></i>  
 							<h2 class="m-0 text-dark counter font-600"><?php echo $dashboard_details['completed_orders']; ?></h2>
-							<div class="text-muted m-t-5">Completed Orders</div>
+							<div class="text-muted m-t-5">Pedidos Finalizados</div>
 						</div>
 					</a>    
 				</div>
@@ -47,16 +47,16 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="card-box">
-						<a href="<?php echo base_url()."admin/orders"; ?>" class="pull-right btn btn-default btn-sm">View All</a>
-						<h4 class="text-dark header-title m-t-0 m-b-20">Recent Orders</h4>
+						<a href="<?php echo base_url()."admin/orders"; ?>" class="pull-right btn btn-default btn-sm">Ver mais</a>
+						<h4 class="text-dark header-title m-t-0 m-b-20">Pedidos Recentes</h4>
 						<div class="table-responsive">
 							<table class="table">
 								<thead>
 									<tr>
-										<th>Product</th>
-										<th>Order Date</th>
-										<th>Transaction Id</th>
-										<th>Amount</th>                                                   
+										<th>Serviço</th>
+										<th>Data</th>
+										<th>ID Pedido</th>
+										<th>Valor</th>                                                   
 									</tr>
 								</thead>
 								<tbody>
@@ -67,7 +67,7 @@
 								$case = $recent['currency_type'];
 								 switch ($case) {
 								 		case 'USD':
-								 			$rate_symbol = "$";	
+								 			$rate_symbol = "R$";	
 								 			break;
 								 		case 'EUR':
 								 			$rate_symbol = "€";	
@@ -115,16 +115,16 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="card-box">
-						<a href="<?php echo base_url()."admin/gigs"; ?>" class="pull-right btn btn-default btn-sm">View All</a>
-						<h4 class="text-dark header-title m-t-0 m-b-20">Popular Products</h4>
+						<a href="<?php echo base_url()."admin/gigs"; ?>" class="pull-right btn btn-default btn-sm">Ver mais</a>
+						<h4 class="text-dark header-title m-t-0 m-b-20"> Mais Solicitados</h4>
 						<div class="table-responsive">
 							<table class="table">
 								<thead>
 									<tr>
-										<th>Product</th>
-										<th>Addded Date</th>
+										<th>Produto</th>
+										<th>Data</th>
 										<th>Views</th>
-										<th>Amount</th>                                                    
+										<th>Valor</th>                                                    
 									</tr>
 								</thead>
 								<tbody>
@@ -135,7 +135,7 @@
 									$case = $popular_order['currency_type'];
 								 switch ($case) {
 								 		case 'USD':
-								 			$rate_symbol = "$";	
+								 			$rate_symbol = "R$";	
 								 			break;
 								 		case 'EUR':
 								 			$rate_symbol = "€";	

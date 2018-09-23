@@ -14,7 +14,7 @@
 
                             <li><a href="#">Home</a> <i class="fa fa fa-chevron-right"></i></li>
 
-                            <li class="active">My Profile</li>        
+                            <li class="active">Meu perfil</li>        
 
                         </ol>
 
@@ -26,7 +26,7 @@
 
                     <div class="col-md-12">
 
-                        <h3 class="page-title">My Purchases</h3>
+                        <h3 class="page-title">Minhas solicitações</h3>
 
                     </div>
 
@@ -54,7 +54,7 @@
 
 										<span class="visible-xxs"><i class="fa fa-credit-card" aria-hidden="true"></i> <?php if($purchases_order_count>0){?><span class="badge badge-white position-right"><?php echo $purchases_order_count;?></span><?php }?></span> 
 
-										<span class="hidden-xxs">My Purchases <?php if($purchases_order_count>0){?><span class="badge badge-white position-right"><?php echo $purchases_order_count;?></span><?php }?></span>
+										<span class="hidden-xxs">Solicitações realizadas <?php if($purchases_order_count>0){?><span class="badge badge-white position-right"><?php echo $purchases_order_count;?></span><?php }?></span>
 
 									</a>
 
@@ -66,7 +66,7 @@
 
 										<span class="visible-xxs"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <?php if($order_count>0){?><span class="badge badge-white position-right"><?php echo $order_count;?></span><?php }?></span> 
 
-										<span class="hidden-xxs">My Sales <?php if($order_count>0){?><span class="badge badge-white position-right"><?php echo $order_count;?></span><?php }?></span>
+										<span class="hidden-xxs">Minhas vendas <?php if($order_count>0){?><span class="badge badge-white position-right"><?php echo $order_count;?></span><?php }?></span>
 
 									</a>
 
@@ -78,7 +78,7 @@
 
 										<span class="visible-xxs"><i class="fa fa-money" aria-hidden="true"></i> <?php if($wallet_order_count>0){?><span class="badge badge-white position-right"><?php echo $wallet_order_count;?></span><?php }?></span> 
 
-										<span class="hidden-xxs">My Payments <?php if($wallet_order_count>0){?><span class="badge badge-white position-right"><?php echo $wallet_order_count;?></span><?php }?></span>
+										<span class="hidden-xxs">Pagamentos <?php if($wallet_order_count>0){?><span class="badge badge-white position-right"><?php echo $wallet_order_count;?></span><?php }?></span>
 
 									</a>
 
@@ -92,7 +92,7 @@
 
 										<span class="visible-xxs"><i class="fa fa-money" aria-hidden="true"></i></span> 
 
-										<span class="hidden-xxs">My Files</span>
+										<span class="hidden-xxs">Meus arquivos</span>
 
 									</a>
 
@@ -128,21 +128,21 @@
 
                                             <tr>
 
-                                                <th>Order Title </th>
+                                                <th>Titulo </th>
 
-                                                <th>Order ID</th>
+                                                <th>ID</th>
 
-                                                <th>Delivery Date</th>
+                                                <th>Data realização</th>
 
-                                                <th>Seller</th>
+                                                <th>Vendedor</th>
 
                                                 <th>Feedback</th>
 
-                                                <th>Order Cancel</th>
+                                                <th>Cancelados</th>
 
-                                                <th>Amount</th>
+                                                <th>Montantes</th>
 
-												<th>Order Status</th>
+												<th>Status</th>
 
                                             </tr>
 
@@ -545,7 +545,7 @@
 
                                                 <tr>
 
-                                                    <td colspan="8"><p class="text-center text-danger m-b-0">No Records Found</p></td>
+                                                    <td colspan="8"><p class="text-center text-danger m-b-0">Nenhum registro encontrado</p></td>
 
                                                 </tr>
 

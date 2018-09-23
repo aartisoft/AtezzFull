@@ -96,6 +96,23 @@ class Sell_service extends CI_Controller{
 
 			 }
 
+
+      		 $this->load->model('user_panel_model');
+			 $uid = $this->session->userdata('SESSION_USER_ID'); 
+			 $verify_user = $this->user_panel_model->verify_Premium($uid); 
+
+			if (!$verify_user) 
+
+			{        
+
+				session_unset();     // unset $_SESSION variable for the run-time
+
+				session_destroy();   // destroy session data in storage
+
+				redirect(base_url());
+
+			 }
+
 			$this->load->model('user_panel_model');
 
 			$this->load->model('gigs_model');

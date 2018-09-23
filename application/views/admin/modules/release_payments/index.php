@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h4 class="page-title m-b-20 m-t-0">Release Payment</h4>
+					<h4 class="page-title m-b-20 m-t-0">Liberar Pagamento</h4>
 				</div>
 			</div>
 			<?php if($this->session->userdata('message')) {  ?>
@@ -17,12 +17,12 @@
 							<table class="table table-striped releasetable m-b-0">
 								<thead>
 									<tr>                                                    
-										<th>Order Id</th><th>Order Date</th>
-										<th>Transaction Id</th><th>Seller</th>
-										<th>Buyer</th><th> Paypal Id</th> <!-- New  -->
-										<th>Amount</th><th>commission Amount</th>
-										<th>Amount to Seller</th><th>Order Status</th>
-										<th>Seller Status</th>
+										<th>ID</th><th>Data Criação</th>
+										<th>Cod. Transação </th><th>Prestador</th>
+										<th>Cliente</th><th> Cod. Paypal</th> <!-- New  -->
+										<th>Valor</th><th>Valor de Comissão</th>
+										<th>Valor para o Prestador</th><th>Status da Solicitação</th>
+										<th>Status do Prestador</th>
 									</tr>
 								</thead>
 								<tbody>

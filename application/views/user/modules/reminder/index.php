@@ -12,9 +12,9 @@
 
 							<ol class="breadcrumb menu-breadcrumb">
 
-								<li><a href="<?php echo base_url(); ?>">Home</a> <i class="fa fa fa-chevron-right"></i></li>
+								<li><a href="<?php echo base_url(); ?>">Início</a> <i class="fa fa fa-chevron-right"></i></li>
 
-								<li class="active">Reminder</li>        
+								<li class="active">Favoritos</li>        
 
 							</ol>
 
@@ -26,7 +26,7 @@
 
 						<div class="col-md-12">
 
-							<h3 class="page-title">Reminders</h3>
+							<h3 class="page-title">Favoritos</h3>
 
 						</div>
 
@@ -92,11 +92,11 @@
 
                                     <div class="col-md-12">
 
-										<h3 class="inner-title"> My favorites gigs </h3>
+										<h3 class="inner-title"> Serviços Favoritos</h3>
 
                                      <?php  if(empty($list)) {   ?>
 
-                                     <p> Sorry ! No Gigs Found  </p>
+                                     <p> Desculpe ! Nenhum favorito. </p>
 
 									 <?php					 }   ?>
 

@@ -35,6 +35,15 @@ class User_panel_model extends CI_Model{
         $result = $query->num_rows();
         return $result;          
     }   
+
+    public function check_ong($user_id, $cnpj)
+    {        
+        $query = $this->db->query("SELECT * FROM `cadastro_ong` WHERE `ID_USUARIO` = '$user_id' or `CNPJ` = '$cnpj';");
+ 
+        $result = $query->num_rows();
+        return $result;          
+    }   
+
     public function get_client_list()
     {
         $query = $this->db->query("SELECT * FROM `client` WHERE `status` = 0 ;");
@@ -83,6 +92,21 @@ class User_panel_model extends CI_Model{
         $result = $query->result_array();
         return $result;        
     }
+
+    public function verify_Ong($uid)    
+    {
+        $query = $this->db->query("SELECT * FROM `cadastro_ong` WHERE `ID_USUARIO` = $uid");
+        $result = $query->result_array();
+        return $result;        
+    }
+
+    public function verify_Premium($uid)    
+    {
+        $query = $this->db->query("SELECT * FROM `service_provider` WHERE `fk_members_service` = $uid");
+        $result = $query->result_array();
+        return $result;        
+    }
+
      public function get_user_data($id) {
 		 $st= ("SELECT a.*,cu.country,cu.sortname,st.state_name 
 			 FROM `members` a
@@ -96,7 +120,22 @@ class User_panel_model extends CI_Model{
          }
          return false;
     }
+
+    public function get_plan()  
+    {        
+        $query = $this->db->query("SELECT `title`, `description`, `price`  FROM contract_plans;");
+        $result = $query->result_array();
+        return $result;                  
+    }
   
+    public function tipoServico_ong()  
+    {        
+        $query = $this->db->query("SELECT `ID`, `DESCRICAO`  FROM tipoServico_ong;");
+        $result = $query->result_array();
+        return $result;                  
+    }
+
+
    /*public function UpdateCurrentCuuencyRate(){
 	   
 	   $query  = $this->db->query("SELECT * FROM `currency` ORDER BY `created_date` DESC LIMIT 0 , 1 ;");

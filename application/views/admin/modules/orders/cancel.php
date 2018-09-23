@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h4 class="page-title m-b-20 m-t-0">Buyer Cancel Orders</h4>
+					<h4 class="page-title m-b-20 m-t-0">Pedidos Cancelados</h4>
 				</div>
 			</div>
 			<?php if($this->session->userdata('message')) {  ?>
@@ -16,14 +16,14 @@
 							<table class="table table-actions-bar datatable m-b-0">
 								<thead>
 									<tr>                                                    
-										<th>Order Id</th>
-										<th>Order Date</th>
-										<th>Transaction Id</th>
-										<th>Seller</th>
-										<th>Buyer</th>
-										<th>Buyer paypal id</th>
-										<th>Amount</th>
-										<th>Order Status</th>
+										<th>Id</th>
+										<th>Data de Criação</th>
+										<th>Id da Transação</th>
+										<th>Prestador</th>
+										<th>Cliente</th>
+										<th>Id paypal Cliente</th>
+										<th>Valor</th>
+										<th>Status do Pedido</th>
 										<!-- <th>Action</th> -->
 									</tr>
 								</thead>

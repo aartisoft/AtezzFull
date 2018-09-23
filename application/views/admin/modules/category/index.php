@@ -3,10 +3,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
-					<h4 class="page-title m-b-20 m-t-0">Gigs Category</h4>
+					<h4 class="page-title m-b-20 m-t-0">Cadastro de Categorias</h4>
 				</div>
 				<div class="col-sm-4 text-right m-b-20">
-					<a href="<?php echo base_url().'admin/category/add_category'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Category</a>
+					<a href="<?php echo base_url().'admin/category/add_category'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add nova Categoria</a>
 				</div>
 			</div>
 			<?php if($this->session->flashdata('message')) { ?>
@@ -20,10 +20,10 @@
 							<table class="table table-actions-bar datatable">
 								<thead>
 									<tr>
-										<th>Category Name</th>
-										<th>Parent Category</th>
-										<th>Status</th>
-										<th class="text-right">Action</th>
+										<th> Nome Categoria</th>
+										<th> Categoria Pai</th>
+										<th> Status</th>
+										<th class="text-right">Ação</th>
 									</tr>
 								</thead>
 								<tbody>
