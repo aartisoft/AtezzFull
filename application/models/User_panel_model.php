@@ -102,7 +102,7 @@ class User_panel_model extends CI_Model{
 
     public function verify_Premium($uid)    
     {
-        $query = $this->db->query("SELECT * FROM `service_provider` WHERE `fk_members_service` = $uid");
+        $query = $this->db->query("SELECT * FROM `service_provider` WHERE `payment_code` <> '' AND `fk_members_service` = $uid");
         $result = $query->result_array();
         return $result;        
     }

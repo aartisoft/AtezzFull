@@ -199,7 +199,8 @@ if(!empty($google_analytics_code))
 	<?php if($this->session->userdata('SESSION_USER_ID')) { ?>
 
 
-
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/pagamento.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.maskedinput.min"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/notification.js"></script>
 
 	 <?php if($module=="message") { ?>
@@ -222,7 +223,7 @@ if(!empty($google_analytics_code))
 
 	<?php }
 
-	if($module=="gig_preview"||$module=="user_profile"||$module=="profile"||$module=="password"||$module=="payment_settings")
+	if($module=="gig_preview"||$module=="user_profile"||$module=="profile"||$module=="password"||$module=="pagamento_user"||$module=="payment_settings")
 
 	 {?>
 

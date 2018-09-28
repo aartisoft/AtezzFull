@@ -213,7 +213,7 @@ $route['user-profile/(:any)/(:num)'] = 'gigs/user_profile/$1/$2';
 
 $route['last-visited'] = 'gigs/last_visited';
 
-$route['payment-settings'] = 'gigs/payment_settings';  
+$route['assinatura'] = 'gigs/pagamento_user';   
 
 $route['edit-gig/(:any)'] = 'gigs/edit_gig/$1';
 
@@ -223,7 +223,10 @@ $route['purchase-success']= 'user/buy_service/purchase_success';
 
 $route['purchase-success/(:any)']= 'user/buy_service/purchase_success/$1';
 
-
+$route['pagamento/redirect'] = 'user/pagamento_service/redirect/sucesso';
+$route['pagamento/redirect/erro'] = 'user/pagamento_service/redirect/erro';
+$route['pagamento/redirect/cancelado'] = 'user/pagamento_service/redirect/cancelado';
+$route['pagamento/retorno'] = 'user/pagamento_service/retorno';
 
 $route['files'] = 'user/sales/my_files'; // Digital Downloads 
 

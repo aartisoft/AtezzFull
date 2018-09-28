@@ -3458,7 +3458,26 @@ public function last_visited($offset = 0)
 
 }
 
+public function pagamento_user()
+{
+    $this->load->model('user_custom_model');
+    
+    $user_id = $this->session->userdata('SESSION_USER_ID');
+    $profile = $this->user_panel_model->profile($user_id);
+    $query = $this->db->query("SELECT `sortname`,country FROM `country` WHERE `id` =". $profile['country']."");
+    $result = $query->row_array();
+    $this->data['country_shortname'] = $result['sortname']; 
+    $this->data['country_name'] = $result['country']; 
+    $this->data['profile'] = $profile;
+    $this->data['list'] = $this->user_custom_model->get_user_pagamento_by_id($user_id);
+    $this->data['user_provider']  = $this->user_custom_model->get_user_provider_id($user_id);
+    
+    $this->data['module'] = 'pagamento_user';
+    $this->data['page'] = 'index';
 
+    $this->load->vars($this->data);
+    $this->load->view($this->data['theme'].'/template');     
+}
 
 public function profile()
 

@@ -14,7 +14,7 @@ class Provider extends CI_Controller{
 
 
 	public function index(){
-		$this->view->('provider/index');
+		$this->load->view('provider/index');
 	}
 
 
