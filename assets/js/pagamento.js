@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $(".pagamento").click(function () {
         var plano = $(this).attr("data-plano");
-        $("#modal").load("/user/pagamento_service/index/" + plano, function () {
+        $("#modal").load("/user/Pagamento_Service/index/" + plano, function () {
             $("#modal").modal();
         })
     });
@@ -268,10 +268,10 @@ function validarPagamentoStep(step){
             alert("Preencha os campos com * para ir para o próximo passo.");
             return false;
         }
-        else($('#cupom_desconto').val() != '')
+        else if($('#cupom_desconto').val() != '')
         {
             $.post(
-                "/user/pagamento_service/cupom",
+                "/user/Pagamento_Service/cupom",
                 {
                     instituicoes: $('#instituicoes').val(),
                     porcentagem: $('#porcentagem').val(),

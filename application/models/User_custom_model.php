@@ -68,15 +68,15 @@ class User_custom_model extends CI_Model
 
     public function get_user_by_email($email)
     {   
-        $query = $this->db->query("SELECT * FROM `members` WHERE `email` = $email ;");
+        $query = $this->db->query("SELECT * FROM `members` WHERE `email` = '".$email."' ;");
         $result = $query->row_array();
         return $result;                  
     }
 
     public function set_user_pagamento($data)
-    {       
+    {    
         $result = $this->db->insert('pagamento',$data);
-
+        
         return $result;
     }    
 

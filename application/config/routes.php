@@ -223,10 +223,10 @@ $route['purchase-success']= 'user/buy_service/purchase_success';
 
 $route['purchase-success/(:any)']= 'user/buy_service/purchase_success/$1';
 
-$route['pagamento/redirect'] = 'user/pagamento_service/redirect/sucesso';
-$route['pagamento/redirect/erro'] = 'user/pagamento_service/redirect/erro';
-$route['pagamento/redirect/cancelado'] = 'user/pagamento_service/redirect/cancelado';
-$route['pagamento/retorno'] = 'user/pagamento_service/retorno';
+$route['pagamento/redirect'] = 'user/Pagamento_Service/redirect/sucesso';
+$route['pagamento/redirect/erro'] = 'user/Pagamento_Service/redirect/erro';
+$route['pagamento/redirect/cancelado'] = 'user/Pagamento_Service/redirect/cancelado';
+$route['pagamento/retorno'] = 'user/Pagamento_Service/retorno';
 
 $route['files'] = 'user/sales/my_files'; // Digital Downloads 
 

@@ -9,7 +9,7 @@
 					<h4 class="page-title m-b-20 m-t-0">Cadastro de Cupons</h4>
 				</div>
 				<div class="col-sm-4 text-right m-b-20">
-					<a href="<?php echo base_url().'admin/custom_cupom/add'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Adicionar Cupom</a>
+					<a href="<?php echo base_url().'admin/Custom_Cupom/add'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Adicionar Cupom</a>
 				</div>
 			</div>
 			<?php if($this->session->flashdata('message')) { ?>
@@ -93,7 +93,7 @@
 										$new='';
 
 										?>
-											<a href="<?php echo base_url()."admin/custom_cupom/edit/".$item['cupom_id']; ?>" class="table-action-btn" title="Edit"><i class="mdi mdi-pencil text-success"></i></a>
+											<a href="<?php echo base_url()."admin/Custom_Cupom/edit/".$item['cupom_id']; ?>" class="table-action-btn" title="Edit"><i class="mdi mdi-pencil text-success"></i></a>
 											<a href="javascript:void(0)" onclick="admin_delete_cupom(<?php echo $item['cupom_id']; ?>)" class="table-action-btn" title="Delete"><i class="mdi mdi-window-close text-danger"></i></a> 
 
 										</td>

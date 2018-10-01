@@ -1,6 +1,6 @@
 <?php 
 
-class Pagamento_Service extends CI_Controller{
+class pagamento_service extends CI_Controller{
 
     public function __construct() 
     {
@@ -8,7 +8,7 @@ class Pagamento_Service extends CI_Controller{
         
         $this->data['theme'] = 'user';
         $this->data['module'] = 'pagamento';
-        $this->load->library('pagseguro_lib');
+        $this->load->library('PagSeguro_lib');
         $this->load->model('user_custom_model');
         $this->load->model('user_panel_model');
     }
@@ -21,7 +21,7 @@ class Pagamento_Service extends CI_Controller{
         $this->load->vars($this->data);
         $this->load->view($this->data['theme'].'/template');     
     }
-
+   
     public function redirect($status)
     {
         foreach($_GET as $key => $value) {
@@ -74,10 +74,11 @@ class Pagamento_Service extends CI_Controller{
             $data = $this->user_custom_model->get_user_provider_id($user_id);
             if($data != null)
             {
+                $userEmail = $this->user_panel_model->profile($user_id);
                 $user['planCode'] = $this->input->post('planCode');
                 $user['planId'] = $this->input->post('plano');
                 $user['nome_cartao'] = $this->input->post('nome_cartao');
-                $user['email'] = 'c30814863287392420224@sandbox.pagseguro.com.br';
+                $user['email'] = $userEmail['email'];
                 $user['cpf'] = $this->input->post('cpf');
                 $user['nascimento'] = $this->input->post('nascimento');
                 $user['telefone'] = $this->input->post('telefone');
@@ -86,6 +87,7 @@ class Pagamento_Service extends CI_Controller{
                 $code = $this->pagseguro_lib->AdicionandoAssinatura($token, $user, $data);
                 if($code != ''){
                     $data['payment_code'] = $code;
+                    $data['status']       = 1;
                     $this->user_custom_model->update_user_provider($data['id'],$data);
                     redirect(base_url().'pagamento/redirect');
                 }
@@ -142,7 +144,7 @@ class Pagamento_Service extends CI_Controller{
         {
             $data['payment_code'] = '';
             $this->user_custom_model->update_user_provider($data['id'],$data);
-            redirect(base_url().'pagamento/redirect/cancelado');
+            redirect(base_url().'assinatura');
         }
         redirect(base_url().'pagamento/redirect/erro');
     }

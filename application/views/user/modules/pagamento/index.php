@@ -11,7 +11,7 @@
 			<button type="button" id="remove_popuptop_provider" class="close" data-dismiss="modal">&times;</button>		
 			<div id="register_errtext"></div>
 			
-			<form id="moduloPagamento" method="post" action="<?php echo base_url().'user/pagamento_service/pagamento/'; ?>" class="form-horizontal">
+			<form id="moduloPagamento" method="post" action="<?php echo base_url().'user/Pagamento_Service/pagamento/'; ?>" class="form-horizontal">
 				<span id="register_success_provider"> </span>
 
 				<div class="col-lg-12" align="center" style="margin: 0px 0px 20px 0px;">

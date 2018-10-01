@@ -156,12 +156,12 @@
 											<div class="col-md-6" class="text-right">
 															
 											</div>
-									<?php } else if($user_provider['end'] != '' && $date_end < $data_atual){ ?>
+									<?php } else if($user_provider['status'] == 1 && $user_provider['payment_code'] != ''){ ?>
 											<div class="col-md-6">
 													<div id="ativo" class="btn btn-green">Plano Ativo <?php echo date_format($date_end, 'd/m/Y'); ?></div>
 											</div>
 											<div class="col-md-6" class="text-right">
-													<a id="cancelar" class="btn btn-yellow">Cancelar Plano</a>		
+													<a href="<?php echo base_url().'user/Pagamento_Service/cancel' ?>" id="cancelar" class="btn btn-yellow">Cancelar Plano</a>		
 											</div>
 									<?php } else { ?>
 											<div class="col-md-6">
@@ -189,9 +189,15 @@
 																	<tbody>											
 																			<?php foreach($list as $item) { ?>
 																					<tr>									
-																							<td><?php echo $item['date']; ?></td>
-																							<td><?php echo $item['status']; ?></td>
-																							<td><?php echo $item['grossAmount']; ?></td>
+																							<td><?php echo date('Y/m/d H:i:s', strtotime($item['date'])); ?></td>
+																							<td>
+																								<?php 
+																									if($item['status'] == 3) { echo 'PAGA'; }
+																									else if($item['status'] == 6) { echo 'NÃO AUTORIZADO'; }
+																									else{ echo 'NÃO AUTORIZADO'; }
+																								?>
+																							</td>
+																							<td><?php echo number_format($item['grossAmount'], 2, ',', '.'); ?></td>
 																					</tr>												
 																			<?php } ?>
 																	</tbody>								

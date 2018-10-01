@@ -34,7 +34,7 @@ class Custom_Cupom extends CI_Controller{
             {
                 $message="<div class='alert alert-success text-center fade in' id='flash_succ_message'>Cupom Criado com sucesso!</div>";
                 $this->session->set_flashdata('message',$message);
-                redirect(base_url().'admin/custom_cupom');
+                redirect(base_url().'admin/Custom_Cupom');
             }	
         }
         $this->load->vars($this->data);
@@ -60,7 +60,7 @@ class Custom_Cupom extends CI_Controller{
             {
                 $message="<div class='alert alert-success text-center fade in' id='flash_succ_message'>Cupom Criado com sucesso!</div>";
                 $this->session->set_flashdata('message',$message);
-                redirect(base_url().'admin/custom_cupom');
+                redirect(base_url().'admin/Custom_Cupom');
             }	
         }
         $this->load->vars($this->data);

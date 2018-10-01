@@ -9,7 +9,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="card-box">
-						<form id="edit" action="<?php echo base_url().'admin/custom_cupom/edit/'.$list['cupom_id']; ?>" method="post"  enctype="multipart/form-data"  >
+						<form id="edit" action="<?php echo base_url().'admin/Custom_Cupom/edit/'.$list['cupom_id']; ?>" method="post"  enctype="multipart/form-data"  >
 							
 							<input type ="hidden" name="cupom_id" value="<?php if(!empty($list['cupom_id'])){echo $list['cupom_id']; } ?>" id="cupom_id">
 							
@@ -49,7 +49,7 @@
 
 							<div class="form-group m-b-0 m-t-30">
 								<button class="btn btn-primary" name="form_submit" value="submit" type="submit">Enviar</button>
-								<a href="<?php echo base_url().'admin/custom_cupom'?>" class="btn btn-default m-l-5">Cancelar</a>
+								<a href="<?php echo base_url().'admin/Custom_Cupom'?>" class="btn btn-default m-l-5">Cancelar</a>
 							</div>
 						</form>
 					</div>

@@ -162,7 +162,7 @@ class Plano_premium extends CI_Controller{
                     $secret_key = $data['value'];
 
                 }
-
+                $stripe_option = 0;
                 if($data['key'] == 'stripe_option'){
 
                     $stripe_option = $data['value'];

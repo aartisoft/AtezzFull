@@ -9,7 +9,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="card-box">
-						<form id="add" action="<?php echo base_url().'admin/custom_cupom/add'; ?>" method="post"  enctype="multipart/form-data"  >
+						<form id="add" action="<?php echo base_url().'admin/Custom_Cupom/add'; ?>" method="post"  enctype="multipart/form-data"  >
 							
 							<div class="form-group">
 								<div class="text-center text-error" id="error-exist"></div>
