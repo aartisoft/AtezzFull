@@ -230,14 +230,13 @@ if(!empty($google_analytics_code))
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/rating.js"></script>  
 
 	<?php }?>
-
-	<?php if($module=="sell_service" || $module=="edit_gig" || $module=="post_ong" ) { ?>
+	<?php if($module=="sell_service" || $module=="edit_gig" || $module=="post_ong" || $module=="sell_service_ong"  ) { ?>
 
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap-tagsinput.js"></script>
 
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.cropit.js"></script>
 
-	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/cropper_main_gig.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/cropper_main_gig.js?12"></script>
 
 	<script>
 
@@ -362,9 +361,11 @@ if(!empty($google_analytics_code))
 
 	</script>
 
-	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/app.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/app.js?233"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/comboCidade.json?"></script>
+ 
 
-	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/formStep.js"></script>
+	
 
 		
 
@@ -379,9 +380,12 @@ if(!empty($google_analytics_code))
 		
 		if($uri=='post_ong'){ ?>
 			<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/post_ong.js"></script>
-	
-
 	<?php }	
+		if($uri=='sell-service-ong')
+		{?>
+			<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/sell_services2.js"></script>
+	<?php }	
+	
 
 		if($uri=='edit-gig'){ ?>
 
@@ -400,7 +404,6 @@ if(!empty($google_analytics_code))
 	<?php }	 ?>
 
 
-
 <?php if($module=="gig_preview"){ ?>
 
 
@@ -414,7 +417,7 @@ if(!empty($google_analytics_code))
 	
 
  <!-- Stripe Payment Start  -->
-
+ 
 
 
  <script type="text/javascript">

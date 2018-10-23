@@ -154,15 +154,21 @@ class Dashboard extends CI_Controller{
         $this->session->set_userdata('SESSION_USER_ID',$result['USERID']);   
         $this->session->set_userdata('user_role',2);   
         $this->session->set_userdata('old_timezone',$result['user_timezone']);
+        $this->session->set_userdata('unique_code',$result['unique_code']);
 
         $verify_user = $this->user_panel_model->verify_Premium($result['USERID']); 
 
         if(!empty($verify_user))
         {
-            $this->session->set_userdata('SESSION_PROVIDER',$verify_user);   
-            $teste = $this->session->userdata('SESSION_PROVIDER');   
+            $this->session->set_userdata('SESSION_PROVIDER',$verify_user[0]['id']);   
         }
-        
+
+        $idOng = $this->user_panel_model->verify_Ong($this->session->userdata('SESSION_USER_ID'));
+
+        if(!empty($idOng))
+        {
+			$this->session->set_userdata('SESSION_USER_ONG_ID',$idOng[0]['ID_ONG']);  
+        }
 
         echo 1;
 

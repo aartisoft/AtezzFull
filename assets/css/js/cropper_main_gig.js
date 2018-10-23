@@ -43,7 +43,10 @@
 		});
         $('.export').click(function() {
            var imageData = $('.image-editor').cropit('export');
-		   var url=base_url+'user/sell_service/prf_crop';
+		   var url= window.location.href+'/prf_crop';
+
+		   url = url.replace("sell-service-ong","user/sell_service_ong").replace("sell-service","user/sell_service");
+
 		   var r_id= $('#select_row_id').val();
 		   var dataString="img_data="+imageData+"&select_row_id="+r_id; 
 		   var file1 = $('#fileopen').val(); 

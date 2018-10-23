@@ -1,67 +1,215 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
-ERROR - 2018-09-28 02:39:30 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:39:33 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:39:35 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:39:41 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:39:43 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:39:44 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:39:44 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:39:50 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:39:55 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:40:24 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:40:42 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:40:52 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:42:29 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:42:47 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:42:49 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:42:55 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:42:58 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:43:00 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:43:30 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:46:56 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:48:31 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:48:38 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:48:41 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:48:45 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:48:47 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:48:50 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:48:55 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:59:20 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 02:59:24 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:01:51 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:01:54 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:01:56 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:02:58 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:03:17 --> Severity: Notice --> Undefined variable: user_provider D:\_Sistemas\php\atezzFull\AtezzFull\application\views\user\modules\pagamento_user\index.php 147
-ERROR - 2018-09-28 03:03:17 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:04:06 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:07:21 --> 404 Page Not Found: Gigs/pagamento_user
-ERROR - 2018-09-28 03:07:30 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:07:32 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:07:34 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:07:48 --> Severity: Notice --> Undefined variable: user_provider D:\_Sistemas\php\atezzFull\AtezzFull\application\views\user\modules\pagamento_user\index.php 147
-ERROR - 2018-09-28 03:07:48 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:08:19 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:08:21 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:08:22 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:08:27 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:08:28 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:11:10 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:11:13 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:11:18 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:11:20 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:11:23 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:11:30 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:11:33 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:11:37 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:11:40 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:11:52 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:14:47 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:14:52 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:14:53 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:14:54 --> 404 Page Not Found: Assets/css
-ERROR - 2018-09-28 03:15:17 --> Query error: Table 'bd_atezz.tiposervico_ong' doesn't exist - Invalid query: SELECT `ID`, `DESCRICAO`  FROM tipoServico_ong;
-ERROR - 2018-09-28 03:15:17 --> Severity: Error --> Call to a member function result_array() on boolean D:\_Sistemas\php\atezzFull\AtezzFull\application\models\User_panel_model.php 134
-ERROR - 2018-09-28 03:15:31 --> Query error: Table 'bd_atezz.tiposervico_ong' doesn't exist - Invalid query: SELECT `ID`, `DESCRICAO`  FROM tipoServico_ong;
-ERROR - 2018-09-28 03:15:31 --> Severity: Error --> Call to a member function result_array() on boolean D:\_Sistemas\php\atezzFull\AtezzFull\application\models\User_panel_model.php 134
+ERROR - 2018-09-28 00:09:30 --> Severity: Notice --> Undefined variable: extra_gig_price /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/projeto_solidario/index.php 397
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 00:09:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:27 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:27 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:27 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:27 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:33:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:34:38 --> Severity: error --> Exception: syntax error, unexpected 'echo' (T_ECHO) /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/user/Post_ong.php 551
+ERROR - 2018-09-28 02:34:48 --> Severity: error --> Exception: syntax error, unexpected 'echo' (T_ECHO) /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/user/Post_ong.php 551
+ERROR - 2018-09-28 02:34:58 --> Severity: error --> Exception: syntax error, unexpected 'echo' (T_ECHO) /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/user/Post_ong.php 551
+ERROR - 2018-09-28 02:50:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:38 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:39 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:39 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:39 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:39 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:39 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:39 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:39 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:40 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:41 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:41 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:41 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:42 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:42 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:42 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:42 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:42 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:42 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:42 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:42 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:42 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:50:42 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:52 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:51:53 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:05 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 02:54:36 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:28 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:03:29 --> Severity: Notice --> Undefined index: parent /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/post_ong/index.php 184
+ERROR - 2018-09-28 03:17:15 --> Severity: Notice --> Undefined index: ip_city /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/Ajax.php 45
+ERROR - 2018-09-28 03:26:15 --> Severity: Notice --> Undefined index: ip_city /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/Ajax.php 45
+ERROR - 2018-09-28 03:26:26 --> Severity: Notice --> Undefined index: ip_city /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/Ajax.php 45
+ERROR - 2018-09-28 03:26:33 --> Severity: Notice --> Undefined index: ip_city /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/Ajax.php 45
+ERROR - 2018-09-28 03:26:37 --> Severity: Notice --> Undefined index: ip_city /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/Ajax.php 45
+ERROR - 2018-09-28 03:26:44 --> Severity: Notice --> Undefined index: ip_city /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/Ajax.php 45
+ERROR - 2018-09-28 03:26:49 --> Severity: Notice --> Undefined index: ip_city /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/Ajax.php 45
+ERROR - 2018-09-28 03:26:54 --> Severity: Notice --> Undefined index: ip_city /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/Ajax.php 45
+ERROR - 2018-09-28 03:28:20 --> Severity: Notice --> Undefined index: ip_city /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/controllers/Ajax.php 45
+ERROR - 2018-09-28 00:28:30 --> Severity: Notice --> Undefined variable: my_gig_rate /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/gig_preview/index.php 2024
+ERROR - 2018-09-28 00:28:46 --> Severity: Notice --> Undefined variable: my_gig_rate /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/gig_preview/index.php 2024
+ERROR - 2018-09-28 00:35:31 --> Severity: Notice --> Undefined variable: my_gig_rate /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/gig_preview/index.php 2024
+ERROR - 2018-09-28 03:35:40 --> Severity: Notice --> Undefined variable: extra_gig_price /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/sobre/index.php 371
+ERROR - 2018-09-28 03:35:49 --> Severity: Notice --> Undefined variable: extra_gig_price /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/projeto_solidario/index.php 397
+ERROR - 2018-09-28 00:36:43 --> Severity: Notice --> Undefined variable: my_gig_rate /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/gig_preview/index.php 2024
+ERROR - 2018-09-28 16:36:56 --> 404 Page Not Found: My-post_ong/index
+ERROR - 2018-09-28 16:38:04 --> 404 Page Not Found: My-post_ong/index
+ERROR - 2018-09-28 16:38:05 --> 404 Page Not Found: My-post_ong/index
+ERROR - 2018-09-28 16:38:05 --> 404 Page Not Found: My-post_ong/index
+ERROR - 2018-09-28 16:38:05 --> 404 Page Not Found: My-post_ong/index
+ERROR - 2018-09-28 16:38:05 --> 404 Page Not Found: My-post_ong/index
+ERROR - 2018-09-28 16:39:12 --> 404 Page Not Found: My-post_ong/index
+ERROR - 2018-09-28 16:39:13 --> 404 Page Not Found: My-post_ong/index
+ERROR - 2018-09-28 16:39:13 --> 404 Page Not Found: My-post_ong/index
+ERROR - 2018-09-28 16:39:14 --> 404 Page Not Found: My-post_ong/index
+ERROR - 2018-09-28 16:42:07 --> Severity: Notice --> Undefined variable: extra_gig_price /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/sobre/index.php 371
+ERROR - 2018-09-28 16:42:30 --> Severity: Notice --> Undefined variable: extra_gig_price /Users/thiagovanderlinde/Documents/GitHub/Atezz/application/views/user/modules/projeto_solidario/index.php 397

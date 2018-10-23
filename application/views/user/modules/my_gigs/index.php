@@ -1,4 +1,4 @@
-			<?php  $this->load->view('user/includes/search_include'); ?>
+			<!--<?php  $this->load->view('user/includes/search_include'); ?> -->
 			<section class="profile-section">
 				<div class="container">
 					<div class="row">	

@@ -35,15 +35,15 @@
 						if(!isset($selected_category_value)){ $selected_category_value = ''; } 					
 						$common_search = (!empty($_POST['common_search']))?$_POST['common_search']:''; 
 						 ?>
-						 	<input class="text" name="common_search" id="common_search" type="text" value="<?php echo $searched_value; ?>" placeholder="Buscar por Serviço"/>
+						 	<input style="font-family: helvetica; font-size: 15px; color: #595959" class="text form-control" name="common_search" id="common_search" type="text" value="<?php echo $searched_value; ?>" placeholder="Buscar por Serviço"/>
 
 
 
 						 	</span>
 
-						 	<span class="search-category">
+						 	<span class="search-category ">
 
-						 		<select class="select" id="changecatetext" name="search_category">
+						 		<select class="select form-control form-control-lg" id="changecatetext" name="search_category" style="height:39px;">
 								<option value="">Categoria</option>
 								<?php 
 
@@ -99,33 +99,40 @@
 
 						 	
 
-						 	<div class="search-country">
+						 	<div class="search-country" hidden="true" >
 
-								<select class="country select form-control" id="country" onchange="country_id_chnage(this)" name="change_country">
+								<select hidden="true" class="country select form-control" id="country" onload="country_id_chnage(this)" name="change_country">
 
-									<option value="">--País--</option>
-
-					<?php 
-
-					if(!empty($gigs_country)){
-
-						foreach($gigs_country as $country){
-							$selected = '';
-							if(!empty($gigs_country_id)){
-								$selected  = ($gigs_country_id==$country['id'])?'selected':'';
-							}
-							echo '<option value="'.$country['id'].'" '.$selected.'>'.$country['country'].'</option>';
-						}
-					}
-					?>
-		</select>
-
+									<option value=30  selected>Brasil</option>
+								</select>
 						 	</div>
 
-						 	<div class="search-state">
+							 <div class="search-country" style="width:30,5% !important; margin-top: 6px; margin-letf: 10px !important;">
+							 <select class="state select form-control" id="uf"  data-target="#cidade" onloader="country_id_chnage(30)" name="uf"> <!--name="state" id="search_state" -->
+										<option value="">--Estado--</option>
+										<?php 
 
-								<select class="state select form-control" id="search_state" name="state">
-									<option value="">--Estado--</option>
+										if(!empty($gigs_state)){
+
+											foreach($gigs_state as $state){
+
+												$selected  = ($gigs_state_id==$state['id'])?'selected':'';
+
+												echo '<option value="'.$state['id'].'" '.$selected.' >'.$state['state'].'</option>';		
+
+											}
+
+										}
+
+										?>
+								</select>	
+							
+							</div>
+
+						 	<div class="search-state" style="margin-top: 5px; margin-letf: -1px;">
+
+								<select class="cidade select form-control" id="cidade"  onloader="country_id_chnage(30)" name="cidade"> <!-- -->
+									<option value="">--Cidade--</option>
 									<?php 
 
 									if(!empty($gigs_state)){
@@ -146,8 +153,9 @@
 
 						 	</div>
 
-						 	<span class="search-btn">
-						 		<button type="submit" name="search_submit" value="search" class="btn btn-primary btn-block search_btn" >Pesquisar</button>	
+
+						 	<span class="search-btn" >
+						 		<button type="submit" name="search_submit" value="search" class="btn btn-primary btn-block search_btn" style="width:100px; font-family:helvetica; font-size:15px; margin-tpo:50px" >Pesquisar</button>	
 						 	</span>
 
 						
