@@ -199,6 +199,7 @@ class Dashboard extends CI_Controller{
 			$this->session->set_userdata('user_role',$result['user_role']);   
 			$site_name = $this->admin_panel_model->site_name();          
 			$this->session->set_userdata('sitename',$site_name['value']);
+
 			echo 1;
 		}
 	 else 

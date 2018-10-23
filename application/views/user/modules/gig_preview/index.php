@@ -1,6 +1,6 @@
     <div class="">
 
-        <?php $this->load->view('user/includes/search_include'); 
+        <?php // $this->load->view('user/includes/search_include'); 
 
 $select_gig =  $gig_id; ?>
 <section class="product-header">
@@ -224,7 +224,7 @@ if($gig_details['parent']==0){
 
                                     ?>
 
-									<span class="gig-deliver">Will deliver in <?php echo $display_days; ?><span class="gig-count">  </span></span>
+									<span class="gig-deliver">Compartilhar <?php //echo $display_days; ?><span class="gig-count">  </span></span>
 
 									<div class="gig-share">
 
@@ -489,7 +489,9 @@ if($gig_details['parent']==0){
 
 								<div class="gig-information">
 
-					 <h3 class="gig-desc-title">Description</h3>	
+
+<strong> Valor: </strong> <h5><span class="price-tag"> <?php echo $rate_symbol;?><span id="change_ratecount"><?php echo $rate ; ?></span></span></h5><br/>
+					 <h3 class="gig-desc-title">Descrição</h3>	
 
 								<?php echo ucfirst($gig_details['gig_details']);
 
@@ -497,7 +499,7 @@ if($gig_details['parent']==0){
 
 								{ ?>
 
-                     <h3 class="gig-desc-title">Requirements from user</h3>
+                     <h3 class="gig-desc-title">Informações adicionais</h3>
 
 								<?php	echo $gig_details['requirements'] ; 
 
@@ -1570,18 +1572,18 @@ if($gig_details['parent']==0){
                                          ?> 
 
                                                                       
-
-                                    <a href="#" class="btn" onclick="check_extra_gigs()" data-toggle="modal" data-target="#checkout-popup">Buy now  <?php echo $rate_symbol ;?><span id="over_all_total"><?php echo $rate; ?></span></a>
+                                    
+                                    <a href="javascript:;" class="btn" data-toggle="modal" data-target="#message-popup">Contratar </span></a>
 
                                      <?php } else {  ?>
 
                                          
 
-                                     <a href="<?php echo base_url()."edit-gig/".$gig_details['title']; ?>" class="btn" > Edit Gig </a>    
+                                     <a href="<?php echo base_url()."edit-gig/".$gig_details['title']; ?>" class="btn" > Editar publicação</a>    
 
                                    <?php   }  } else { $gig_title = $this->uri->segment(2); ?>
 
-                                      <a href="javascript:;" class="btn" onclick="selected_menu('gig-preview/<?php echo $gig_title; ?>')" >Buy now  <?php echo $rate_symbol ;?><span id="over_all_total"><?php echo $rate; ?></span></a>
+                                      <a href="javascript:;" class="btn" onclick="selected_menu('gig-preview/<?php echo $gig_title; ?>')" > Orçamento  <?php echo $rate_symbol ;?><span id="over_all_total"><?php echo $rate; ?></span></a>
 
                                      <?php } ?>
 
@@ -1677,7 +1679,7 @@ if($gig_details['parent']==0){
 
 										<?php if(($this->session->userdata('SESSION_USER_ID'))!=$user_profile['USERID'] )   {  ?> 
 
-                                                                                <li class="seller-contact"><img alt="views" src="<?php echo base_url()."assets/images/contact.png";?>" width="33" height="33">                                                                                    
+                                                                                <li class="seller-contact"><img alt="views" src="<?php echo base_url()."assets/images/client.png";?>" width="33" height="33">                                                                                    
 
                                                                               
 
@@ -1686,12 +1688,11 @@ if($gig_details['parent']==0){
                                                                                       
 
                                                                                       ?> 
-
-                                                                                    <a href="javascript:;" data-toggle="modal" data-target="#message-popup"><h5>Contact Seller</h5></a>
+                                                                                    <a href="<?php echo base_url()."user-profile/".$username; ?>"><h5>Perfil do Profissional</h5></a>
 
                                                                                   <?php } else { ?>
 
-                                                                                    <a href="javascript:;" onclick="selected_menu('sell-service')" ><h5>Contact Seller</h5></a>
+                                                                                    <a href="javascript:;" onclick="selected_menu('sell-service')" ><h5>Editar publicação</h5></a>
 
                                                                                   <?php } ?>
 
@@ -1711,9 +1712,9 @@ if($gig_details['parent']==0){
 
 										<li class="seller-views"><img alt="views" src="<?php echo base_url()."assets/images/view.png"?>" width="34" height="34"> <h5><?php echo $gig_details['total_views']; ?> Views</h5></li>
 
-										<li class="seller-orders"><img alt="views" src="<?php echo base_url()."assets/images/orders.png";?>" width="36" height="36"> <h5><?php echo count($result_countid);?> order in queue</h5></li>
+										<li class="seller-orders"><img alt="views" src="<?php echo base_url()."assets/images/orders.png";?>" width="36" height="36"> <h5><?php echo count($result_countid);?> Trabalhos realizados</h5></li>
 
-										<li class="seller-speaks"><img alt="views" src="<?php echo base_url()."assets/images/speaks.png";?>" width="34" height="34"> <h5>Speaks: <?php echo ucfirst($user_profile['lang_speaks']); ?></h5></li>
+										<!-- <li class="seller-speaks"><img alt="views" src="<?php //echo base_url()."assets/images/speaks.png";?>" width="34" height="34"> <h5>Speaks: <?php //echo ucfirst($user_profile['lang_speaks']); ?></h5></li> -->
 
                                         <?php 
 
@@ -2001,83 +2002,21 @@ $rate_symbol = currency_sign($currency_option);
 
 						<div class="modal-header text-center">
 
-							<h4 class="sign-title">Buy the Gig</h4>
+							<h4 class="sign-title"></h4>
 
 						</div>
 
 						<div class="modal-body">
 
-							<div class="row">
-
-								<div class="col-md-6">
-
-									<ul class="quantity-list">
-
-										<li>
-
-											<div class="form-group clearfix">
-
-                                            <?php 
-
-                                             // $rate = $rate;  //Fixed 
-
-                                                $rate = $my_gig_rate; // Dynamic 
-
-                                             ?>
-
-												<label class="label-title">Price</label>
-
-												<input type="text" class="form-control" readonly="" id="last_modifiy_inputid" value="<?php  echo  $rate ;?>">
-
-												<input type="hidden" value="<?php echo $rate;?>" name="default_gigsamount" id="default_gigsamount" />
-
-											</div>
-
-										</li>
-
-										<li><span class="multiple"><i aria-hidden="true" class="fa fa-times"></i></span></li>
-
-										<li>
-
-											<div class="form-group clearfix">
-
-												<label class="label-title">Quantity</label>
-
-												<span class="quantity-select">1</span>
-
-											</div>
-
-										</li>
-
-									</ul>
-
-								</div>
-
-								<div class="col-md-6">
-
-									<div class="text-right summary">
-
-										<span class="price-tag"> <?php echo $rate_symbol;?><span id="change_ratecount"><?php echo $rate ; ?></span></span>
-
-									</div>
-
-								</div>
-
-							</div>
-
-
-
-                            <div id="extra_gig_calculation"></div>
-
 							<form action="<?php echo base_url().'user/buy_service/payment';?>" method="post" id="payment_formid" name="payment_submit">
 
-								<input type="hidden" name="gigs_rate" id="gigs_rate" value="<?php  echo $item_gig_price;?>" />
+								<input type="textarea" name="gigs_rate" id="gigs_rate" value="fdsfds" rows="10" cols="30" />
 
-                                <input type="hidden" name="converted_india_gigs_rate" id="converted_india_gigs_rate" value="500" />
+                                <input type="text" name="converted_india_gigs_rate" id="converted_india_gigs_rate" value="" />
 
-                                <input type="hidden" name="gigs_actual_rate" id="gigs_actual_rate" value="<?php  echo $item_gig_price;?>" />
+                                <input type="text" name="gigs_actual_rate" id="gigs_actual_rate" value="" />
 
-                                <input type="hidden" name="gigs_id" id="gigs_id" value="<?php  echo $select_gig;?>" />
+                                <input type="text" name="gigs_id" id="gigs_id" value=""  />
 
                                 <input type="hidden" name="gig_user_id" id="gig_user_id" value="<?php  echo $gig_user_id;?>" />
 
@@ -2090,40 +2029,6 @@ $rate_symbol = currency_sign($currency_option);
                                 <input type ="hidden" name="total_delivery_days" value="" id="total_delivery_days"  />
 
                                 <input type="hidden" id="hidden_super_fast_delivery_charges" name="hidden_super_fast_delivery_charges" value="" />
-
-								<div id="payment-method">
-
-									<h4 class="clearfix">Select your payment method</h4>
-
-									<div class="payment-method">
-
-									 <?php if ($paypal_allow == 1) { ?>	
-
-                              
-
-                              <label class="radio-inline bold">
-
-                              <input class="le-radio" type="radio" onchange="check_payment_type(this)" name="group2" value="Direct"  > <img src="<?php echo base_url();?>assets/images/paypal-icon.png" alt="Paypal" width="24" height="22"> Paypal</label>
-
-                    <?php }  ?>                    
-
-                    <?php if ($stripe_allow == 1) { ?>  
-
-                            <?php if (!empty($publishable_key)) { ?>
-
-                                <label class="radio-inline bold">
-
-                                <input class="le-radio" type="radio" onchange="check_payment_type(this)" name="group2" value="stripe" >Stripe</label>
-
-                            <?php } ?>
-
-                     <?php } ?>                   
-
-
-
-									</div>
-
-								</div>
 
 								<div>
 
@@ -2171,7 +2076,7 @@ $rate_symbol = currency_sign($currency_option);
 
 						<div class="modal-body">
 
-							<div class="msg-user-details">
+							<div class="msg-user-details" style="width:100%">
 
 								<?php  if(!empty($user_profile['user_thumb_image'])) {
 
@@ -2189,6 +2094,11 @@ $rate_symbol = currency_sign($currency_option);
 
 								?>
 
+
+                                <div class="modal-header text-center">
+                                    <h4 class="sign-title">Solicitar Orçamento</h4>
+                                </div>
+
 								<div class="pull-left user-img m-r-10">
 
 									<img src="<?php echo $user_image;?>" alt="" class="w-40 img-circle" width="50" height="50"><span class="online"></span>
@@ -2198,16 +2108,16 @@ $rate_symbol = currency_sign($currency_option);
 								<div class="user-info pull-left">
 
 									<div class="dropdown">
-
+                                         
 										<a href="javascript:;"><?php echo $name;?></a>
 
 									</div>
 
-									<p class="text-muted m-0"><?php echo $user_country_name; ?></p>
+								<b class="text-muted m-0">Prestador</b>
 
 								</div>
 
-							</div>
+							</div><br/><br/>
 
 							<div class="new-message">
 
@@ -2219,9 +2129,24 @@ $rate_symbol = currency_sign($currency_option);
 
 									<div class="form-group">
 
-										<label class="form-label">Your Message</label>
+										<label class="form-label">Descrição do pedido</label>
 
-										<textarea name="chat_message_content" placeholder="Message to <?php echo $name; ?>" required="" id="messageone" class="form-control"></textarea>
+										<textarea name="chat_message_content" style="height:100px !important;" placeholder="Olá, tenho interesse de contratar os seus serviços. Aguardo o contato. Obrigado." required="" id="messageone" class="form-control"></textarea><br/>
+
+                                        <label class="form-label">Nome</label>
+
+                                        <input type="text" name="chat_nome"  placeholder="nome" required="" id="nome" class="form-control"></input><br/>
+
+                                        <label class="form-label">Email</label>
+
+                                        <input type="text" name="chat_email"  placeholder="email" required="" id="email" class="form-control"></input><br/>                                        
+
+                                        <label class="form-label">Telefone</label>
+
+                                        <input type="text" name="chat_telefone"  placeholder="telefone" required="" id="telefone" class="form-control"></input><br/>                                        
+
+
+                                        <input type="checkbox" name="chat_permissao_whatsapp" value="permirtir" required="" id="permissao"> Receber contato p/ telefone ou whatsApp</input><br/><br/>                                        
 
 									</div>						
 
@@ -2229,8 +2154,10 @@ $rate_symbol = currency_sign($currency_option);
 
 							</div>
 
-							<button type="submit" name="submit" class="btn btn-primary btn-style" onclick="save_newchat();">Send</button>
-
+                            <div align="center">
+							    <!-- <button type="submit" name="submit" class="btn btn-primary btn-style"  style="background-color: #37c3be; width:50%; height:40px; align:center" onclick="save_newchat();">Solicitar pedido</button> -->
+                                <button type="submit" name="submit" class="btn btn-primary btn-style"  style="background-color: #37c3be; width:50%; height:40px; align:center" >Solicitar pedido</button>
+                            </div><br/>
 						</div>
 
 					</div>

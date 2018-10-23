@@ -11,7 +11,7 @@
 
 				<div class="container">
 
-					<div class="row">
+					<!-- <div class="row">
 
 						<div class="col-md-12 sell-banner-cont">
 
@@ -27,7 +27,7 @@
 
 						</div>
 
-					</div>
+					</div> -->
 
 				</div>
 
@@ -43,7 +43,7 @@
 
 							<span class="circle-bg orange-bg"><img src="<?php echo base_url(); ?>assets/images/circle-map.png"></span>
 
-							<p class="miles-title">Create your gig</p>
+							<p class="miles-title">Crie seus serviços</p>
 
 						</div>
 
@@ -51,7 +51,7 @@
 
 							<span class="circle-bg orange-bg"><img src="<?php echo base_url(); ?>assets/images/publish-icon.png"></span>
 
-							<p class="miles-title">Publish</p>
+							<p class="miles-title">Publique</p>
 
 						</div>
 
@@ -59,7 +59,7 @@
 
 							<span class="circle-bg orange-bg"><img src="<?php echo base_url(); ?>assets/images/receive-orders-icon.png"></span>
 
-							<p class="miles-title">Receive Orders</p>
+							<p class="miles-title">Receba mais pedidos</p>
 
 						</div>
 
@@ -67,7 +67,7 @@
 
 							<span class="circle-bg green-bg"><img src="<?php echo base_url(); ?>assets/images/deliver-work-icon.png"></span>
 
-							<p class="miles-title">Deliver the work</p>
+							<p class="miles-title">Divulgue seus serviços</p>
 
 						</div>
 
@@ -75,7 +75,7 @@
 
 							<span class="circle-bg green-bg"><img src="<?php echo base_url(); ?>assets/images/get-paid-icon.png"></span>
 
-							<p class="miles-title">Get paid</p>
+							<p class="miles-title">Contribua com causas sociais</p>
 
 						</div>
 
@@ -83,7 +83,7 @@
 
 							<span class="circle-bg green-bg"><img src="<?php echo base_url(); ?>assets/images/money-bag.png"></span>
 
-							<p class="miles-title">Withdraw Funds</p>
+							<p class="miles-title">Receba mais propostas</p>
 
 						</div>
 
@@ -113,9 +113,9 @@
 
 						<div class="col-md-8 col-sm-12">                                                   
 
-							<h3 class="post-gig-title">Post a Gig in few seconds</h3>
+							<h3 class="post-gig-title">Publique em alguns minutos.</h3>
 
-							<p class="sub-title">Gig: a packed service you can deliver remotely or  around you for a fixed price in a set time frame.</p>
+							<p class="sub-title">Para conquitar muitos pedidos, descreva com detalhes seus serviços e condições</p>
 
 							<input type="hidden" id="payment_option" value="<?php echo $price_option['value']; ?>">	
 
@@ -145,19 +145,19 @@
 
 								<div class="form-group clearfix">
 
-									<label class="label-title">Title for your Gig <span class="required">*</span></label>
+									<label class="label-title">Titulo <span class="required">*</span></label>
 
 									<div class="name-block">
 
 										<span class="name-input">
 
-											<input type="text" name="gig_title" id="gig_title" onkeyup="gig_title_check(this)" onchange="gig_title_check(this)" value="" class="form-control gig-name " maxlength="80" placeholder="I can">	
+											<input type="text" name="gig_title" id="gig_title" onkeyup="gig_title_check(this)" onchange="gig_title_check(this)" value="" class="form-control gig-name " maxlength="80" placeholder="Titulo">	
 
 										</span>
 
 										<span class="currency">
 
-											for <span class="currency-group">
+											Preço <span class="currency-group">
 												<?php 
 												$rate = $gig_price['value'];
 												$extra_gig_price = $extra_gig_price['value'];
@@ -171,13 +171,13 @@
 
 									</div>
 
-									<span class="form-description">eg. I can repair a door in Paris </span>
+									<span class="form-description">Ex. Saio para passear com Cães</span>
 
-									<small class="error_msg help-block gig_title_error" style="display: none;">Please enter a title</small>
+									<small class="error_msg help-block gig_title_error" style="display: none;">Por favor, adicione um título</small>
 
-									<small class="error_msg help-block gig_title_already_error" style="display: none;">This tilte is already taken</small>
+									<small class="error_msg help-block gig_title_already_error" style="display: none;">Este título já está sendo usado</small>
 
-									<small class="error_msg help-block gig_price_error" style="display: none;">Please enter the price for gig</small>
+									<small class="error_msg help-block gig_price_error" style="display: none;">Por favor, adicione o preço de seu serviço</small>
 
 									
 
@@ -185,13 +185,13 @@
 
 								<div class="form-group clearfix delivery-day">
 
-								<label class="label-title">When will you deliver the Gig? <span class="required">*</span></label>
+								<label class="label-title">Prazo <span class="required">*</span></label>
 
-								<input type="text" name="delivering_time" id="delivering_time" class="form-control" maxlength="2" onkeyup="max_lenght(this)" onblur="checkinput(this)" onchange="max_lenght(this)" placeholder="Just type number of days (ex : 2 Days)"><span class="actual_delivery_days" id="main_delivery_days"> </span>
+								<input type="text" name="delivering_time" id="delivering_time" class="form-control" maxlength="2" onkeyup="max_lenght(this)" onblur="checkinput(this)" onchange="max_lenght(this)" placeholder="Digite apenas números (ex : 2 Days)"><span class="actual_delivery_days" id="main_delivery_days"> </span>
 
-								<small class="error_msg help-block main_delivery_days_error" style="display: none;">Please enter a estimated delivery days</small>
+								<small class="error_msg help-block main_delivery_days_error" style="display: none;">Por favor, adicione uma estimativa de tempo</small>
 
-								<small class="error_msg help-block delivery_days_error" style="display: none;">Please enter a Days 1 to 29.</small>
+								<small class="error_msg help-block delivery_days_error" style="display: none;">Por favor, adicione entre 1 e 29</small>
 
 								</div>
 
@@ -199,13 +199,13 @@
 
 								<div class="form-group clearfix">
 
-									<label class="label-title">Pick Category <span class="required">*</span></label>
+									<label class="label-title">Categoria <span class="required">*</span></label>
 
 									<div class="category-select">
 
 									<select class="select gig-category" id="gig_category_id" name="gig_category_id">										
 
-									<option value="">Select Category</option>
+									<option value="">Selecione uma Categoria</option>
 
 									<?php foreach($categories_subcategories as $cat) { 
 
@@ -249,9 +249,9 @@
 
 								<div class="form-group clearfix">
 
-									<label class="label-title">Add tags <span class="small-title">(separated with a comma)</span></label>
+									<label class="label-title">Adicione Tag <span class="small-title">(separado por virgula)</span></label>
 
-									<input type="text" placeholder="Enter your tags" name="gig_tags" id="gig_tags" data-role="tagsinput" class="form-control">	
+									<input type="text" placeholder="Adicionar tag" name="gig_tags" id="gig_tags" data-role="tagsinput" class="form-control">	
 
 								</div>
 
@@ -269,7 +269,7 @@
 
                                     <input type="hidden" name="video_div_id" id="video_div_id" value="1" />
 
-									<label class="label-title">Make it fun: upload photos or videos! <span class="text-muted" style="color:#999;">(image <span class="required">*</span>)</span></label>
+									<label class="label-title">Envie Fotos ou vídeos <span class="text-muted" style="color:#999;">(jpg <span class="required">*</span>)</span></label>
 
 									<div class="upload-block">
 
@@ -283,7 +283,7 @@
 
 											<h4>Upload</h4>
 
-											<p> photos</p>
+											<p> Fotos</p>
 
 										</div>
 
@@ -305,9 +305,9 @@
 
 										<div class="embedded" id="third_party">
 
-											<h4>Embedded</h4>
+											<h4>Copiar link</h4>
 
-											<p>from 3rd party sites</p>
+											<p>de sites de terceiros</p>
 
 										</div>											 
 
@@ -333,7 +333,7 @@
 
 								<div class="form-group item-description clearfix">
 
-									<label class="label-title">Provide more details about your gig <span class="required">*</span></label>
+									<label class="label-title">Detalhes <span class="required">*</span></label>
 
 									<textarea rows="5" placeholder="Explain in more detail what exactly you will deliver to the Buyer..." name="gig_details" id="gig_details" class="form-control"></textarea>
 
@@ -347,7 +347,7 @@
 
 								<div class="form-group clearfix">
 
-									<label class="label-title">Earn extra money - offer optional add-on services to the Buyer</label>
+									<label class="label-title">Ganhe dinheiro extra - ofereça serviços adicionais opcionais ao Comprador</label>
 
 									<div class="add-more-items clearfix">
 
@@ -359,11 +359,11 @@
 
 <div class="name-block2">
 
-	<span class="name-input2"><input type="text" name="extra_gigs[]" value="" id='label_name_1'  class="form-control extra_money_price gig-name gigs_name_opt" placeholder="I can"  date-no="1" ></span>
+	<span class="name-input2"><input type="text" name="extra_gigs[]" value="" id='label_name_1'  class="form-control extra_money_price gig-name gigs_name_opt" placeholder="Descrição"  date-no="1" ></span>
 
 	<span class="currency">
 
-	for <span class="currency-group">	                                                                                 
+	Por R <span class="currency-group">	                                                                                 
 
 	<?php echo $currency_sign; ?> 
 
@@ -371,9 +371,9 @@
 
 	<input type="hidden"  id="readonly_dynamic" value="<?php echo ($allow==1)?'':'readonly'; ?>"> 
 
-	</span> in <input type="text"  value="1"  onkeyup="extra_gig_days(this,1)" onfocusout="inputfocusout(this)" class="form-control amount2 numberonly"  name="extra_gigs_delivery[]">
+	</span> em <input type="text"  value="1"  onkeyup="extra_gig_days(this,1)" onfocusout="inputfocusout(this)" class="form-control amount2 numberonly"  name="extra_gigs_delivery[]">
 
-	<span class="sub_delivery_days">Day</span></span>                                                
+	<span class="sub_delivery_days">Dias</span></span>                                                
 
 </div>	
 
@@ -405,7 +405,7 @@
 
 				<div class="form-group clearfix">
 
-                <label class="label-title">Super fast Delivery</label>
+                <label class="label-title">Entrega super rápida</label>
 
 				<div class="delivery-block clearfix">                                                                                   
 
@@ -417,19 +417,19 @@
 
 					</div>
 
-					<span class="super-fast">Super Fast</span>
+					<span class="super-fast">Super rápido</span>
 
 					
 
 					<div class="name-block2 superfast-block">
 
-					<span class="name-input2"><input name="super_fast_delivery_desc" id="super_fast_delivery_desc" value="" class="form-control gig-name" placeholder="I can deliver the gigs" type="text" disabled="disabled"></span>
+					<span class="name-input2"><input name="super_fast_delivery_desc" id="super_fast_delivery_desc" value="" class="form-control gig-name" placeholder="Posso entregar" type="text" disabled="disabled"></span>
 
 						<span class="currency">
 
-					 for <?php echo $currency_sign; ?> <span class="currency-group"><input type="text" disabled="disabled" class="form-control validdays  amount numberonly" name="super_fast_charges" id="super_fast_charges" value="<?php echo ($allow==1)?'':$extra_gig_price; ?>" <?php echo ($allow==1)?'':''; ?> ></span> in <input type="text" value="1" onfocusout="inputfocusout(this)" onkeyup="extra_gig_days(this,2)" onmouseup="extra_gig_days(this,2)" class="form-control amount2 numberonly" name="super_fast_delivery_date" maxlength="2" id="super_fast_delivery_date" disabled="disabled" >
+					 por R <?php echo $currency_sign; ?> <span class="currency-group"><input type="text" disabled="disabled" class="form-control validdays  amount numberonly" name="super_fast_charges" id="super_fast_charges" value="<?php echo ($allow==1)?'':$extra_gig_price; ?>" <?php echo ($allow==1)?'':''; ?> ></span> em <input type="text" value="1" onfocusout="inputfocusout(this)" onkeyup="extra_gig_days(this,2)" onmouseup="extra_gig_days(this,2)" class="form-control amount2 numberonly" name="super_fast_delivery_date" maxlength="2" id="super_fast_delivery_date" disabled="disabled" >
 
-					 <span class="sub_delivery_days">Day</span></span>                                             
+					 <span class="sub_delivery_days">Dias</span></span>                                             
 
 					</div>	
 
@@ -449,7 +449,7 @@
 
 								<div class="form-group select-condition clearfix">
 
-									<label class="label-title">How are you planning to work with the Buyer? <span class="required">*</span></label>
+									<label class="label-title">Como você planeja trabalhar com o comprador?<span class="required">*</span></label>
 
 									<div class="buyer-option">
 
@@ -459,7 +459,7 @@
 
 											<label for="radio3">
 
-												Remotely
+												Remoto
 
 											</label>
 
@@ -471,7 +471,7 @@
 
 											<label for="radio4">
 
-												On-site 
+												No local 
 
 											</label>
 
@@ -485,7 +485,7 @@
 
 								<div class="form-group item-description clearfix">
 
-									<label class="label-title">What do you need from the Buyer to get started </label>
+									<label class="label-title">O que você precisa do Comprador para começar</label>
 
                                      <textarea rows="4" placeholder="Explain what you will need from the Buyer to deliver the world..." name="requirements" id="requirements" class="form-control"></textarea>
 
@@ -503,11 +503,9 @@
 
 									</div>
 
-									I confirm that I am able to deliver this service to Buyers within the delivery time specified.<br>
-
-									I will update or pause my Gig if I can no longer meet this delivery time.<br>
-
-									I understand that late delivery will adversely affect my rankings on <span class="sitename2"><?php  if(!empty($site_name)) {echo  $site_name; } ?></span> and will
+									Confirmo que posso entregar este serviço aos Compradores dentro do prazo de entrega especificado.
+Eu atualizarei ou pausarei meu Projetos se eu não puder mais atender a esse tempo de entrega.
+Eu entendo que a entrega atrasada afetará negativamente meus rankings no Atezz e dará direito ao comprador a um reembolso. <span class="sitename2"><?php  if(!empty($site_name)) {echo  $site_name; } ?></span> and will
 
 									entitle the Buyer to a refund. See <a href="<?php echo base_url().'tandc'?>" target="_blank" class="chk-link"> T&amp;Cs </a>
 
@@ -517,7 +515,7 @@
 
 								<input type="hidden" name="form_submit" value="add"> 
 
-								<a href="javascript:void(0)" onclick="sell_services_add()" class="btn btn-yellow sell_service_submit"  >Post Your Ad</a> 
+								<a href="javascript:void(0)" onclick="sell_services_add()" class="btn btn-yellow sell_service_submit"  >Publicar anúncio</a> 
 
                                 
 

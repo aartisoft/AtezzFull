@@ -10,6 +10,7 @@ if($this->session->flashdata('message')) { ?>
 
 } ?>
 
+
 	<?php if($this->session->userdata('message') && $i ==0) { ?>
 
 		<div class="alert alert-success text-center fade in alert-dismissable" id="flash_succ_message"><?php echo $this->session->userdata('message');?></div>
@@ -130,7 +131,7 @@ if($this->session->flashdata('message')) { ?>
 
 			<div class="col-md-9">
 
-				<h3 class="latest-title"><img src="<?php echo base_url().'assets/images/map.png';?>" alt="Location" width="42" height="42">
+				<h3 class="latest-title"><img src="<?php echo base_url().'assets/images/medalha.png';?>" alt="Location" width="42" height="42">
 
 					<span> 
 					Em destaque<?php // echo $full_country_name; ?> &nbsp;&nbsp;
@@ -579,7 +580,7 @@ if($this->session->flashdata('message')) { ?>
 
 				<h3 class="client-title">
 
-					<span>Clients</span>
+					<span>Projetos patrocinados</span>
 
 				</h3>
 
@@ -617,7 +618,7 @@ if($this->session->flashdata('message')) { ?>
 
 				</div>
 
-				<?php  }else{ ?><p>No Clients Found</p>  <?php  } ?>
+				<?php  }else{ ?><p>Nenhum encontrado</p>  <?php  } ?>
 
 				<input type="hidden" name="clients_count" id="clients_count" value="<?php echo $clients_count; ?>" />
 

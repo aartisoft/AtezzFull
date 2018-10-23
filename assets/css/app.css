@@ -4,7 +4,7 @@
 
 @font-face {font-family:'Andale-mono';src:url('../fonts/AndaleMono.ttf');font-weight: normal;font-style: normal;}
 
-body {font-family: 'Open Sans', sans-serif;background-color: #fff;color: #959595;position: relative;overflow-x: hidden;}
+body {font-family: 'Open Sans', sans-serif !important;background-color: #fff;color: #959595;position: relative;overflow-x: hidden;}
 
 ul, ol {padding-left: 0;list-style: none;margin-bottom: 20px;}
 
@@ -340,6 +340,8 @@ textarea {resize: vertical;}
 
 .navbar {margin-bottom:0;height:124px;padding:0;}
 
+.logotipo img{margin-top:-30px; margin-left:-15px;}
+
 .logotipo > a {font-weight: 1000; color: #000000;}
 
 /* .menu-1 {background: url("../images/home.png") no-repeat scroll center 25px #f4f4f4;} */
@@ -440,9 +442,9 @@ textarea {resize: vertical;}
 
 .btn{border-radius: 25px !important;}
 
-.login-btn {border-radius: 2px;font-size: 15px;padding: 10px;width: 166px;background-color: #3a8768;color: #fff !important;margin-right: 5px;border:1px solid #3a8768}
+.login-btn {border-radius: 2px;font-size: 15px;padding: 10px;width: 166px;font-family: sans-serif; background-color: #3a8768;color: #fff !important;margin-right: 5px;border:1px solid #3a8768}
 
-.reg-btn {border-radius: 2px;font-size: 15px;padding: 10px;width: 166px;background-color: #fff;color: #3a8768 !important;margin-left: 5px;border:1px solid #fff;}
+.reg-btn {border-radius: 2px;font-size: 15px;padding: 10px;width: 166px;font-family: sans-serif; background-color: #fff;color: #3a8768 !important;margin-left: 5px;border:1px solid #fff;}
 
 .banner-content {margin-top:20px; padding-bottom: 90px;}
 .banner-content h2 { margin-left: 35%; font-size: 70px; font-weight: 1000;}
@@ -748,11 +750,11 @@ textarea {resize: vertical;}
 
 .social-login a {border: 1px solid #d0d0d0;border-radius: 3px;box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);color: #767676 !important;font-size: 13px;margin: 0 5px;padding: 5px;width: 205px;}
 
-.logon-btn{border-bottom: 2px solid #52b79c;box-shadow: 0 3px 3px rgba(0, 0, 0, 0.11);font-size: 13px;font-weight: bold;text-transform: uppercase;width: 155px;color: #ffffff; font-family: sans-serif}
+.logon-btn{border-bottom: 2px solid #52b79c;box-shadow: 0 3px 3px rgba(0, 0, 0, 0.11);font-size: 13px;font-weight: bold;text-transform: uppercase;width: 155px;color: #ffffff; font-family: sans-serif !important}
 
-.logon-btn a{font-family: sans-serif; color: #ffffff}
+.logon-btn a{font-family: sans-serif !important; color: #ffffff}
 
-.logon-btn  buttom{font-family: sans-serif; color: #ffffff}
+.logon-btn  buttom{font-family: sans-serif !important; color: #ffffff}
 
 /* register popup */
 
@@ -790,7 +792,7 @@ textarea {resize: vertical;}
 
 .psw_points{font-size: 14px;font-weight: 400;text-align: left;color: #fff;margin-left: 20px;}
 
-.account-error {background-color: #ffd8d9;color: #f91a24;padding: 5px 15px;text-align: center;border-radius: 4px;margin-bottom: 15px; margin-top: 202px;}
+.account-error {background-color: #ffd8d9;color: #f91a24;padding: 5px 15px;text-align: center;border-radius: 4px;margin-bottom: 15px; margin-top: 20px;}
 
 .account-error.success{background-color: #dff0d8;color:#3c763d; margin-top:10px;}
 
@@ -1068,9 +1070,13 @@ a.add-more-btn {background-color: #fff;color: #e76e6e;font-size: 15px;font-style
 
 .view-left .media-body .feedback-area .starrr {font-size: 16px;}
 
+.btn-sucesso {width:60% !important}
+
 .view-right {float: left;width: 320px;}
 
-.order-btn {margin-bottom: 0;background-color:#fff;z-index:99;padding-bottom:0 !important;}
+.btn-sucesso{width: 320px; background-color:red ;border-radius:4px 4px 0px 0px}
+
+.order-btn {margin-bottom: 0; background-color:#fff; z-index:99; padding-bottom:0 !important;}
 
 .order-btn > a {background-color: #37c3be;box-shadow: 0 5px 0 #19a9a3;color: #fff;font-size: 21px;font-weight: bold;margin-bottom: 30px;padding: 6px 0;width: 100%;}
 
@@ -1578,7 +1584,7 @@ a.add-more-btn {background-color: #fff;color: #e76e6e;font-size: 15px;font-style
 
 
 
-.custom-popup.order-popup .modal-body {padding: 15px;}
+.custom-popup.order-popup .modal-body {padding: 8px;}
 
 .custom-popup.order-popup .modal-footer.text-left {padding:15px;}
 
@@ -2724,9 +2730,9 @@ span.ZW{background-position:-200px -593px !important}
 
 #menu-navigation .nav > li > a {display: block;text-align: center;overflow: hidden;height: 125px;padding: 45px 0 15px;text-transform: uppercase;-webkit-transition: all 0.4s ease; -moz-transition: all 0.4s ease; -o-transition: all 0.4s ease; -ms-transition: all 0.4s ease;}
 
-#menu-navigation .nav > li > button {margin-top: 35px; background-color: #5db789; color: #ffffff !important; font-family: sans-serif;}
+#menu-navigation .nav > li > button {margin-top: 35px; background-color: #5db789; color: #ffffff !important; font-family: sans-serif !important;}
 
-.menu-2  li > button  {margin-top: 35px; background-color: #5db789; color: #ffffff !important; font-family: sans-serif;}
+.menu-2  li > button  {margin-top: 35px; background-color: #5db789; color: #ffffff !important; font-family: sans-serif !important;}
 
 #menu-navigation .nav.logotipo > li > a {font-size: 25px !important; color: red !important;}
 
@@ -2757,7 +2763,7 @@ span.ZW{background-position:-200px -593px !important}
 
 .menu-6.active .badge {background-color: #fff;border-color: #fff;color: #e76f6f;}
 
-.menu-5 .badge {background-color: #6db6f5;border-color: #6db6f5;color: #fff;position: absolute;right: 5px;top: 5px;}
+.menu-5 .badge {background-color: #6db6f5;border-color: #6db6f5;color: #fff;position: absolute;right: 5px;top: 60px;}
 
 .menu-5.active .badge {background-color: #fff;border-color: #fff;color: #6db6f5;}
 
@@ -3271,11 +3277,13 @@ input[type="file"] {height: auto;}
 
 .location-search .search-btn {
 
-    float: right;
+
 
     margin-left: 10px;
 
     width: 185px;
+	
+	
 
 }
 
