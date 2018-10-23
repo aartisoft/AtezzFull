@@ -15,6 +15,14 @@ $active =$this->uri->segment(2);
 					<a href="<?php echo base_url().'admin/gigs'; ?>" class="<?php echo ($active == 'gigs')? 'active':''; ?>"><i class="mdi mdi-cart"></i> <span>Gigs</span> </a>
 				</li>
 				<li class="has_sub">
+					<a href="#" class=""><i class="mdi mdi-cart"></i> <span>Extras</span> <span class="menu-arrow"></span></a>
+					<ul class="list-unstyled" <?php if($module == 'custom_cupom' || $module == 'custom_signature' || $module == 'custom_payment'){?> style="display:block" <?php } ?>>
+						<li><a href="<?php echo base_url().'admin/Custom_Cupom/'; ?>" class="<?php echo ($active =='custom_cupom')? 'active':''; ?>"> Cupom</a></li>
+						<li><a href="<?php echo base_url().'admin/Custom_Signature/'; ?>" class="<?php echo ($active =='custom_signature')? 'active':''; ?>"> Assinaturas</a></li>
+						<li><a href="<?php echo base_url().'admin/Custom_Payment/'; ?>" class="<?php echo ($active =='custom_payment')? 'active':''; ?>"> Pagamentos</a></li>
+					</ul>
+				</li>					
+				<li class="has_sub">
 					<a href="#" class=""><i class="mdi mdi-cash"></i> <span>Withdrawal</span> <span class="menu-arrow"></span></a>
 					<ul class="list-unstyled" <?php if($module == 'release_payments' || $module == 'completed_payments'){?> style="display:block" <?php } ?>> 
 						<li><a href="<?php echo base_url().'admin/release_payments/'; ?>" class="<?php echo ($active =='release_payments')? 'active':''; ?>"> Incoming withdrawal</a></li>

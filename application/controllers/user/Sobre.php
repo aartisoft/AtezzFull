@@ -204,7 +204,8 @@ class Sobre extends CI_Controller{
 
             }
 
-            $stripe_option = 0;
+
+
             if($stripe_option == 1){
 
                 $this->publishable_key = $publishable_key;
@@ -366,7 +367,7 @@ public function index($offset=0)
 
     $this->data['links'] = $this->pagination->create_links();
 
-    $this->data['list'] =   $this->gigs_model->ong_lista(1,$offset,$config['per_page']);       
+    $this->data['list'] =   $this->gigs_model->buy_service(1,$offset,$config['per_page'],$uid);       
 
     $this->data['user_favorites'] = $this->gigs_model->add_favourites();
 
@@ -384,9 +385,6 @@ public function index($offset=0)
 
     $this->load->view($this->data['theme'] . '/template'); 
 
-
-
-    $this->data['user_all_gigs'] = $this->user_panel_model->user_all_ong();
 
 
 } 

@@ -438,6 +438,10 @@ class Sell_service extends CI_Controller{
 
        { 
 
+       
+
+	   
+
 	   $gigs_id = $this->db->insert_id();  
 
 	   $this->session->set_flashdata('message','Gig added successfully, once get admin approval gigs will be shown in buy service page.');

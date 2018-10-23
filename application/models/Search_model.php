@@ -11,7 +11,7 @@ public function category_wise_search($id)
                     LEFT JOIN country ON members.`country` = country.id
 					LEFT JOIN categories ON categories.`CATID` = sell_gigs.category_id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-					WHERE sell_gigs.status = 0 AND members.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+					WHERE sell_gigs.status = 0 AND members.status = 0 
 					AND sell_gigs.category_id = $id
                     ORDER BY sell_gigs.id DESC ");
 	$result = $query->result_array();
@@ -79,7 +79,7 @@ public function search_subcategory_details($id,$start,$end)
                     LEFT JOIN country ON members.`country` = country.id
 					LEFT JOIN categories ON categories.`CATID` = sell_gigs.category_id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-					WHERE sell_gigs.status = 0 AND members.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+					WHERE sell_gigs.status = 0 AND members.status = 0 
 					AND sell_gigs.category_id  ".$append_sql."
                     ORDER BY sell_gigs.id DESC LIMIT $start , $end ");  	
 	$total_rows = $subcategory_list->result_array();
@@ -106,7 +106,7 @@ public function search_subcategory_details_list($value,$id,$start,$end)
                     LEFT JOIN country ON members.`country` = country.id
 					LEFT JOIN categories ON categories.`CATID` = sell_gigs.category_id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-					WHERE sell_gigs.status = 0 AND members.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+					WHERE sell_gigs.status = 0 AND members.status = 0 
 					".$append_sql."
 					AND sell_gigs.category_id IN (".$result['category_id']." , ".$id.")
                     ORDER BY sell_gigs.id DESC LIMIT $start , $end ");  	
@@ -134,7 +134,7 @@ public function category_search($value,$start,$end)
                     LEFT JOIN country ON members.`country` = country.id
 					LEFT JOIN categories ON categories.`CATID` = sell_gigs.category_id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-					WHERE sell_gigs.status = 0 AND members.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+					WHERE sell_gigs.status = 0 AND members.status = 0 
 					".$append_sql." 
                     ORDER BY sell_gigs.id DESC LIMIT $start , $end ");
 	$result = $query->result_array();
@@ -163,7 +163,7 @@ public function tags_search($value,$start,$end)
                     LEFT JOIN country ON members.`country` = country.id
 					LEFT JOIN categories ON categories.`CATID` = sell_gigs.category_id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-					WHERE sell_gigs.status = 0 AND members.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+					WHERE sell_gigs.status = 0 AND members.status = 0 
 					".$append_sql." 
                     ORDER BY sell_gigs.id DESC LIMIT $start , $end ");
 	$result = $query->result_array();
@@ -208,7 +208,7 @@ public function search($value,$category_id,$start,$end,$country_id,$state_id)
                     LEFT JOIN country ON members.`country` = country.id
 					LEFT JOIN categories ON categories.`CATID` = sell_gigs.category_id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-					WHERE sell_gigs.status = 0 AND members.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+					WHERE sell_gigs.status = 0 AND members.status = 0 
 					".$append_sql." 
                     ORDER BY sell_gigs.id DESC LIMIT $start , $end ");
 	$result = $query->result_array();
@@ -230,7 +230,7 @@ public function search($value,$category_id,$start,$end,$country_id,$state_id)
                     LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
                     LEFT JOIN country ON members.`country` = country.id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-                    WHERE sell_gigs.country_name = '$full_country_name' AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+                    WHERE sell_gigs.country_name = '$full_country_name'
 					AND sell_gigs.status = 0 AND members.status = 0 
                     ORDER BY sell_gigs.id ASC" .$append_sql. " ;");
         
@@ -254,7 +254,7 @@ public function search($value,$category_id,$start,$end,$country_id,$state_id)
                     LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
                     LEFT JOIN country ON members.`country` = country.id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`    
-					WHERE sell_gigs.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)               
+					WHERE sell_gigs.status = 0                
                     ORDER BY sell_gigs.id DESC ".$append_sql."" );
 
         $result = $query->result_array();

@@ -184,7 +184,6 @@ class Buy_service extends CI_Controller{
 			}
 
 
-                        $stripe_option = 0;
 
 			if($stripe_option == 1){
 
@@ -302,7 +301,7 @@ public function index($offset=0)
 
 
 
-	$this->data['page_title'] = 'Serviços encontrados';
+	$this->data['page_title'] = 'Buy Service';
 
 	$this->load->library('pagination');
 
@@ -380,7 +379,7 @@ public function index($offset=0)
 
 	$this->data['page'] = 'index';
 
-	$this->data['search_value'] = 'Serviços encontrados';    
+	$this->data['search_value'] = 'Buy Service';    
 
 	$this->data['search_type'] = 'Location';
 
@@ -591,6 +590,9 @@ function buy($id,$amount,$user_id,$g_name,$currency_type){
 
 		//$this->paypal_lib->image($logo);
 
+
+
+		
 
 		$this->paypal_lib->paypal_auto_form();
 

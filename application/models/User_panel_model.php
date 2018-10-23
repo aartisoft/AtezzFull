@@ -93,24 +93,16 @@ class User_panel_model extends CI_Model{
         return $result;        
     }
 
-    public function getTituloPost($uid)    
-    {
-        $query = $this->db->query("SELECT POST.title AS title  FROM sell_gigs AS POST  INNER JOIN sell_post_ong AS ONG ON ONG.id_sell_gigs = POST.id WHERE ong.id_cadastro_ong = $uid");
-        $result = $query->result_array();
-        return $result;        
-    }
-
-
     public function verify_Ong($uid)    
     {
-        $query = $this->db->query("SELECT ID AS ID_ONG FROM `cadastro_ong` WHERE `ID_USUARIO` = $uid");
+        $query = $this->db->query("SELECT * FROM `cadastro_ong` WHERE `ID_USUARIO` = $uid");
         $result = $query->result_array();
         return $result;        
     }
 
     public function verify_Premium($uid)    
     {
-        $query = $this->db->query("SELECT * FROM `service_provider` WHERE `fk_members_service` = $uid");
+        $query = $this->db->query("SELECT * FROM `service_provider` WHERE `payment_code` <> '' AND `fk_members_service` = $uid");
         $result = $query->result_array();
         return $result;        
     }
@@ -141,27 +133,6 @@ class User_panel_model extends CI_Model{
         $query = $this->db->query("SELECT `ID`, `DESCRICAO`  FROM tipoServico_ong;");
         $result = $query->result_array();
         return $result;                  
-    }
-
-
-    public function user_all_ong()
-    {
-        $query = $this->db->query("  SELECT sell_gigs.*,members.`fullname`, `members`.username, `members`.`user_thumb_image`,`members`.`user_profile_image` , `states`.`state_name` ,( SELECT gigs_image.`gig_image_medium` FROM `gigs_image` 
-                    WHERE gigs_image.gig_id = sell_gigs.id
-                    LIMIT 0 , 1  ) AS gig_image , ( SELECT gigs_image.`gig_image_tile` FROM `gigs_image` 
-                    WHERE gigs_image.gig_id = sell_gigs.id
-                    LIMIT 0 , 1  ) AS gig_image_tile , country.country , members.`state`,
-					(SELECT count(id) FROM `feedback` WHERE `gig_id` = sell_gigs.id and to_user_id = sell_gigs.user_id) AS gig_usercount,
-					(SELECT AVG(rating) FROM `feedback` WHERE `gig_id` = sell_gigs.id and to_user_id = sell_gigs.user_id) AS gig_rating FROM `sell_gigs` 
-                    LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
-                    LEFT JOIN sell_post_ong ON sell_post_ong.id_sell_gigs = sell_gigs.id
-                    LEFT JOIN country ON members.`country` = country.id
-                    LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-                    WHERE sell_gigs.user_id not in (select USERID from members where  status=1)  
-					AND sell_gigs.status = 0 AND sell_gigs.id = sell_post_ong.id_sell_gigs
-                    ORDER BY sell_gigs.id DESC ");
-        $result =  $query->result_array();    
-        return $result;
     }
 
 

@@ -129,11 +129,11 @@
 											<span class="hidden-xxs">Perfil</span>
 										</a>
 									</li>
-									<!--<li>
-										<a href="<?php echo base_url().'payment-settings'; ?>">
+									<li>
+										<a href="<?php echo base_url().'assinatura'; ?>">
 											<span class="visible-xxs"><i class="fa fa-money" aria-hidden="true"></i></span>
-											<span class="hidden-xxs">Payment Settings</span>
-										</a>-->
+											<span class="hidden-xxs">Assinatura</span>
+										</a>
 									</li>
 								</ul>    
 							</div>		

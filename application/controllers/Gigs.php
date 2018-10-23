@@ -29,6 +29,8 @@ class Gigs extends CI_Controller{
     if(isset($userid['SESSION_USER_ID']))
     {
         $uid = $userid['SESSION_USER_ID']; 
+        $verify_user = $this->user_panel_model->verify_Premium($uid); 
+        $this->data['verify_user_premium'] = $verify_user;
     }
 
 
@@ -1570,237 +1572,6 @@ $this->load->vars($this->data);
 $this->load->view($this->data['theme'].'/template');
 
 }
-
-
-
-public function ong_preview($title='')
-
-{
-  $uid = $this->session->userdata('SESSION_USER_ID');
-  $IdOng = $this->session->userdata('SESSION_USER_ONG_ID');
-
-
-    $this->data['gigs_country'] =  $this->gigs_model->gigs_country();
-    $title =  urldecode($title);
-
-  /* Stripe Library in CI Start */
-    $stripe_config = array();
-    $stripe_config['publishable_key'] = "pk_test_Js15CigEZPZH69hjS2hgXjBx";
-    $stripe_config['secret_key'] = "sk_test_OVXvseuWuLVp2w0XOWvGKDQJ";
-    $stripe_config['stripe_name'] = "Dreams Gigs";
-    $stripe_config['stripe_logo'] = base_url()."assets/images/logo.png";
-    $stripe_config['stripe_description'] = "This Gigs Payments";
-    $stripe_config['server_side_coding'] = base_url()."user/buy_service/stripe_token_payment";
-    $this->load->library('stripe',$stripe_config);
-    /* Stripe Library in CI End */
-    //$this->data['seo_module_name']      = $this->user_panel_model->seo_details('gig_preview');
-    if(empty($title))
-  {
-    $title = str_replace(" ","-",$this->input->post('selected_category'));
-  }
-  if(!empty($IdOng))
-  { 
-    $gig_details = $this->gigs_model->get_ong_details($title, $IdOng);
-  }
-  else
-  {
-    $gig_details = $this->gigs_model->get_ong_details($title);
-  }
-
-
-  if(empty($gig_details['id']))
-
-  {
-
-   redirect(base_url());
-
- }
-
- //$this->data['gig_tags']  = $gig_details['ong_categoria'];
- $gig_id = $gig_details['id'];
- $userid = $this->session->userdata('SESSION_USER_ID');
-
-
-  // echo '<pre>'; print_r($this->session->all_userdata());
-
-
- $this->db->select('id');
- $this->db->from('views');
- $this->db->where('user_id',$userid);
- $this->db->where('gig_id',$gig_id);
- $check_views = $this->db->count_all_results();
-
- $this->db->select('id');
- $this->db->from('sell_gigs');
- $this->db->where('user_id',$userid);
- $this->db->where('id',$gig_id);
- $check_self_gig = $this->db->count_all_results();
-
- if($check_views == 0 && $check_self_gig == 0){
-   $this->db->insert('views', array('user_id'=>$userid, 'gig_id'=>$gig_id));
-
-   $this->db->set('total_views', 'total_views+1', FALSE);
-   $this->db->where('id',$gig_id);
-   $this->db->update('sell_gigs');
- }
-
-
-//dados ong
-$this->data['Banco']  = $gig_details['BANCO'];
-$this->data['Agencia']  = $gig_details['AGENCIA'];
-$this->data['Conta']  = $gig_details['CONTA'];
-$this->data['Cnpj']  = $gig_details['CNPJ'];
-$this->data['Nome']  = $gig_details['TITULAR'];
-
-
- $this->data['gig_id'] = $gig_id;
- $user_id = $gig_details['user_id'];
- $this->data['gig_user_id'] = $user_id;
-
- $profile = $this->user_panel_model->profile($user_id);
-
-
-
- $result =  array();
-
- $this->data['user_country_shortname'] = '';
-
- $this->data['user_country_name'] = '';
-
- if(!empty($profile['country'])){
-
-  $query = $this->db->query("SELECT `sortname`,country FROM `country` WHERE `id` =". $profile['country']."");
-
-  $result = $query->row_array();
-
-   $this->data['user_country_shortname'] = $result['sortname'];
-
-   $this->data['user_country_name'] = $result['country'];
-
- }
-
-
-
-
-
- $this->data['user_profile'] = $profile ;
-
-
-
- if(($this->session->userdata('SESSION_USER_ID')))
-
- {
-
-  $userid = $this->session->userdata('SESSION_USER_ID');
-
-  $visited_gigs = $this->gigs_model->get_user_visited_gigs($userid);
-
-  if(!empty($visited_gigs))
-
-  {
-
-    foreach ($visited_gigs as $value)
-
-    {
-
-      if(in_array($gig_id,$value))
-
-      {
-
-       $this->load->helper('date');
-
-       $result = "true";
-
-       $date = date('Y-m-d H:i:s');
-
-       $update_data = array('created_date'=>$date);
-
-       $this->db->where('gig_id',$gig_id);
-
-       $this->db->update('last_visited',$update_data);
-
-       break;
-
-     }
-
-     else {
-
-      $result =  "false";
-
-    }
-
-  }
-
-  if($result=="false")
-
-  {
-
-    $data['gig_id'] = $gig_id;
-
-    $data['user_id'] = $userid;
-
-    $this->db->insert('last_visited',$data);
-
-  }
-
-} else {
-
-  $data['gig_id'] = $gig_id;
-
-  $data['user_id'] = $userid;
-
-  $this->db->insert('last_visited',$data);    }
-
-}
-
-$this->data['gig_time_zone'] = $gig_details['time_zone'];
-
-$this->data['gig_time_posted'] = $gig_details['created_date'];
-
-$this->data['username'] = $gig_details['username'];
-
-$this->data['user_name'] = $gig_details['fullname'];
-
-//$this->data['category_based_gigs'] =  $gig_details['ong_categoria'];
-
-$this->data['page_title'] = 'Gig Preview';
-
-$this->data['gig_details'] = $gig_details;
-
-$this->data['module']  = "ong_preview";
-
-$this->data['page'] = "index";
-
-$this->data['user_all_gigs'] = $this->gigs_model->user_all_ong();
-
-$this->data['feedbacks'] = $this->gigs_model->gigs_feedbacks($gig_id,$user_id);
-
-$query_feed = $this->db->query("SELECT AVG(rating) FROM `feedback` WHERE `to_user_id` = $user_id and `gig_id` = $gig_id;");
-
-$fe_count = $query_feed->row_array();
-
-$rat=0;
-
-if($fe_count['AVG(rating)']!='')
-
-{
-
-  $rat=round($fe_count['AVG(rating)']);
-
-}
-
-$this->data['super_fast_delivery'] = $this->gigs_model->super_fast_delivery($gig_id,$user_id);
-
-$this->data['user_feedback'] = $rat;
-
-$this->data['gig_user_id'] = $user_id;
-
-$this->load->vars($this->data);
-
-$this->load->view($this->data['theme'].'/template');
-
-}
-
 
 public function load_more_feedbacks()
 
@@ -3687,7 +3458,26 @@ public function last_visited($offset = 0)
 
 }
 
+public function pagamento_user()
+{
+    $this->load->model('user_custom_model');
+    
+    $user_id = $this->session->userdata('SESSION_USER_ID');
+    $profile = $this->user_panel_model->profile($user_id);
+    $query = $this->db->query("SELECT `sortname`,country FROM `country` WHERE `id` =". $profile['country']."");
+    $result = $query->row_array();
+    $this->data['country_shortname'] = $result['sortname']; 
+    $this->data['country_name'] = $result['country']; 
+    $this->data['profile'] = $profile;
+    $this->data['list'] = $this->user_custom_model->get_user_pagamento_by_id($user_id);
+    $this->data['user_provider']  = $this->user_custom_model->get_user_provider_id($user_id);
+    
+    $this->data['module'] = 'pagamento_user';
+    $this->data['page'] = 'index';
 
+    $this->load->vars($this->data);
+    $this->load->view($this->data['theme'].'/template');     
+}
 
 public function profile()
 

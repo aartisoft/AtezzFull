@@ -1285,7 +1285,7 @@ function checkPassword(str)
     return re.test(str);
 }
 var password_checker = function(obj){ 
-		if($('#password_error').length == 0) $('<div class="pwd-hint" id="pwd-hint"><ul id="password_error"><li class="psw_head">Sua senha deve ter</li></ul></div> ').insertAfter(obj);		
+		if($('#password_error').length == 0) $('<div class="pwd-hint" id="pwd-hint"><ul id="password_error"><li class="psw_head">Your password must</li></ul></div> ').insertAfter(obj);		
 		var passwdVal = obj.val();
 		var passwdFlag = true;
 		
@@ -1295,25 +1295,25 @@ var password_checker = function(obj){
 		$('#upperErr').remove();
 		$('#specialErr').remove();					 
 	  	if (passwdVal.length < 8){  
-			$('#password_error').append('<li id="lengthErr" class="psw_points">Tenha pelo menos 8 caracteres</li>');	
+			$('#password_error').append('<li id="lengthErr" class="psw_points">Be at least 8 characters</li>');	
 			passwdFlag = false;
 		}			
-		// if(!/[a-z]/.test(passwdVal)){ 
-		// 	$('#password_error').append('<li id="lowerErr" class="psw_points">Inclua uma letra maiuscu</li>');
-		// 	passwdFlag = false;
-		// }
-		// if(!/\d/.test(passwdVal)) {
-		// 	$('#password_error').append('<li id="digitErr" class="psw_points">Include a number</li>');
-		// 	passwdFlag = false;
-		// } 
-		if(!/[A-Z]/.test(passwdVal)){
-			$('#password_error').append('<li id="upperErr" class="psw_points">Inclua uma letra maiúscula</li>');
+		if(!/[a-z]/.test(passwdVal)){ 
+			$('#password_error').append('<li id="lowerErr" class="psw_points">Include a lowercase letter</li>');
 			passwdFlag = false;
 		}
-		// if(!/[!@#$%^&*]/.test(passwdVal)){
-		// 	$('#password_error').append('<li id="specialErr" class="psw_points">Include a special character</li>');
-		// 	passwdFlag = false;
-		// }
+		if(!/\d/.test(passwdVal)) {
+			$('#password_error').append('<li id="digitErr" class="psw_points">Include a number</li>');
+			passwdFlag = false;
+		} 
+		if(!/[A-Z]/.test(passwdVal)){
+			$('#password_error').append('<li id="upperErr" class="psw_points">Include an uppercase letter</li>');
+			passwdFlag = false;
+		}
+		if(!/[!@#$%^&*]/.test(passwdVal)){
+			$('#password_error').append('<li id="specialErr" class="psw_points">Include a special character</li>');
+			passwdFlag = false;
+		}
 		if(passwdFlag == false) { 
 		$('#pwd-hint').show();
 		$( "#registers" ).addClass( "disabled" );

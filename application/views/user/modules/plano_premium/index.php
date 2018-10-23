@@ -69,11 +69,9 @@
 								<?php } else {?>	
 
 								<div id="<?php echo 'plano-'.$i ;?>">
-									<a href="" data-toggle="modal" data-target="#register-popup_provider" >
-										<button type="button" class="btn btn-primary  btn-plano" onclick="checkbox(this)">
-												Contratar Plano
-										</button>					
-									</a> 										
+									<button type="button" class="btn btn-primary pagamento" data-plano="<?php echo $i ;?>">
+										Contratar Plano
+									</button>										
 								</div>	
 
 							 	<?php }?>										
@@ -123,7 +121,7 @@
 				<br/><br/><br/><br/>
 
 			</section>
-								
+			<div class="modal" id="modal"></div>					
 			<script type="text/javascript">
 				
 					function checkbox(child) {
@@ -145,99 +143,6 @@
 					}
 
 			</script>
-
-
-		<!-- POP-UP REGISTER PROVIDER -->
-        <?php if(!$this->session->userdata('SESSION_USER_ID')) {} else { ?>
-		<div id="register-popup_provider" class="modal fade custom-popup" role="dialog" data-backdrop="static" data-keyboard="false">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<button type="button" id="remove_popuptop_provider" class="close" data-dismiss="modal">&times;</button>
-					<div class="modal-header text-center">
-					</div>
-					<div class="modal-body">
-						<div id="register_errtext"></div>
-						<form id="provider_register" class="form-horizontal">
-							<span id="register_success_provider"> </span>
-
-							<div class="col-lg-12" align="center" style="margin: 0px 0px 20px 0px;">
-
-								<h2><b>Conta Premium Atezz</b></h2> 
-							    <p class="member-text">Seja um prestador Atezz e conquiste ainda mais clientes. </p>	<br/>
-								<p class="member-text">O seu plano escolhido: <h4><b id="txtP"></b></h4></p><br/>							    						
-							</div>
-
-							<div class="form-group">
-								<label class="col-lg-4">Instituição que apoiarei </label>
-								<div class="col-lg-8">
-									<select name="instituicoes" id="instituicoes" style="width:240px; height: 35px;">
-										<option 		 >Selecionar..</option>
-										<option value="0">Lar dos Idosos - Maria de Fátima</option>
-										<option value="1"> Sopão da madrugada</option>
-										<option value="2">Resgate amigo - Pets</option>
-										<option value="3">Orfanato Joãozinho</option>
-										<option value="4">AACD São Paulo</option>
-
-									</select>
-
-								</div>
-							</div>	
-
-							<div class="form-group">
-								<label class="col-lg-4">Porcentagem que será doado </label>
-								<div class="col-lg-8">
-									<select name="porcentagem" id="porcentagem" style="width:240px; height: 35px;">
-										<option value="5">5%</option>
-										<option value="10">10%</option>
-										<option value="15">15%</option>
-										<option value="20">20%</option>
-										<option value="30">30% ou mais..</option>
-
-									</select>
-
-								</div>
-							</div>								
-
-							<div class="form-group">
-								<label class="col-lg-4">Forma de Pagamento </label>
-								<div class="col-lg-8">
-									<section id="meio_pagamento">
-										<input type="radio" class="check_pay" name="meio_pagamento" id="boleto" value="boleto" checked > Boleto <br/>
-										<input type="radio" class="check_pay" name="meio_pagamento" id="ccredito" value="ccredito" > Cartão de Crédito<br/>
-										<input type="radio" class="check_pay" name="meio_pagamento" id="debt_automatico" value="debt_automatico" > Débito Automático<br/>	
-									</section> 
-
-								</div>
-							</div>	
-
-							<div class="form-group">
-								<label class="col-lg-4">Cupom de Desconto </label>
-								<div class="col-lg-8">
-									<input type="email" value=""  placeholder="" id="cupom_desconto" name='cupom_desconto' class="form-control">
-								</div>
-							</div>																										
-																			
-
-							<div class="form-group">
-								<div class="col-lg-12">
-									<div class="terms-text text-center">
-										Leia o <a href="<?php echo base_url().'terms';?>" target="_blank"> Termos e condições ATezz</a>.    <br/>           
-									</div>		
-								</div>										
-							</div>
-							<div class="form-group">								
-								<div class="col-lg-12 text-center"><button type="submit" class="btn btn-primary logon-btn" id="registers_provider">Confirmar</button></div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- END POP-UP REGISTER PROVIDER -->
-
-
-		<?php } ?>
-
 
 
 			<!-- <div class="tab-content buy-section">

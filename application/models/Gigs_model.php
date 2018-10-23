@@ -43,7 +43,7 @@ class Gigs_model extends CI_Model{
                     LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
                     LEFT JOIN country ON members.`country` = country.id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-					WHERE sell_gigs.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+					WHERE sell_gigs.status = 0
                     ORDER BY sell_gigs.id DESC LIMIT 0 , 10 ");
         $result = $query->result_array();        
         return $result;
@@ -60,8 +60,7 @@ class Gigs_model extends CI_Model{
                     LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
                     LEFT JOIN country ON members.`country` = country.id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-					WHERE sell_gigs.status = 0 AND members.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
-                    GROUP BY id 
+					WHERE sell_gigs.status = 0 AND members.status = 0 GROUP BY id
                     ORDER BY sell_gigs.id DESC LIMIT 0, 10");
 
 		
@@ -93,7 +92,7 @@ class Gigs_model extends CI_Model{
                     LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
                     LEFT JOIN country ON members.`country` = country.id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-					WHERE sell_gigs.status = 0 AND members.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+					WHERE sell_gigs.status = 0 AND members.status = 0
                     ORDER BY sell_gigs.total_views DESC LIMIT 0 , 10  ");
         if($param==1)
         {
@@ -203,7 +202,7 @@ class Gigs_model extends CI_Model{
                     LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
                     LEFT JOIN country ON members.`country` = country.id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-                    WHERE sell_gigs.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)  AND members.status = 0 AND sell_gigs.id IN ( SELECT `gig_id` FROM `favourites` WHERE `user_id` = $user_id )".$append_sql." ");
+                    WHERE sell_gigs.status = 0  AND members.status = 0 AND sell_gigs.id IN ( SELECT `gig_id` FROM `favourites` WHERE `user_id` = $user_id )".$append_sql." ");
         
         if($return_type==0)
         { $result = $query->num_rows(); }
@@ -223,10 +222,9 @@ class Gigs_model extends CI_Model{
 					(SELECT count(id) FROM `feedback` WHERE `gig_id` = sell_gigs.id and to_user_id = sell_gigs.user_id) AS gig_usercount,
 					(SELECT AVG(rating) FROM `feedback` WHERE `gig_id` = sell_gigs.id and to_user_id = sell_gigs.user_id) AS gig_rating FROM `sell_gigs` 
                     LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
-                    LEFT JOIN sell_post_ong ON sell_post_ong.id_sell_gigs = sell_gigs.id
                     LEFT JOIN country ON members.`country` = country.id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-                    WHERE sell_gigs.country_name = '$full_country_name' AND sell_gigs.id != sell_post_ong.id_sell_gigs 
+                    WHERE sell_gigs.country_name = '$full_country_name'
 					AND sell_gigs.status = 0
                     ORDER BY sell_gigs.id ASC" .$append_sql. " ;");
         if($param==1)
@@ -250,11 +248,10 @@ class Gigs_model extends CI_Model{
 					(SELECT count(id) FROM `feedback` WHERE `gig_id` = sell_gigs.id and to_user_id = sell_gigs.user_id) AS gig_usercount,
 					(SELECT AVG(rating) FROM `feedback` WHERE `gig_id` = sell_gigs.id and to_user_id = sell_gigs.user_id) AS gig_rating FROM `sell_gigs` 
                     LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
-                    LEFT JOIN sell_post_ong ON sell_post_ong.id_sell_gigs = sell_gigs.id
                     LEFT JOIN country ON members.`country` = country.id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
                     WHERE members.`username` = '$username'
-					AND sell_gigs.status = 0 AND sell_gigs.id != sell_post_ong.id_sell_gigs 
+					AND sell_gigs.status = 0
                     ORDER BY sell_gigs.id ASC" .$append_sql. " ;");
 		 //echo 	$this->db->last_query().'<br>';
 			 
@@ -288,43 +285,6 @@ class Gigs_model extends CI_Model{
 		}
         return $result;
     }
-
-
-    public function ong_lista($param,$start,$end)
-    {
-        $append_sql = '';
-	
-        if($start||$end != 0)
-        {
-        $append_sql = " LIMIT $start , $end ";    
-        }
-        $query = $this->db->query("  SELECT sell_gigs.*,members.`fullname`,members.`username`,`members`.`user_thumb_image`,`members`.`user_profile_image` , `states`.`state_name` , ( SELECT gigs_image.`gig_image_medium` FROM `gigs_image` 
-                    WHERE gigs_image.gig_id = sell_gigs.id
-                    LIMIT 0 , 1  ) AS gig_image , country.country , members.`state`,
-					(SELECT count(id) FROM `feedback` WHERE `gig_id` = sell_gigs.id and to_user_id = sell_gigs.user_id) AS gig_usercount,
-					(SELECT AVG(rating) FROM `feedback` WHERE `gig_id` = sell_gigs.id and to_user_id = sell_gigs.user_id) AS gig_rating FROM `sell_gigs` 
-                    LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
-                    LEFT JOIN sell_post_ong ON sell_post_ong.id_sell_gigs = sell_gigs.id
-                    LEFT JOIN country ON members.`country` = country.id
-                    LEFT JOIN states ON `states`.`state_id` = `members`.`state`    
-					WHERE sell_gigs.status = 0 AND sell_gigs.id = sell_post_ong.id_sell_gigs AND sell_gigs.user_id not in (select USERID from members where  status=1)            
-                    ORDER BY sell_gigs.id DESC ".$append_sql."" );
-	 
-        if($param==1)
-        {
-        $result = $query->result_array();
-		 
-        }
-        else {
-        $result = $query->num_rows(); 
-		 
-        } 
-		
-        return $result;
-        
-    }
-
-
     
     public function buy_service($param,$start,$end,$userid)
     {
@@ -347,7 +307,7 @@ class Gigs_model extends CI_Model{
                     LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
                     LEFT JOIN country ON members.`country` = country.id
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`    
-					WHERE sell_gigs.status = 0 ".$new."   AND sell_gigs.user_id not in (select USERID from members where  status=1) AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+					WHERE sell_gigs.status = 0 ".$new."   AND sell_gigs.user_id not in (select USERID from members where  status=1)            
                     ORDER BY sell_gigs.id DESC ".$append_sql."" );
 	 
         if($param==1)
@@ -378,7 +338,7 @@ class Gigs_model extends CI_Model{
                         LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
                         LEFT JOIN country ON members.`country` = country.id
                         LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-                        WHERE sell_gigs.status = 0 AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+                        WHERE sell_gigs.status = 0 AND 
 						sell_gigs.category_id = (SELECT `CATID` FROM `categories` WHERE `name` = '$category_name' AND `status` = 0) AND sell_gigs.user_id not in (select USERID from members where  status=1)  
                         ORDER BY sell_gigs.id DESC" .$append_sql. " ;");
         if($param==1)
@@ -403,51 +363,8 @@ class Gigs_model extends CI_Model{
                     LEFT JOIN states ON `states`.`state_id` = `members`.`state`
                     LEFT JOIN gigs_image ON gigs_image.gig_id = sell_gigs.id
                     LEFT JOIN gigs_video ON gigs_video.gig_id = sell_gigs.id
-					WHERE sell_gigs.status = 0 AND sell_gigs.user_id not in (select USERID from members where  status=1)  AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)
+					WHERE sell_gigs.status = 0 AND sell_gigs.user_id not in (select USERID from members where  status=1)  
                     AND sell_gigs.title =  '$title';");
-        $result = $query->row_array(); 
-        return $result;       
-    }
-
-    public function get_ong_details($title)
-    {
-        $title = str_replace(" ","_",$title);
-        $query = $this->db->query("SELECT  sell_gigs.*,members.`fullname`, members.`username`,`members`.`user_thumb_image`,`members`.`user_profile_image` , country.country ,   `states`.`state_name` , members.`state`,
-        categories.name,categories.parent , GROUP_CONCAT(gigs_image.image_path SEPARATOR '#') as image_path ,
-        GROUP_CONCAT(gigs_video.video_path SEPARATOR '#') as video_path, cadastro_ong.* 
-        FROM `sell_gigs` 
-        LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
-        LEFT JOIN sell_post_ong ON sell_post_ong.id_sell_gigs = sell_gigs.id
-        LEFT JOIN categories ON categories.CATID = sell_gigs.category_id
-        LEFT JOIN cadastro_ong ON cadastro_ong.ID = sell_post_ong.id_cadastro_ong
-        LEFT JOIN country ON members.`country` = country.id
-        LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-        LEFT JOIN gigs_image ON gigs_image.gig_id = sell_gigs.id
-        LEFT JOIN gigs_video ON gigs_video.gig_id = sell_gigs.id
-        WHERE sell_gigs.status = 0 AND sell_gigs.user_id not in (select USERID from members where  status=1)  
-        AND sell_gigs.title =  '$title' AND sell_gigs.id = sell_post_ong.id_sell_gigs;");
-
-        $result = $query->row_array(); 
-        return $result;       
-    }
-
-    public function get_ong_details_admin($title, $IdOng)
-    {
-        $title = str_replace(" ","_",$title);
-        $query = $this->db->query("SELECT  sell_gigs.*,members.`fullname`, members.`username`,`members`.`user_thumb_image`,`members`.`user_profile_image` , country.country ,   `states`.`state_name` , members.`state`,
-        categories.name,categories.parent , GROUP_CONCAT(gigs_image.image_path SEPARATOR '#') as image_path ,
-        GROUP_CONCAT(gigs_video.video_path SEPARATOR '#') as video_path 
-        FROM `sell_gigs` 
-        LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
-        LEFT JOIN sell_post_ong ON sell_post_ong.id_sell_gigs = sell_gigs.id
-        LEFT JOIN categories ON categories.CATID = sell_gigs.category_id
-        LEFT JOIN country ON members.`country` = country.id
-        LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-        LEFT JOIN gigs_image ON gigs_image.gig_id = sell_gigs.id
-        LEFT JOIN gigs_video ON gigs_video.gig_id = sell_gigs.id
-        WHERE sell_gigs.status = 0 AND sell_gigs.user_id not in (select USERID from members where  status=1)  
-        AND sell_gigs.title =  '$title' AND sell_post_ong.id_cadastro_ong = '$IdOng' ;");
-
         $result = $query->row_array(); 
         return $result;       
     }
@@ -469,27 +386,6 @@ class Gigs_model extends CI_Model{
         return $result;       
     }
     
-    public function user_all_ong()
-    {
-        $query = $this->db->query("  SELECT sell_gigs.*,members.`fullname`, `members`.username, `members`.`user_thumb_image`,`members`.`user_profile_image` , `states`.`state_name` ,( SELECT gigs_image.`gig_image_medium` FROM `gigs_image` 
-                    WHERE gigs_image.gig_id = sell_gigs.id
-                    LIMIT 0 , 1  ) AS gig_image , ( SELECT gigs_image.`gig_image_tile` FROM `gigs_image` 
-                    WHERE gigs_image.gig_id = sell_gigs.id
-                    LIMIT 0 , 1  ) AS gig_image_tile , country.country , members.`state`,
-					(SELECT count(id) FROM `feedback` WHERE `gig_id` = sell_gigs.id and to_user_id = sell_gigs.user_id) AS gig_usercount,
-					(SELECT AVG(rating) FROM `feedback` WHERE `gig_id` = sell_gigs.id and to_user_id = sell_gigs.user_id) AS gig_rating FROM `sell_gigs` 
-                    LEFT JOIN members ON members.`USERID` = sell_gigs.user_id
-                    LEFT JOIN sell_post_ong ON sell_post_ong.id_sell_gigs = sell_gigs.id
-                    LEFT JOIN country ON members.`country` = country.id
-                    LEFT JOIN states ON `states`.`state_id` = `members`.`state`
-                    WHERE sell_gigs.user_id not in (select USERID from members where  status=1)  
-					AND sell_gigs.status = 0 AND sell_gigs.id = sell_post_ong.id_sell_gigs
-                    ORDER BY sell_gigs.id DESC ");
-        $result =  $query->result_array();    
-        return $result;
-    }
-
-
     public function user_all_gigs($gig_id,$user_id)
     {
         $query = $this->db->query("  SELECT sell_gigs.*,members.`fullname`, `members`.username, `members`.`user_thumb_image`,`members`.`user_profile_image` , `states`.`state_name` ,( SELECT gigs_image.`gig_image_medium` FROM `gigs_image` 

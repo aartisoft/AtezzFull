@@ -54,31 +54,27 @@ function sell_services_add(){
 
      
 
-    // if($('#gig_price').val()==""){
-    //     error = 1;
-    //     $('.gig_price_error').show();
-    // }else{
-    //     $('.gig_price_error').hide();
-    // }
-    
-    // if($('#delivering_time').val()==""){
-    //     error = 1;
-    //     $('.main_delivery_days_error').show();
-    // }else{
-    //     $('.main_delivery_days_error').hide();
-    // }
-
-    // if($('#delivering_time').val()!=""){
+    if($('#gig_price').val()==""){
+        error = 1;
+        $('.gig_price_error').show();
+    }else{
+        $('.gig_price_error').hide();
+    }
+    if($('#delivering_time').val()==""){
+        error = 1;
+        $('.main_delivery_days_error').show();
+    }else{
+        $('.main_delivery_days_error').hide();
+    }
+    if($('#delivering_time').val()!=""){
         
-    //     if(parseInt($('#delivering_time').val())>=30){
-    //       error = 1;
-    //      $('.delivery_days_error').show();
-    //     }else{
-    //         $('.delivery_days_error').hide();
-    //    }
-    // }
-
-
+        if(parseInt($('#delivering_time').val())>=30){
+          error = 1;
+         $('.delivery_days_error').show();
+        }else{
+            $('.delivery_days_error').hide();
+       }
+    }
 
     if($('#gig_category_id').val()==""){
         error = 1;
@@ -104,47 +100,47 @@ function sell_services_add(){
         $('.gig_details_error').hide();
     }       
 
-    //   $('.extra_money_price').each(function(){
+      $('.extra_money_price').each(function(){
 
-    //         var no = $(this).attr('date-no');
+            var no = $(this).attr('date-no');
 
-    //         if(no!='#' && typeof no !== "undefined"){
-    //             if($('#label_name_'+no).val() !="" || $('#label_val_'+no).val() !="" )  {
-    //                if($('#label_name_'+no).val() ==""){$('.extra_gigs_gig_name').show(); error = 1 ;  return false; }else{$('.extra_gigs_gig_name').hide(); } 
-    //                if($('#label_val_'+no).val() ==""){ $('.extra_gigs_validate').show(); error = 1 ;  return false; }else{ $('.extra_gigs_validate').hide(); } 
-    //             } 
-    //         }
-    //     });
+            if(no!='#' && typeof no !== "undefined"){
+                if($('#label_name_'+no).val() !="" || $('#label_val_'+no).val() !="" )  {
+                   if($('#label_name_'+no).val() ==""){$('.extra_gigs_gig_name').show(); error = 1 ;  return false; }else{$('.extra_gigs_gig_name').hide(); } 
+                   if($('#label_val_'+no).val() ==""){ $('.extra_gigs_validate').show(); error = 1 ;  return false; }else{ $('.extra_gigs_validate').hide(); } 
+                } 
+            }
+        });
 
-    //   if($('input[name="work_option"]').is(':checked')==false){
-    //     error = 1;
-    //     $('.work_option_error').show();
-    //   }else{
-    //     $('.work_option_error').hide();
-    //   }
+      if($('input[name="work_option"]').is(':checked')==false){
+        error = 1;
+        $('.work_option_error').show();
+      }else{
+        $('.work_option_error').hide();
+      }
 
-    //   if($('#super_fast_delivery').is(':checked')==true){
-    //         if($('#super_fast_delivery_desc').val()==''){
-    //             error = 1;
-    //             $('.super_fast_error').show();
-    //         }else{
-    //             $('.super_fast_error').hide();
-    //         }
+      if($('#super_fast_delivery').is(':checked')==true){
+            if($('#super_fast_delivery_desc').val()==''){
+                error = 1;
+                $('.super_fast_error').show();
+            }else{
+                $('.super_fast_error').hide();
+            }
 
-    //         if($('#super_fast_charges').val()==''){
-    //             error = 1;
-    //             $('.super_fast_priece_error').show();
-    //         }else{
-    //             $('.super_fast_priece_error').hide();
-    //         }
+            if($('#super_fast_charges').val()==''){
+                error = 1;
+                $('.super_fast_priece_error').show();
+            }else{
+                $('.super_fast_priece_error').hide();
+            }
 
-    //         // if($('#super_fast_delivery_date').val()>$('#main_delivery_days').val()){
-    //         //     error = 1;
-    //         //     $('.less_then_priece_error').show();
-    //         // }else{
-    //         //     $('.less_then_priece_error').hide();
-    //         // }
-    //   }
+            // if($('#super_fast_delivery_date').val()>$('#main_delivery_days').val()){
+            //     error = 1;
+            //     $('.less_then_priece_error').show();
+            // }else{
+            //     $('.less_then_priece_error').hide();
+            // }
+      }
       
       if($('#terms_conditions').is(':checked')==false){
             error = 1;
@@ -154,7 +150,7 @@ function sell_services_add(){
       }
     if (error==0) {
 
-         $('#post_ong').submit();
+         $('#sell_service').submit();
 
     } else {
         return false;

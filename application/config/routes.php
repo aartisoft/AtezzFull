@@ -161,8 +161,6 @@ $route['load_more_userfeedbacks'] = 'gigs/load_more_userfeedbacks';
 
 $route['sell-service'] = 'user/sell_service';
 
-$route['sell-service-ong'] = 'user/sell_service_ong';
-
 $route['projeto_solidario'] = 'user/projeto_solidario';
 
 $route['sobre'] = 'user/sobre';
@@ -174,10 +172,6 @@ $route['post_ong'] = 'user/post_ong';
 $route['buy-service/(:any)'] = 'user/buy_service/index/$1';
 
 $route['buy-service'] = 'user/buy_service';
-
-$route['lista-ong/(:any)'] = 'user/lista_ong/index/$1';
-
-$route['lista-ong'] = 'user/lista_ong';
 
 $route['my-gigs'] = 'gigs/my_gigs';
 
@@ -209,10 +203,6 @@ $route['gig-preview'] = 'gigs/gig_preview';
 
 $route['gig-preview/(:any)'] = 'gigs/gig_preview/$1'; 
 
-$route['ong-preview'] = 'gigs/ong_preview';  
-
-$route['ong-preview/(:any)'] = 'gigs/ong_preview/$1'; 
-
 $route['user-profile'] =  'gigs/user_profile';
 
 $route['terms'] = 'gigs/terms';
@@ -223,7 +213,7 @@ $route['user-profile/(:any)/(:num)'] = 'gigs/user_profile/$1/$2';
 
 $route['last-visited'] = 'gigs/last_visited';
 
-$route['payment-settings'] = 'gigs/payment_settings';  
+$route['assinatura'] = 'gigs/pagamento_user';   
 
 $route['edit-gig/(:any)'] = 'gigs/edit_gig/$1';
 
@@ -233,7 +223,10 @@ $route['purchase-success']= 'user/buy_service/purchase_success';
 
 $route['purchase-success/(:any)']= 'user/buy_service/purchase_success/$1';
 
-
+$route['pagamento/redirect'] = 'user/Pagamento_Service/redirect/sucesso';
+$route['pagamento/redirect/erro'] = 'user/Pagamento_Service/redirect/erro';
+$route['pagamento/redirect/cancelado'] = 'user/Pagamento_Service/redirect/cancelado';
+$route['pagamento/retorno'] = 'user/Pagamento_Service/retorno';
 
 $route['files'] = 'user/sales/my_files'; // Digital Downloads 
 

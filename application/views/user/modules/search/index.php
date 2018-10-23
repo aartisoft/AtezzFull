@@ -29,15 +29,15 @@
 
 
 // echo '<pre>'; print_r($search_value); 
-						$display_result = "Desculpe! Nenhum item encontrado. ";
+						$display_result = "Sorry! No Gigs Found ";
 												
 
 						if($total_results!=0 && $total_results>1 ) { 
-							$display_result = $total_results . " Registro encontrado "; 
+							$display_result = $total_results . " Gigs found "; 
 						} 
 
 						else if($total_results!=0 && $total_results==1) { 
-							$display_result = $total_results . " Registro encontrado "; 
+							$display_result = $total_results . " Gig found "; 
 						}  ?>
 
                             <h3 class="header-title"> <?php 

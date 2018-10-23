@@ -75,7 +75,7 @@ class Search extends CI_Controller{
 				$append_sql .=  " AND S.gig_tags LIKE '%".$search_value."%' ";
 				}
 				 
-				$query = $this->db->query("SELECT * FROM sell_gigs S LEFT JOIN members M ON M.USERID = S.user_id  WHERE S.status = 0  AND sell_gigs.id != (select id_sell_gigs FROM sell_post_ong)  AND M.status = 0 " . $append_sql);
+				$query = $this->db->query("SELECT * FROM sell_gigs S LEFT JOIN members M ON M.USERID = S.user_id  WHERE S.status = 0  AND M.status = 0 " . $append_sql);
 								
 				  $rowcount = $query->num_rows();
 				 
@@ -244,7 +244,7 @@ class Search extends CI_Controller{
 				}
 				
 				
-				$query = $this->db->query("SELECT * FROM sell_gigs AS SE ".$joins_append." WHERE SE.status = 0 AND SE.id != (select id_sell_gigs FROM sell_post_ong)" . $append_sql);				
+				$query = $this->db->query("SELECT * FROM sell_gigs AS SE ".$joins_append." WHERE SE.status = 0 " . $append_sql);				
 				 $rowcount = $query->num_rows();
 				 $this->db->last_query();
 				 

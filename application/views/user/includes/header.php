@@ -49,7 +49,6 @@
     <meta name="description" content="<?php echo $meta_description;?>">
 	<meta name="keywords" content="<?php echo $meta_keywords ;?>">
 	<link rel="shortcut icon" href="<?php echo $fav;  ?>">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/css/owl.carousel.css" rel="stylesheet">
@@ -199,7 +198,7 @@
                         <ul class="nav navbar navbar-static-top">
                             <?php if(($this->session->userdata('SESSION_USER_ID')))
                             {  ?>
-                            <li id="menu-1" class="menu-1 logotipo <?php if($module == 'gigs') echo 'active'; ?>"><a href="<?php echo base_url(); ?>"><img alt="Atezz" src="<?php echo base_url()."assets/images/logo-atezz.png"?>" width="185" height="80"></a></li>
+                            <li id="menu-1" class="menu-1 logotipo <?php if($module == 'gigs') echo 'active'; ?>"><a href="<?php echo base_url(); ?>">Atezz</a></li>
                             	
 							 <li id="menu-1" class="menu-1 <?php if($module == 'gigs') echo 'active'; ?>"><a href="<?php echo base_url().'sobre'; ?>">Sobre</a></li> 
 
@@ -244,7 +243,7 @@
 									
 								</ul>
 							</li>                             
-							<li id="menu-8" align="center" class="logado dropdown menu-8 menu-icon-8 <?php if($module == 'purchases' || $module == 'my_gigs' || $module == 'my_post_ong'  || $module == 'sales' || $module == 'payments' || $module == 'user_profile' ) echo 'active'; ?> ">
+							<li id="menu-8" align="center" class="logado dropdown menu-8 menu-icon-8 <?php if($module == 'purchases' || $module == 'my_gigs' || $module == 'sales' || $module == 'payments' || $module == 'user_profile' ) echo 'active'; ?> ">
 								<img style="margin-top: 8px !important; padding-right:5px" class="menu-pro-img" src="<?php echo $header_user_image ; ?>" alt="<?php echo $header_user_fullname ; ?>" 
 								title="<?php echo $header_user_fullname ; ?>" width="10" height="50">
 								<a href="<?php echo base_url().'user-profile/'.$header_username; ?>">
@@ -256,47 +255,8 @@
 								<?php if($this->session->userdata('SESSION_PROVIDER')){ ?> 
 									<li><a href="<?php echo base_url().'my-gigs'; ?>">Meus serviços</a></li>
 									<li><a href="<?php echo base_url().'sales'; ?>">Serviços Prestados</a></li>
+									
 								<?php } ?>		
-
-								<?php 
-									$idOng = $this->session->userdata('SESSION_USER_ONG_ID');
-									if(!empty($idOng))
-									{
-										if(!empty($idOng))
-										{
-											$title = $this->user_panel_model->getTituloPost($idOng);	
-											$title = $title[0]['title'];
-										}
-										else
-										{
-											$title = "";
-										}
-								?>
-
-								<?php  
-										if(!empty($idOng))
-										{
-											$query  = $this->db->query("SELECT id_sell_gigs FROM `sell_post_ong` where id_cadastro_ong = ".$idOng."  ");
-											$row = $query->num_rows();
-										}	
-										if($row = 0)
-										{
-								?>
-									<li><a href="<?php echo base_url().'sell-service-ong'?>">Criar Publicação</a></li>
-								<?php 
-										}else{
-											if(!empty($idOng) )
-											{
-												$title = $this->user_panel_model->getTituloPost($idOng);	
-												$title = $title[0]['title'];
-											}
-								?>
-								<li><a href="<?php echo base_url().'ong-preview/'.$title; ?>">Editar Publicação</a></li>
-								<?php 
-											}
-									}
-								?>								
-
 									<li><a href="">Avaliações</a></li>
 									<li><a href="<?php echo base_url().'user-profile/'.$header_username; ?>">Perfil</a></li>
 									<li><a href="<?php echo base_url().'logout'; ?>">Sair</a></li>
@@ -304,12 +264,11 @@
 							</li>    
 
 							<!-- USUARIO DESLOGADO-->
-							<?php 
-							 } else {  ?>
+							<?php } else {  ?>
 
 							<li id="menu-1" class="menu-1 logotipo <?php if($module == 'gigs') echo 'active'; ?> ">
 								<a href="<?php echo base_url(); ?>">
-								<img alt="Atezz" src="<?php echo base_url()."assets/images/logo-atezz.png"?>" width="185" height="80">
+									ATEZZ
 								</a>
 							</li>
 
@@ -440,7 +399,7 @@
 								<li class="nav-row"><a href="<?php echo base_url().'payment-settings'; ?>">Payment Settings</a></li>
 							</ul>
 						</li>
-						<li class="<?php if($module == 'purchases' || $module == 'my_gigs' || $module == 'my_post_ong' || $module == 'sales' || $module == 'wallets' || $module == 'user_profile' ) echo 'active'; ?>" >
+						<li class="<?php if($module == 'purchases' || $module == 'my_gigs' || $module == 'sales' || $module == 'wallets' || $module == 'user_profile' ) echo 'active'; ?>" >
 							<div class="mobile-menu-item clearfix">
 								<a href="<?php echo base_url().'user-profile/'.$header_username; ?>">
 									<img class="mobile-user-img" src="<?php echo $header_user_image ; ?>" alt="<?php echo $header_user_fullname ; ?>" title="<?php echo $header_user_fullname ; ?>" width="50" height="50"> Profile
@@ -605,16 +564,16 @@
 					</div>
 					<div class="modal-body">
 						<form id="users_register" class="form-horizontal">
-							<p class="member-text">Já é cadastrado? <a href="" data-toggle="modal" data-target="#login-popup">Login</a></p>
+							<p class="member-text">Already a member? <a href="" data-toggle="modal" data-target="#login-popup">Login</a></p>
 							<span id="register_success"> </span>
 							<div class="login-or">
 								<hr class="hr-or">
-								<span class="span-or">Ou</span>
+								<span class="span-or">or</span>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">Nome</label>
+								<label class="col-lg-4">Name</label>
 								<div class="col-lg-8">
-									<input type="text" value=""   placeholder="Nome" id="name" name='name' class="form-control alphaonly" required>
+									<input type="text" value=""   placeholder="Name" id="name" name='name' class="form-control alphaonly" required>
 								</div>
 							</div>
 							<div class="form-group">
@@ -624,31 +583,31 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">Apelido</label>
+								<label class="col-lg-4">Username</label>
 								<div class="col-lg-8">
-									 <input type="text" name="username"  minlength=5  id="username" class="form-control alphaonly" placeholder="Apelido" autocomplete="off" required>                                                                              
+									 <input type="text" name="username"  minlength=5  id="username" class="form-control alphaonly" placeholder="Username" autocomplete="off" required>                                                                              
 								</div>
 								<div id="username_suggestion"  style="display: none;">
 									<input type="hidden" name="hidden_field" >                                                                                           
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">Senha</label>
+								<label class="col-lg-4">Password</label>
 								<div class="col-lg-8">
-									<input type="password" placeholder="Senha" class="form-control" id="reg_password" name="Password" required>
+									<input type="password" placeholder="Password" class="form-control" id="reg_password" name="Password" required>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">Confirmar Senha</label>
+								<label class="col-lg-4">Repeat Password</label>
 								<div class="col-lg-8">
-									<input type="password" placeholder="Confirmar Senha" class="form-control" id="repeatpassword" name="RepeatPassword" required>
+									<input type="password" placeholder="Repeat Password" class="form-control" id="repeatpassword" name="RepeatPassword" required>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">País</label>
+								<label class="col-lg-4">Country</label>
 								<div class="col-lg-8">
 									<select name="country_id" id="country_id" class="form-control" required > 
-										<option value="">Selecionar País</option>
+										<option value="">Select Country</option>
 										<?php if(!empty($country_list)) { ?>
 										<?php foreach($country_list as $countries) { ?>
 										<option value="<?php echo $countries['id']; ?>" ><?php echo $countries['country']; ?></option>
@@ -658,22 +617,22 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">Estado</label>
+								<label class="col-lg-4">State</label>
 								<div class="col-lg-8">
 									<select name="state_id" id="state_id" class="form-control" required>
-										<option value="">Selecionar Estado</option> 
+										<option value="">Select State</option> 
 									</select>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-lg-12">
 									<div class="terms-text text-center">
-									Ao inscrever-se, eu concordo com <?php echo  $this->site_name; ?>  <a href="<?php echo base_url().'terms';?>" target="_blank"> Termos de condições</a>.               
+										By signing up, I agree to <?php echo  $this->site_name; ?>  <a href="<?php echo base_url().'terms';?>" target="_blank"> Terms of conditions</a>.               
 									</div>		
 								</div>										
 							</div>
 							<div class="form-group">								
-								<div class="col-lg-12 text-center"><button type="submit" class="btn btn-primary logon-btn" id="registers">Criar conta</button></div>
+								<div class="col-lg-12 text-center"><button type="submit" class="btn btn-primary logon-btn" id="registers">Register</button></div>
 							</div>
 						</form>
 					</div>
@@ -693,16 +652,16 @@
 					</div>
 					<div class="modal-body">
 						<form id="ongs_register" class="form-horizontal">
-							<p class="member-text">Já é cadastrado?  <a href="" data-toggle="modal" data-target="#login-popup">Login</a></p>
+							<p class="member-text">Already a member? <a href="" data-toggle="modal" data-target="#login-popup">Login</a></p>
 							<span id="register_success_1"> </span>
 							<div class="login-or">
 								<hr class="hr-or">
 								<span class="span-or">or</span>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">Nome</label>
+								<label class="col-lg-4">Name</label>
 								<div class="col-lg-8">
-									<input type="text" value=""   placeholder="Nome" id="name_ong" name='name' class="form-control alphaonly" required>
+									<input type="text" value=""   placeholder="Name" id="name_ong" name='name' class="form-control alphaonly" required>
 								</div>
 							</div>
 							<div class="form-group">
@@ -712,31 +671,31 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">Apelido</label>
+								<label class="col-lg-4">Username</label>
 								<div class="col-lg-8">
-									 <input type="text" name="Apelido"  minlength=5  id="username_ong" class="form-control alphaonly" placeholder="Username" autocomplete="off" required>                                                                              
+									 <input type="text" name="username"  minlength=5  id="username_ong" class="form-control alphaonly" placeholder="Username" autocomplete="off" required>                                                                              
 								</div>
 								<div id="username_suggestion_ong"  style="display: none;">
 									<input type="hidden" name="hidden_field" >                                                                                           
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">Senha</label>
+								<label class="col-lg-4">Password</label>
 								<div class="col-lg-8">
-									<input type="password" placeholder="Senha" class="form-control" id="reg_password_ong" name="Password" required>
+									<input type="password" placeholder="Password" class="form-control" id="reg_password_ong" name="Password" required>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">Confirmar Senha</label>
+								<label class="col-lg-4">Repeat Password</label>
 								<div class="col-lg-8">
-									<input type="password" placeholder="Confirmar Senha" class="form-control" id="repeatpassword_ong" name="RepeatPassword" required>
+									<input type="password" placeholder="Repeat Password" class="form-control" id="repeatpassword_ong" name="RepeatPassword" required>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">País</label>
+								<label class="col-lg-4">Country</label>
 								<div class="col-lg-8">
-									<select name="País" id="country_id_ong" class="form-control" required > 
-										<option value="">Selecionar país</option>
+									<select name="country_id" id="country_id_ong" class="form-control" required > 
+										<option value="">Select Country</option>
 										<?php if(!empty($country_list)) { ?>
 										<?php foreach($country_list as $countries) { ?>
 										<option value="<?php echo $countries['id']; ?>" ><?php echo $countries['country']; ?></option>
@@ -746,10 +705,10 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-lg-4">Estado</label>
+								<label class="col-lg-4">State</label>
 								<div class="col-lg-8">
 									<select name="state_id" id="state_id_ong" class="form-control" required>
-										<option value="">Selecionar estado</option> 
+										<option value="">Select State</option> 
 									</select>
 								</div>
 							</div>
